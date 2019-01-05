@@ -108,11 +108,11 @@ $helper = Mage::helper('onestepcheckout/checkout');
                                                 <?php $uncheck = (!empty($_POST['billing']) && empty($_POST['billing']['use_for_shipping'])); ?>
                                                 <?php if ($this->differentShippingAvailable()): ?>
                                                     <div class="input-box input-different-shipping checkbox-field">
-                                                        <input class="aion-checkbox" type="checkbox"
+                                                        <input class="icoders-checkbox" type="checkbox"
                                                                name="billing[use_for_shipping]"
                                                                id="billing:use_for_shipping_yes"
                                                                value="1" <?php echo(($this->sameAsBilling() && !$uncheck) ? 'checked="checked" ' : '') ?>/>
-                                                        <label class="aion-checkbox-label"
+                                                        <label class="icoders-checkbox-label"
                                                                for="billing:use_for_shipping_yes"><?php echo $this->__('Ship to the same address') ?></label>
                                                     </div>
                                                 <?php else: ?>
@@ -717,9 +717,9 @@ $helper = Mage::helper('onestepcheckout/checkout');
                                         <div class="onestepcheckout-enable-newsletter checkbox-field">
                                             <input type="checkbox" id="id_subscribe_newsletter"
                                                    name="subscribe_newsletter"
-                                                   value="1" class="aion-checkbox"
+                                                   value="1" class="icoders-checkbox"
                                                    <?php if ($this->settings['newsletter_default_checked']): ?>checked="checked"<?php endif; ?> />
-                                            <label class="aion-checkbox-label"
+                                            <label class="icoders-checkbox-label"
                                                    for="id_subscribe_newsletter"><?php echo $this->__('Subscribe to our newsletter'); ?></label>
                                         </div>
                                     <?php endif; ?>
@@ -731,13 +731,13 @@ $helper = Mage::helper('onestepcheckout/checkout');
                                                 <?php foreach ($_extraProductsHelper->getExtraProducts() as $product): ?>
                                                     <li class="checkbox-field">
                                                         <input type="checkbox"
-                                                               class="onestepcheckout-extra-product aion-checkbox"
+                                                               class="onestepcheckout-extra-product icoders-checkbox"
                                                             <?php if ($_extraProductsHelper->productInCart($product->getId())): ?>
                                                                 checked="checked" <?php endif; ?>
                                                                name="extra_products_<?php echo $product->getId(); ?>"
                                                                id="id_extra_product_<?php echo $product->getId(); ?>"/>
                                                         &nbsp;
-                                                        <label class="aion-checkbox-label"
+                                                        <label class="icoders-checkbox-label"
                                                                for="id_extra_product_<?php echo $product->getId(); ?>"> <?php echo $product->getName(); ?>
                                                             <span><?php echo Mage::helper('checkout')->formatPrice($product->getPrice()); ?></span>
                                                         </label>
@@ -849,11 +849,11 @@ $helper = Mage::helper('onestepcheckout/checkout');
                                             ?>
 
                                             <div class="checkbox-field">
-                                                <input class="required-entry aion-checkbox" type="checkbox"
+                                                <input class="required-entry icoders-checkbox" type="checkbox"
                                                        id="id_accept_terms"
                                                        name="accept_terms"
                                                        value="1" <?php if (!$terms_error) echo "checked=\"checked\""; ?> />
-                                                <label class="aion-checkbox-field"
+                                                <label class="icoders-checkbox-field"
                                                        for="id_accept_terms"><?php echo $this->__('I accept the <a id="onestepcheckout-toc-link" target="_blank" href="javascript:void(0);">Terms and Conditions</a>'); ?></label>
                                             </div>
 

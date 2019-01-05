@@ -1,11 +1,11 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Edm
- * @author    Sági Attila <sagi.attila@aionhill.hu>
- * @copyright 2016 AionNext Kft. (http://www.aionhill.hu)
- * @license   http://aionhill.hu/license Aion License
- * @link      http://www.aionhill.hu
+ * @category  Icoders
+ * @package   Icoders_Edm
+ * @author    Sági Attila <iCoders <support@icoders.co>>
+ * @copyright 2016 iCoders. (http://icoders.co)
+ * @license   http://icoders.co/license Icoders License
+ * @link      http://icoders.co
  */
 ?>
 <?php
@@ -21,7 +21,7 @@
     </div>
     <?php echo $this->getChildHtml('form_fields_before')?>
     <?php echo $this->getMessagesBlock()->toHtml() ?>
-    <form class="form-horizontal aion-login-form" action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data">
+    <form class="form-horizontal icoders-login-form" action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data">
         <div class="fieldset">
             <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
             <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
@@ -119,34 +119,34 @@
                     </div>
                 </div>
                 <?php echo $this->getChildHtml('form.additional.info'); ?>
-                <div class="form-group aion-submit-registration">
-                    <div class="aion-checkbox-group">
+                <div class="form-group icoders-submit-registration">
+                    <div class="icoders-checkbox-group">
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 no-padding">
-                            <?php if (Mage::helper('aion_edm')->isRegisterReplaceEnabled()) : ?>
+                            <?php if (Mage::helper('icoders_edm')->isRegisterReplaceEnabled()) : ?>
                                 <input type="checkbox"
                                        name="edm_accept"
                                        title="<?php echo $this->quoteEscape($this->__('I accept Terms and Conditions')) ?>"
                                        value="1"
                                        id="edm_accept"
-                                       class="aion-checkbox required-entry" />
-                                <label for="edm_accept" class="aion-checkbox-label">
-                                    <?php if (Mage::helper('aion_edm')->getTermsUrl()) : ?>
-                                        <?php echo Mage::helper('aion_edm')->__(
+                                       class="icoders-checkbox required-entry" />
+                                <label for="edm_accept" class="icoders-checkbox-label">
+                                    <?php if (Mage::helper('icoders_edm')->getTermsUrl()) : ?>
+                                        <?php echo Mage::helper('icoders_edm')->__(
                                             'I accept <a href="%s" target="_blank">Terms and Conditions</a>.',
-                                            Mage::helper('aion_edm')->getTermsUrl()
+                                            Mage::helper('icoders_edm')->getTermsUrl()
                                         ); ?>
                                     <?php else : ?>
-                                        <?php echo Mage::helper('aion_edm')->__('I accept Terms and Conditions'); ?>
+                                        <?php echo Mage::helper('icoders_edm')->__('I accept Terms and Conditions'); ?>
                                     <?php endif; ?>
                                 </label>
                             <?php endif; ?>
                             <?php if ($this->isNewsletterEnabled()): ?>
-                                <input  class="aion-checkbox" type="checkbox" name="is_subscribed" value="1" id="is_subscribed" <?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> />
-                                <label for="is_subscribed" class="aion-checkbox-label"><?php echo $this->__('Sign Up for Newsletter'); ?></label>
+                                <input  class="icoders-checkbox" type="checkbox" name="is_subscribed" value="1" id="is_subscribed" <?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> />
+                                <label for="is_subscribed" class="icoders-checkbox-label"><?php echo $this->__('Sign Up for Newsletter'); ?></label>
                             <?php endif; ?>
                             <button type="submit" title="<?php echo $this->quoteEscape($this->__('Register')) ?>" class="button pull-right"><span><span><?php echo $this->__('Register') ?></span></span></button>
-                            <p class="aion-required pull-right"><em>*</em> <?php echo $this->__('All fields are required'); ?></p>
+                            <p class="icoders-required pull-right"><em>*</em> <?php echo $this->__('All fields are required'); ?></p>
                         </div>
                     </div>
                 </div>

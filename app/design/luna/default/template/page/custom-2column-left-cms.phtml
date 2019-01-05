@@ -29,7 +29,7 @@
  * Template for Mage_Page_Block_Html
  */
 
-$helper = Mage::helper('aion_mobiledetect/data');
+$helper = Mage::helper('icoders_mobiledetect/data');
 
 if($helper->isBrowserSafari()) {
     $body_class = "__browser_safari";
@@ -58,7 +58,7 @@ if($helper->isBrowserSafari()) {
 	</header>
 
 	<main class="main-container container col2-left-layout">
-		<div class="aion-cms-cms main row">
+		<div class="icoders-cms-cms main row">
             <div class="view-breadcrumbs">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
             </div>

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!--
 /**
- * @category  Aion
- * @package   Aion_Nila
- * @author    Sági Attila <sagi.attila@aionhill.hu>
- * @copyright 2016 AionNext Kft. (http://www.aionhill.hu)
- * @license   http://aionhill.hu/license Aion License
- * @link      http://www.aionhill.hu
+ * @category  Icoders
+ * @package   Icoders_Nila
+ * @author    Sági Attila <iCoders <support@icoders.co>>
+ * @copyright 2016 iCoders. (http://icoders.co)
+ * @license   http://icoders.co/license Icoders License
+ * @link      http://icoders.co
  */
 -->
 <config>
@@ -18,9 +18,9 @@
                         <children>
                             <config>
                                 <children>
-                                    <nila translate="title" module="aion_nila">
+                                    <luna translate="title" module="icoders_luna">
                                         <title>Nila Management</title>
-                                    </nila>
+                                    </luna>
                                 </children>
                             </config>
                         </children>

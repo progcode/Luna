@@ -61,7 +61,7 @@ foreach ($children as $child) {
 
     if (!empty($_hasChildren)) {
         $html .= '<ul class="level'. $childLevel .'">';
-        if (Mage::helper('aion_nila')->isViewAllEnabled()) {
+        if (Mage::helper('icoders_luna')->isViewAllEnabled()) {
             $html .= '<li class="level' . $nextChildLevel . ' view-all">';
             $html .= '<a class="level' . $nextChildLevel . '" href="' . $child->getUrl() . '">';
             $html .= $this->__('View All') . ' ' . $this->escapeHtml($this->__($child->getName()));

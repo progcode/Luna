@@ -1,31 +1,31 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Aion_NilaBrands>
+        <Icoders_NilaBrands>
             <version>0.1.2</version>
-        </Aion_NilaBrands>
+        </Icoders_NilaBrands>
     </modules>
 
     <global>
         <models>
-            <aion_nilabrands>
-                <class>Aion_NilaBrands_Model</class>
-                <resourceModel>aion_nilabrands_resource</resourceModel>
-            </aion_nilabrands>
-            <aion_nilabrands_resource>
-                <class>Aion_NilaBrands_Model_Resource_Setup</class>
-            </aion_nilabrands_resource>
+            <icoders_brands>
+                <class>Icoders_NilaBrands_Model</class>
+                <resourceModel>icoders_brands_resource</resourceModel>
+            </icoders_brands>
+            <icoders_brands_resource>
+                <class>Icoders_NilaBrands_Model_Resource_Setup</class>
+            </icoders_brands_resource>
         </models>
         <resources>
-            <aion_nilabrands_setup>
+            <icoders_brands_setup>
                 <setup>
-                    <module>Aion_NilaBrands</module>
+                    <module>Icoders_NilaBrands</module>
                     <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
                 <connection>
                     <use>core_setup</use>
                 </connection>
-            </aion_nilabrands_setup>
+            </icoders_brands_setup>
         </resources>
     </global>
 </config>

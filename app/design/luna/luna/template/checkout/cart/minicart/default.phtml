@@ -59,7 +59,7 @@
                                 data-update
                                 data-cart-item-update
                                 class="button quantity-button">
-                            <i class="aion-icon aion-icon-reload"></i>
+                            <i class="icoders-icon icoders-icon-reload"></i>
                         </button>
                     </td>
                 </tr>
@@ -164,19 +164,19 @@
                         <?php endforeach; ?>
                     </dl>
                 </div>
-                <a href="#" onclick="return false;" class="details"><i class="aion-icon aion-icon-info"></i></a>
+                <a href="#" onclick="return false;" class="details"><i class="icoders-icon icoders-icon-info"></i></a>
             </div>
         <?php endif; ?>
         <?php if ($isVisibleProduct): ?>
         <a href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Edit item')) ?>" class="btn-edit">
-            <i class="aion-icon aion-icon-edit"></i>
+            <i class="icoders-icon icoders-icon-edit"></i>
         </a>
 
             <?php if (!$this->isOnCheckoutPage()): ?>
                 <a href="<?php echo $this->getAjaxDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove This Item')) ?>"
                    data-confirm="<?php echo $this->__('Are you sure you would like to remove this item from the shopping cart?') ?>"
                    class="remove">
-                    <i class="aion-icon aion-icon-delete"></i>
+                    <i class="icoders-icon icoders-icon-delete"></i>
                 </a>
             <?php endif; ?>
         <?php endif ?>

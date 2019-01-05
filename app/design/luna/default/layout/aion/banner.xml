@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <default>
-        <block type="aion_banner/banner" name="banner_content_top" template="aion/banner/banner.phtml" before="-" >
+        <block type="icoders_banner/banner" name="banner_content_top" template="icoders/banner/banner.phtml" before="-" >
             <action method="setPosition"><name>CONTENT_TOP</name></action>
-            <block type="aion_banner/banner" name="banner_small_banners" as="small_banners" template="aion/banner/small_banners.phtml" />
+            <block type="icoders_banner/banner" name="banner_small_banners" as="small_banners" template="icoders/banner/small_banners.phtml" />
         </block>
-        <block type="aion_banner/banner" name="banner_content_bottom" template="aion/banner/banner.phtml" after="-" >
+        <block type="icoders_banner/banner" name="banner_content_bottom" template="icoders/banner/banner.phtml" after="-" >
             <action method="setPosition"><name>CONTENT_BOTTOM</name></action>
         </block>
-        <block type="aion_banner/banner" name="banner_content_background" template="aion/banner/background.phtml" after="-" >
+        <block type="icoders_banner/banner" name="banner_content_background" template="icoders/banner/background.phtml" after="-" >
             <action method="setPosition"><name>BODY_BACKGROUND</name></action>
         </block>
     </default>
@@ -42,7 +42,7 @@
 
     <!--<customer_account_login>-->
         <!--<reference name="content">-->
-            <!--<block type="aion_banner/banner" name="banner" template="aion/banner/banner.phtml" before="-" >-->
+            <!--<block type="icoders_banner/banner" name="banner" template="icoders/banner/banner.phtml" before="-" >-->
                 <!--<action method="setBanner"><name>login</name></action>-->
             <!--</block>-->
         <!--</reference>-->

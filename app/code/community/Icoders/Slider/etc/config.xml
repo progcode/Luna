@@ -29,9 +29,9 @@
             </icoders_slider>
         </blocks>
         <helpers>
-            <aion_rbanner>
+            <icoders_slider>
                 <class>Icoders_Slider_Helper</class>
-            </aion_rbanner>
+            </icoders_slider>
         </helpers>
         <resources>
             <icoders_slider_setup>

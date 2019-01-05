@@ -69,8 +69,8 @@ if ($helper->settings['hide_nonfree_payment_methods']) {
                 <dt class="checkbox-field">
                     <input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="hidden"
                            name="payment[method]" title="<?php echo $this->escapeHtml($_method->getTitle()) ?>"
-                           class="aion-radio radio" <?php if ($this->getSelectedMethodCode() == $_code || ($hide_nonfree_methods && $_code == 'free')): ?> checked="checked"<?php endif; ?> />
-                    <label class="aion-radio-label" for="p_method_<?php echo $_code ?>"><?php echo $this->__($_method->getTitle()) ?></label></dt>
+                           class="icoders-radio radio" <?php if ($this->getSelectedMethodCode() == $_code || ($hide_nonfree_methods && $_code == 'free')): ?> checked="checked"<?php endif; ?> />
+                    <label class="icoders-radio-label" for="p_method_<?php echo $_code ?>"><?php echo $this->__($_method->getTitle()) ?></label></dt>
             <?php endforeach; ?>
         </dl>
     <?php else: ?>
@@ -82,12 +82,12 @@ if ($helper->settings['hide_nonfree_payment_methods']) {
                     <?php if (sizeof($this->getMethods()) > 1): ?>
                         <input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio"
                                name="payment[method]" title="<?php echo $this->escapeHtml($_method->getTitle()) ?>"
-                               class="aion-radio radio validate-one-required-by-name" <?php if ($this->getSelectedMethodCode() == $_code || ($hide_nonfree_methods && $_code == 'free')): ?> checked="checked"<?php endif; ?> />
+                               class="icoders-radio radio validate-one-required-by-name" <?php if ($this->getSelectedMethodCode() == $_code || ($hide_nonfree_methods && $_code == 'free')): ?> checked="checked"<?php endif; ?> />
                     <?php else: ?>
-                        <span class="no-display"><input class="aion-radio" id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>"
+                        <span class="no-display"><input class="icoders-radio" id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>"
                                                         type="radio" name="payment[method]" checked="checked"/></span>
                     <?php endif; ?>
-                    <label class="aion-radio-label" for="p_method_<?php echo $_code ?>"><?php echo $this->__($_method->getTitle()) ?></label>
+                    <label class="icoders-radio-label" for="p_method_<?php echo $_code ?>"><?php echo $this->__($_method->getTitle()) ?></label>
                 </dt>
                 <?php if ($html = $this->getChildHtml('payment.method.' . $_code)): ?>
                     <dd id="container_payment_method_<?php echo $_code; ?>" class="payment-method">

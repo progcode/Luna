@@ -122,8 +122,8 @@ $shippingFields['lastname'] = '
 <?php if ($this->isCustomerLoggedIn() && $this->customerHasAddresses()): ?>
     <?php $shippingFields['save_in_address_book'] = '
         <li class="control checkbox-field">
-            <input type="checkbox" name="shipping[save_in_address_book]" value="1" title="' . $this->__('Save in address book') . '" id="shipping:save_in_address_book" ' . (($this->getQuote()->getShippingAddress()->getSaveInAddressBook()) ? 'checked="checked"' : '') . ' class="checkbox aion-checkbox" />
-            <label class="aion-checkbox-label" for="shipping:save_in_address_book">' . $this->__('Save in address book') . '</label>
+            <input type="checkbox" name="shipping[save_in_address_book]" value="1" title="' . $this->__('Save in address book') . '" id="shipping:save_in_address_book" ' . (($this->getQuote()->getShippingAddress()->getSaveInAddressBook()) ? 'checked="checked"' : '') . ' class="checkbox icoders-checkbox" />
+            <label class="icoders-checkbox-label" for="shipping:save_in_address_book">' . $this->__('Save in address book') . '</label>
         </li>';
     ?>
 <?php else: ?>

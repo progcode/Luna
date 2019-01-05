@@ -40,7 +40,7 @@
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>aion/css/nila.css</name>
+                <name>icoders/css/luna.css</name>
                 <params/>
             </action>
             <action method="removeItem">
@@ -79,7 +79,7 @@
         <!--<reference name="head">-->
             <!--<action method="addItem">-->
                 <!--<type>skin_js</type>-->
-                <!--<name>aion/js/home.js</name>-->
+                <!--<name>icoders/js/home.js</name>-->
                 <!--<params/>-->
             <!--</action>-->
             <!--<action method="addItem">-->

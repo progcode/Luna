@@ -70,7 +70,7 @@ jQuery(document).ready(function() {
 					<?php foreach($images as $image): ?>
 						<li>
 							<a <?php if(!empty($image['link'])): ?> href="<?php echo $image['link'];?>"<?php else:?> href="#" <?php endif;?> >
-								<img src="<?php echo $this->helper('aionbanner')->resizeImg($image['file'],$width,$height);?>" <?php if(!empty($image['label'])): ?> alt="<?php echo $image['label'];?>"<?php endif?>/>
+								<img src="<?php echo $this->helper('icodersbanner')->resizeImg($image['file'],$width,$height);?>" <?php if(!empty($image['label'])): ?> alt="<?php echo $image['label'];?>"<?php endif?>/>
 							</a>
 							<?php if(!empty($image['html'])): ?>
 								<div class="label_text">

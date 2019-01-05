@@ -1,44 +1,44 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Aion_Nila>
+        <Icoders_Nila>
             <version>0.2.8</version>
-        </Aion_Nila>
+        </Icoders_Nila>
     </modules>
     <global>
         <models>
-            <aion_nila>
-                <class>Aion_Nila_Model</class>
-                <resourceModel>aion_nila_resource</resourceModel>
-            </aion_nila>
-            <aion_nila_resource>
-                <class>Aion_Nila_Model_Resource</class>
-            </aion_nila_resource>
+            <icoders_luna>
+                <class>Icoders_Luna_Model</class>
+                <resourceModel>icoders_luna_resource</resourceModel>
+            </icoders_luna>
+            <icoders_luna_resource>
+                <class>Icoders_Luna_Model_Resource</class>
+            </icoders_luna_resource>
         </models>
         <blocks>
-            <aion_nila>
-                <class>Aion_Nila_Block</class>
-            </aion_nila>
+            <icoders_luna>
+                <class>Icoders_Luna_Block</class>
+            </icoders_luna>
         </blocks>
         <helpers>
-            <aion_nila>
-                <class>Aion_Nila_Helper</class>
-            </aion_nila>
+            <icoders_luna>
+                <class>Icoders_Luna_Helper</class>
+            </icoders_luna>
         </helpers>
         <resources>
-            <aion_nila_setup>
+            <icoders_luna_setup>
                 <setup>
-                    <module>Aion_Nila</module>
-                    <class>Aion_Nila_Model_Resource_Setup</class>
+                    <module>Icoders_Nila</module>
+                    <class>Icoders_Luna_Model_Resource_Setup</class>
                 </setup>
-            </aion_nila_setup>
+            </icoders_luna_setup>
         </resources>
     </global>
     <default>
-        <nila>
+        <luna>
             <view>
                 <category_view_all>0</category_view_all>
             </view>
-        </nila>
+        </luna>
     </default>
 </config>

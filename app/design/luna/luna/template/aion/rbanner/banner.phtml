@@ -1,27 +1,27 @@
 <?php
 /**
- * Aion_Rbanner_Block_Banner
+ * Icoders_Slider_Block_Banner
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Kovacs Daniel Akos <daniel.kovacs@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   Aion License https://aionhill.com/licence
- * @link      https://www.aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Kovacs Daniel Akos <daniel.kovacs@icodershill.com>
+ * @copyright 2017 iCoders. (http://icodershill.com)
+ * @license   Icoders License https://icodershill.com/licence
+ * @link      https://icoders.co
  */
 
-/** @var Aion_Rbanner_Block_Banner $this */
-/** @var Aion_Rbanner_Model_Banner $banner */
+/** @var Icoders_Slider_Block_Banner $this */
+/** @var Icoders_Slider_Model_Banner $banner */
 
-$mobileHelper = Mage::helper('aion_mobiledetect/data');
+$mobileHelper = Mage::helper('icoders_mobiledetect/data');
 $banner       = $this->getBanner();
 
 if ($banner->getId()) :
     $slides = $banner->getSlides(); ?>
-    <div class="aion-responsive-banner">
+    <div class="icoders-responsive-banner">
         <div class="container">
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 no-padding">
-                <div class="owl-carousel owl-theme" id="aionResponsiveBanner">
+                <div class="owl-carousel owl-theme" id="icodersResponsiveBanner">
                     <?php
                     foreach ($slides as $slide):
                         echo $this->getChild('banner_slide')->setSlide($slide)->toHtml();

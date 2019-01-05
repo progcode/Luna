@@ -4,7 +4,7 @@
 		<page>
 			<layouts>
 				<custom_2column_left_cms>
-					<label>AionCmsPage</label>
+					<label>IcodersCmsPage</label>
 					<template>page/custom-2column-left-cms.phtml</template>
 				</custom_2column_left_cms>
 			</layouts>

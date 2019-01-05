@@ -43,14 +43,14 @@
                             </ul>
                         <?php else: ?>
                             <div class="checkbox-field">
-                                <input class="aion-radio"
+                                <input class="icoders-radio"
                                        name="shipping_method"
                                        type="radio"
                                        value="<?php echo $_rate->getCode() ?>"
                                        id="s_method_<?php echo $_rate->getCode() ?>"
                                        checked="checked"/>
 
-                                <label class="aion-radio-label" for="s_method_<?php echo $_rate->getCode() ?>">
+                                <label class="icoders-radio-label" for="s_method_<?php echo $_rate->getCode() ?>">
                                     <?php echo $_rate->getMethodTitle() ?>
                                     <strong>
                                         <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
@@ -84,12 +84,12 @@
                             <input
                                 name="shipping_method"
                                 type="radio"
-                                class="aion-radio validate-one-required-by-name"
+                                class="icoders-radio validate-one-required-by-name"
                                 value="<?php echo $_rate->getCode() ?>"
                                 id="s_method_<?php echo $_rate->getCode() ?>"
                                 <?php if ($_rate->getCode() === $this->getAddressShippingMethod()) echo ' checked="checked"' ?> />
 
-                            <label class="aion-radio-label" for="s_method_<?php echo $_rate->getCode() ?>">
+                            <label class="icoders-radio-label" for="s_method_<?php echo $_rate->getCode() ?>">
                                 <?php echo $_rate->getMethodTitle() ?>
                                 <strong>
                                     <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>

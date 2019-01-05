@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!-- 
 /**
- * @category  Aion
- * @package   Aion_Edm
- * @author    Sági Attila <sagi.attila@aionhill.hu>
- * @copyright 2016 AionNext Kft. (http://www.aionhill.hu)
- * @license   http://aionhill.hu/license Aion License
- * @link      http://www.aionhill.hu
+ * @category  Icoders
+ * @package   Icoders_Edm
+ * @author    Sági Attila <iCoders <support@icoders.co>>
+ * @copyright 2016 iCoders. (http://icoders.co)
+ * @license   http://icoders.co/license Icoders License
+ * @link      http://icoders.co
  */
 -->
 <layout version="0.1.0">
     <default>
         <reference name="footer.newsletter">
-            <action method="setTemplate"><template helper="aion_edm/data/getNewsletterTemplate" /></action>
+            <action method="setTemplate"><template helper="icoders_edm/data/getNewsletterTemplate" /></action>
         </reference>
     </default>
 
     <customer_account_create>
         <reference name="customer_form_register">
-            <action method="setTemplate"><template helper="aion_edm/data/getRegisterTemplate" /></action>
+            <action method="setTemplate"><template helper="icoders_edm/data/getRegisterTemplate" /></action>
             <block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
             <block type="core/template" name="persistent.remember.me.tooltip" template="persistent/remember_me_tooltip.phtml" />
         </reference>

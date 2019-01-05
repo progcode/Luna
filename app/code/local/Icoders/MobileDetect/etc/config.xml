@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Aion_MobileDetect>
+        <Icoders_MobileDetect>
             <version>0.1.0</version>
-        </Aion_MobileDetect>
+        </Icoders_MobileDetect>
     </modules>
     <global>
         <helpers>
-            <aion_mobiledetect>
-                <class>Aion_MobileDetect_Helper</class>
-            </aion_mobiledetect>
+            <icoders_mobiledetect>
+                <class>Icoders_MobileDetect_Helper</class>
+            </icoders_mobiledetect>
         </helpers>
     </global>
 </config>

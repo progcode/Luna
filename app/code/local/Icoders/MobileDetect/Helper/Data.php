@@ -5,7 +5,7 @@
  * @category  Icoders
  * @package   Icoders_MobileDetect
  * @author    Kovacs Daniel Akos <kovacs.daniel@icoders.co>
- * @copyright 2016 IcodersNext Ltd.. (http://www.icoders.co)
+ * @copyright 2016 iCoders Ltd.. (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
  * @link      http://www.icoders.co
  *

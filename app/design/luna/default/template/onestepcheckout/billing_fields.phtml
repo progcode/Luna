@@ -196,8 +196,8 @@ try {
 <?php if (!$this->isCustomerLoggedIn() && $helper->showCreateAccount()): ?>
     <?php $billingFields['create_account'] = '
         <div class="input-box checkbox-field">
-            <input class="aion-checkbox" id="id_create_account" type="checkbox" name="create_account" value="1" ' . ((isset($_POST['create_account']) && $_POST['create_account'] == '1') ? ' checked="checked"' : '') . ' />
-            <label class="aion-checkbox-label" for="id_create_account">' . $this->__('Create an account for later use') . '</label>
+            <input class="icoders-checkbox" id="id_create_account" type="checkbox" name="create_account" value="1" ' . ((isset($_POST['create_account']) && $_POST['create_account'] == '1') ? ' checked="checked"' : '') . ' />
+            <label class="icoders-checkbox-label" for="id_create_account">' . $this->__('Create an account for later use') . '</label>
         </div>
 
         <script>
@@ -235,8 +235,8 @@ try {
     <?php $billingFields['save_in_address_book'] = '
         <li class="control">
             <div class="checkbox-field">
-                <input class="aion-checkbox checkbox" type="checkbox" name="billing[save_in_address_book]" value="1" title="' . $this->__('Save in address book') . '" id="billing:save_in_address_book" onchange="shipping.setSameAsBilling(false);"' . (($dataHelper->clearDash($this->getQuote()->getBillingAddress()->getSaveInAddressBook())) ? ' checked="checked"' : '') . ' />
-                <label class="aion-checkbox-label" for="billing:save_in_address_book">' . $this->__('Save in address book') . '</label>
+                <input class="icoders-checkbox checkbox" type="checkbox" name="billing[save_in_address_book]" value="1" title="' . $this->__('Save in address book') . '" id="billing:save_in_address_book" onchange="shipping.setSameAsBilling(false);"' . (($dataHelper->clearDash($this->getQuote()->getBillingAddress()->getSaveInAddressBook())) ? ' checked="checked"' : '') . ' />
+                <label class="icoders-checkbox-label" for="billing:save_in_address_book">' . $this->__('Save in address book') . '</label>
             </div>
         </li>';
     ?>

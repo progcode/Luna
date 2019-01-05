@@ -4,39 +4,39 @@
         <reference name="head">
             <action method="addItem">
                 <type>skin_js</type>
-                <name>aion/vendor/owl.carousel2/js/owl.carousel.min.js</name>
+                <name>icoders/vendor/owl.carousel2/js/owl.carousel.min.js</name>
             </action>
             <action method="addItem">
                 <type>skin_js</type>
-                <name>aion/aion-rbanner/js/aion-config.js</name>
+                <name>icoders/icoders-slider/js/icoders-config.js</name>
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>aion/vendor/owl.carousel2/css/owl.carousel.min.css</name>
+                <name>icoders/vendor/owl.carousel2/css/owl.carousel.min.css</name>
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>aion/vendor/owl.carousel2/css/owl.theme.default.css</name>
+                <name>icoders/vendor/owl.carousel2/css/owl.theme.default.css</name>
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>aion/aion-rbanner/css/aion-rbanner.css</name>
+                <name>icoders/icoders-slider/css/icoders-slider.css</name>
             </action>
         </reference>
 
-        <block type="aion_rbanner/banner" name="banner_content_top" template="aion/rbanner/banner.phtml" before="-">
+        <block type="icoders_slider/banner" name="banner_content_top" template="icoders/slider/banner.phtml" before="-">
             <action method="setPosition"><name>CONTENT_TOP</name></action>
-            <block type="aion_rbanner/banner_slide" name="banner_slide" template="aion/rbanner/banner/slide.phtml" />
-            <block type="aion_rbanner/banner" name="banner_small_banners" as="small_banners" template="aion/rbanner/small_banners.phtml" />
-            <block type="aion_rbanner/banner" name="banner_icon_banners" as="icon_banners" template="aion/rbanner/icon_banners.phtml" />
+            <block type="icoders_slider/banner_slide" name="banner_slide" template="icoders/slider/banner/slide.phtml" />
+            <block type="icoders_slider/banner" name="banner_small_banners" as="small_banners" template="icoders/slider/small_banners.phtml" />
+            <block type="icoders_slider/banner" name="banner_icon_banners" as="icon_banners" template="icoders/slider/icon_banners.phtml" />
         </block>
-        <block type="aion_rbanner/banner" name="banner_content_bottom" template="aion/rbanner/banner.phtml" after="-">
+        <block type="icoders_slider/banner" name="banner_content_bottom" template="icoders/slider/banner.phtml" after="-">
             <action method="setPosition"><name>CONTENT_BOTTOM</name></action>
-            <block type="aion_rbanner/banner_slide" name="banner_slide" template="aion/rbanner/banner/slide.phtml" />
+            <block type="icoders_slider/banner_slide" name="banner_slide" template="icoders/slider/banner/slide.phtml" />
         </block>
-        <block type="aion_rbanner/banner" name="banner_content_background" template="aion/rbanner/background.phtml" after="-">
+        <block type="icoders_slider/banner" name="banner_content_background" template="icoders/slider/background.phtml" after="-">
             <action method="setPosition"><name>BODY_BACKGROUND</name></action>
-            <block type="aion_rbanner/banner_slide" name="banner_slide" template="aion/rbanner/banner/slide.phtml" />
+            <block type="icoders_slider/banner_slide" name="banner_slide" template="icoders/slider/banner/slide.phtml" />
         </block>
     </default>
 </layout>

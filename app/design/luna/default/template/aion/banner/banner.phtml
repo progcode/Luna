@@ -1,24 +1,24 @@
 <?php
 /**
- * Aion_Banner template for Nila
+ * Icoders_Banner template for Nila
  *
- * @category  Aion
- * @package   Aion_Banner
- * @author    Kovacs Daniel Akos <kovacs.daniel@aion.hu>
- * @copyright 2016 AionNext Kft. (http://www.aion.hu)
- * @license   http://aion.hu/license Aion License
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Banner
+ * @author    Kovacs Daniel Akos <kovacs.daniel@icoders.hu>
+ * @copyright 2016 iCoders. (http://www.icoders.hu)
+ * @license   http://icoders.hu/license Icoders License
+ * @link      http://www.icoders.hu
  */
 
-$helper = Mage::helper('aion_mobiledetect/data');
+$helper = Mage::helper('icoders_mobiledetect/data');
 $banner = $this->getBanner();
 
 if ($banner->getId()): ?>
     <?php $images = $banner->getImages(); ?>
     <?php $links = $banner->getLinks() ?>
 
-<div class="aion-aion-banner">
-    <div class="container aion-banner-container">
+<div class="icoders-icoders-banner">
+    <div class="container icoders-banner-container">
         <div id="banner-<?php echo $banner->getId() ?>" class="carousel slide"  data-ride="carousel" style="width: 100%;">
 
             <?php if (count($images) > 1): ?>

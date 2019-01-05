@@ -35,7 +35,7 @@
 <div class="account-login<?php if (!$this->helper('customer')->isRegistrationAllowed()) echo ' login-only' ?>">
     <?php echo $this->getMessagesBlock()->toHtml() ?>
     <div class="row">
-        <form class="form-horizontal aion-login-form" action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+        <form class="form-horizontal icoders-login-form" action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
             <?php echo $this->getBlockHtml('formkey'); ?>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 login-nop">
                 <?php if ($this->helper('customer')->isRegistrationAllowed()): ?>
@@ -76,8 +76,8 @@
                         </div>
                         <hr />
 
-                        <div class="aion-login-actions">
-                            <div class="aion-required">
+                        <div class="icoders-login-actions">
+                            <div class="icoders-required">
                                 <span class="required"><span class="red">*</span> <?php echo $this->__('All fields are required') ?></span>
                             </div>
                             <a class="btn-grey" href="<?php echo Mage::getUrl('customer/account/forgotpassword') ?>" title="<?php echo $this->__('Forgot password'); ?>"><?php echo $this->__('Forgot password'); ?></a>

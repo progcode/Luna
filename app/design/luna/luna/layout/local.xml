@@ -40,17 +40,17 @@
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>aion/css/nila.css</name>
+                <name>icoders/css/luna.css</name>
                 <params/>
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>aion/aion-fonticon/style.css</name>
+                <name>icoders/icoders-fonticon/style.css</name>
                 <params/>
             </action>
             <action method="addItem">
                 <type>skin_js</type>
-                <name>aion/js/home.js</name>
+                <name>icoders/js/home.js</name>
                 <params/>
             </action>
             <!--<action method="addItem">-->
@@ -99,7 +99,7 @@
 
         <reference name="footer">
             <block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml">
-                <action method="setTemplate"><template helper="aion_edm/data/getNewsletterTemplate" /></action>
+                <action method="setTemplate"><template helper="icoders_edm/data/getNewsletterTemplate" /></action>
             </block>
             <block type="page/html" name="footer-menu" template="page/html/footer-menu.phtml"/>
         </reference>
@@ -108,7 +108,7 @@
 
     <cms_index_index>
         <reference name="content">
-            <block type="cms/block" name="aion_promotion_banners" after="-">
+            <block type="cms/block" name="icoders_promotion_banners" after="-">
                 <action method="setBlockId">
                     <block_id>Nila-homepage-small-banners</block_id>
                 </action>

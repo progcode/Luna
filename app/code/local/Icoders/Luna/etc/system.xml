@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <!--
 /**
- * @category  Aion
- * @package   Aion_Nila
- * @author    Sági Attila <sagi.attila@aionhill.hu>
- * @copyright 2016 AionNext Kft. (http://www.aionhill.hu)
- * @license   http://aionhill.hu/license Aion License
- * @link      http://www.aionhill.hu
+ * @category  Icoders
+ * @package   Icoders_Nila
+ * @author    Sági Attila <iCoders <support@icoders.co>>
+ * @copyright 2016 iCoders. (http://icoders.co)
+ * @license   http://icoders.co/license Icoders License
+ * @link      http://icoders.co
  */
 -->
 <config>
     <sections>
-        <nila>
+        <luna>
             <class>separator-top</class>
-            <label>Aion Nila</label>
-            <tab>Aion_Extensions</tab>
+            <label>Icoders Nila</label>
+            <tab>Icoders_Extensions</tab>
             <frontend_type>text</frontend_type>
             <sort_order>500</sort_order>
             <show_in_default>1</show_in_default>
@@ -41,6 +41,6 @@
                     </fields>
                 </view>
             </groups>
-        </nila>
+        </luna>
     </sections>
 </config>
