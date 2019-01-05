@@ -1,0 +1,481 @@
+.aion-checkbox,
+.aion-radio {
+  display: none;
+}
+.aion-checkbox + label,
+.aion-radio + label {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 25px;
+  position: relative;
+  margin: 0;
+  min-height: 20px;
+  vertical-align: top !important;
+}
+.aion-checkbox + label span,
+.aion-radio + label span {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cacece;
+  display: block;
+  left: 0;
+  padding: 7px;
+  position: absolute;
+  vertical-align: middle !important;
+  top: 0;
+}
+.aion-checkbox.input-right-pos + label,
+.aion-radio.input-right-pos + label {
+  padding-right: 25px;
+  padding-left: 0;
+  text-align: right;
+}
+.aion-checkbox.input-right-pos + label span,
+.aion-radio.input-right-pos + label span {
+  right: 0;
+  left: auto;
+}
+.aion-checkbox + label:active span,
+.aion-checkbox:checked + label:active span,
+.aion-radio + label:active span,
+.aion-radio:checked:active + label span {
+  background-color: #63b626;
+}
+.aion-checkbox:checked + label span,
+.aion-radio:checked + label span {
+  background-color: #fff;
+  border: 1px solid #7d7d7d;
+}
+.aion-checkbox:checked + label span:after {
+  bottom: 0;
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  top: -3px;
+  vertical-align: middle !important;
+  content: '\25A0';
+}
+@media screen and (-moz-images-in-menus: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+  *::-ms-backdrop,
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -1px;
+  }
+}
+@-moz-document url-prefix() {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+.aion-radio + label span {
+  border-radius: 8px;
+}
+.aion-radio:checked + label span:after {
+  background: #99a1a7;
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+label {
+  color: #595959;
+  font-family: 'Open Sans';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 8px 0 0 0;
+  text-transform: uppercase;
+}
+.a-center {
+  text-align: center;
+}
+.a-right,
+.align-right {
+  text-align: right;
+}
+.a-left {
+  text-align: left;
+}
+.v-top {
+  vertical-align: top !important;
+}
+.v-middle {
+  vertical-align: middle !important;
+}
+.v-bottom {
+  vertical-align: bottom !important;
+}
+.no-display {
+  display: none !important;
+}
+.nobr,
+.nowrap {
+  white-space: nowrap;
+}
+.hidden {
+  display: none;
+}
+/*custom text-color (just for mixins)*/
+/*custom width and color to a solid border*/
+/*create default buttons*/
+/* AionBanner css */
+.banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.aion-aion-banner .carousel {
+  max-width: 100%;
+}
+.aion-aion-banner .carousel-indicators li {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background-color: #fff;
+  border: 0;
+  margin: 0;
+  height: 15px;
+  width: 15px;
+}
+.aion-aion-banner .carousel-indicators li.active {
+  background-color: #256599;
+}
+.aion-aion-banner .carousel-control-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.aion-aion-banner .carousel-control-container .carousel-control {
+  background-color: transparent;
+  opacity: 1;
+  width: 60px;
+  z-index: 11;
+}
+.aion-aion-banner .carousel-control-container .carousel-control.left {
+  background-color: transparent;
+  background-image: none;
+}
+.aion-aion-banner .carousel-control-container .carousel-control.right {
+  background-color: transparent;
+  background-image: none;
+}
+.aion-aion-banner .carousel-control-container .carousel-control .icon-nav {
+  display: inline-block;
+  left: 0;
+  margin-top: -30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  z-index: 5;
+}
+.aion-aion-banner .carousel-caption {
+  left: 0;
+  padding: 50px 0;
+  right: 0;
+}
+.aion-aion-banner .carousel-caption h2 {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 65px;
+  letter-spacing: 2px;
+  margin-top: 0;
+  padding: 0 150px;
+  text-transform: uppercase;
+}
+.aion-aion-banner .carousel-caption p {
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 0 200px;
+}
+.aion-aion-banner .carousel-caption.vertical-center {
+  bottom: initial;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.aion-aion-banner .carousel-caption.vertical-top {
+  bottom: initial;
+  top: 0;
+}
+.aion-aion-banner .carousel-caption.horizontal-left {
+  text-align: left;
+}
+.aion-aion-banner .carousel-caption.horizontal-left h2,
+.aion-aion-banner .carousel-caption.horizontal-left p {
+  padding-left: 60px;
+}
+.aion-aion-banner .carousel-caption.horizontal-right {
+  text-align: right;
+}
+.aion-aion-banner .carousel-caption.horizontal-right h2,
+.aion-aion-banner .carousel-caption.horizontal-right p {
+  padding-right: 60px;
+}
+.aion-small-banners {
+  padding-top: 20px;
+}
+.aion-small-banners .small-banner {
+  width: 100%;
+  padding: 15px;
+}
+.aion-small-banners .small-banner a {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.aion-small-banners .small-banner p {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.aion-small-banners .small-banner.banner-yellow {
+  background-color: #c4bd0a;
+}
+.aion-small-banners .small-banner.banner-green {
+  background-color: #79a42f;
+}
+.aion-small-banners .small-banner.banner-purple {
+  background-color: #b982c3;
+}
+.aion-home-grid .widget-title hr {
+  border: 0;
+  border-top: 2px solid #eee;
+  margin-bottom: 0;
+}
+.aion-home-grid .widget-title h2 {
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.aion-home-grid .widget-products {
+  margin-left: 0;
+  margin-right: -15px;
+}
+.aion-home-grid .widget-products .products-grid {
+  padding-top: 20px;
+}
+.aion-home-grid .widget-products .products-grid .product-thumbnail {
+  border-top: solid 1px #000;
+  border-left: solid 1px #000;
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.aion-home-grid .widget-products .products-grid .product-info .product-name a {
+  color: #000;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.aion-home-grid .widget-products .products-grid .product-info .price {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+.aion-home-grid .widget-products .products-grid .product-info .actions button {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  background-color: #256599;
+  border: 1px solid transparent;
+  display: inline-block;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.aion-home-grid .widget-products .products-grid .product-info .actions button:hover {
+  background-color: #fff;
+  border: 1px solid #256599;
+  color: #256599;
+}
+.aion-home-grid .widget-products .products-grid .product-info .add-to-links {
+  list-style-type: none;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .aion-small-banners {
+    padding-top: 40px;
+  }
+  .aion-small-banners .small-banner {
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+  }
+  .aion-small-banners .small-banner a {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .aion-small-banners .small-banner p {
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  .aion-small-banners .small-banner.banner-yellow {
+    background-color: #c4bd0a;
+  }
+  .aion-small-banners .small-banner.banner-green {
+    background-color: #79a42f;
+  }
+  .aion-small-banners .small-banner.banner-purple {
+    background-color: #b982c3;
+  }
+  .aion-aion-banner .carousel-control.right {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+@media (max-width: 1200px) {
+  .aion-aion-banner .carousel-caption h2 {
+    font-size: 45px;
+    line-height: 55px;
+    padding: 0 100px;
+  }
+  .aion-aion-banner .carousel-caption p {
+    padding: 0 150px;
+  }
+}
+@media (min-width: 992px) {
+  .aion-banner-container {
+    padding: 0;
+    width: auto;
+  }
+}
+@media (max-width: 992px) {
+  .aion-aion-banner .carousel-control-container {
+    position: static;
+  }
+  .aion-aion-banner .carousel-caption .container {
+    padding: 0;
+    width: auto;
+  }
+  .aion-aion-banner .carousel-caption h2 {
+    font-size: 40px;
+    line-height: 45px;
+    padding: 0 80px;
+  }
+  .aion-aion-banner .carousel-caption p {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 768px) {
+  .aion-aion-banner .carousel-caption h2 {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 60px;
+  }
+  .aion-aion-banner .carousel-caption p {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .aion-small-banners .small-banner {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .aion-aion-banner .carousel-caption {
+    padding: 10px 0;
+  }
+  .aion-aion-banner .carousel-caption h2 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .aion-aion-banner .carousel-caption p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+  }
+}

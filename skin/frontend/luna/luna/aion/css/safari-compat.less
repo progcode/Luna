@@ -1,0 +1,55 @@
+/** This less file support OSX/Safari browser compatibility!*/
+
+@import "base";
+
+.__browser_safari {
+
+    .store-language-container {
+        #select-language {
+            float: right;
+            height: 25px;
+            margin-top: 7px;
+        }
+    }
+
+    #search_mini_form {
+        #search {
+            .solid-border(1px, @default-border);
+            height: 40px;
+            padding: 0 40px 0 10px;
+            -webkit-appearance: textfield;
+            width: 100%;
+        }
+    }
+
+    .cart {
+        .cart-item {
+            display: -webkit-flex;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+        }
+    }
+
+    .aion-dashboard-whislist {
+        .cart-item {
+            display: -webkit-flex;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            &-wrapper{
+                display: -webkit-flex;
+                -webkit-flex: 1;
+                -webkit-box-flex: 1;
+            }
+            .cart-item-details {
+                display: -webkit-flex;
+                -webkit-flex: 1;
+                -webkit-box-flex: 1;
+            }
+        }
+    }
+
+    .opc .section .step .buttons-set .button > span {
+        display: block;
+        line-height: 26px;
+    }
+}

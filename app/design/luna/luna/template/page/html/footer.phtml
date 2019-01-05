@@ -1,0 +1,126 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+$_helper = Mage::helper('catalog/category');
+
+$_categories = $_helper->getStoreCategories();
+$currentCategory = Mage::registry('current_category');
+?>
+
+<div class="container">
+    <hr class="footer-separator" />
+    <?php if (count($_categories) > 0): ?>
+    <div class="brand--slider" id="brandSlider">
+        <?php
+
+        foreach ($_categories as $_category):
+            $current_category = Mage::getModel('catalog/category')->load($_category->getId());
+            $layer = Mage::getSingleton('catalog/layer');
+            $layer->setCurrentCategory($current_category);
+
+            $_subcategories = $current_category->getCategories(($_category->getId()));
+
+            /**
+             * Category brand slider
+             */
+            if($current_category->getData('is_active') && $current_category->getData('is_featured_brand')) { ?>
+                <div class="item">
+                    <a href="<?php echo $_helper->getCategoryUrl($current_category) ?>" title="<?php echo $current_category->getName() ?>">
+                        <img class="brand-logo" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'/catalog/category/'. $current_category->getData('brand_logo'); ?>"  />
+                    </a>
+                </div>
+            <?php };
+
+            if (count($_subcategories) > 0):
+                foreach($_subcategories as $_subcategory):
+
+                    $current_subcategory = Mage::getModel('catalog/category')->load($_subcategory->getId());
+                    $layer = Mage::getSingleton('catalog/layer');
+                    $layer->setCurrentCategory($current_subcategory);
+
+                    if($current_subcategory->getData('is_active') && $current_subcategory->getData('is_featured_brand')) {
+                        ?>
+
+                        <div class="item">
+                            <a href="<?php echo $_helper->getCategoryUrl($current_subcategory) ?>" title="<?php echo $current_subcategory->getName() ?>">
+                                <img class="brand-logo" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'/catalog/category/'. $current_subcategory->getData('brand_logo'); ?>"  />
+                            </a>
+                        </div>
+
+                        <?php
+                    }
+                endforeach;
+            endif;
+        endforeach;
+        ?>
+    </div>
+
+    <?php else: ?>
+        <div class="row">
+            <div class="alert alert-warning">
+                <p><?php echo $this->__('There are no featured categories'); ?></p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <hr class="footer-separator" />
+</div>
+
+<div class="container">
+    <?php echo $this->getChildHtml('aion_icon_banners'); ?>
+</div>
+
+<?php echo $this->getChildHtml('footer.newsletter'); ?>
+<?php echo $this->getChildHtml('footer-menu'); ?>
+
+<div class="copyright">
+    <div class="container">
+        <a href="#header" title="Nila Shop">
+            <img src="<?php echo $this->getSkinUrl('img/footer-logo.png') ?>">
+        </a>
+    </div>
+</div>
+
+<script>
+    jQuery(document).ready(function() {
+        jQuery("#brandSlider").owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            responsive:{
+                320:{
+                    items:3
+                },
+                768:{
+                    items:6
+                },
+                992:{
+                    items:12
+                }
+            }
+        });
+    });
+</script>

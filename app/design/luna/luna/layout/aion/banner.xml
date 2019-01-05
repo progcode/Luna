@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<block type="aion_banner/banner" name="banner_content_top" template="aion/banner/banner.phtml" before="-" >
+			<action method="setPosition"><name>CONTENT_TOP</name></action>
+			<block type="aion_banner/banner" name="banner_small_banners" as="small_banners" template="aion/banner/small_banners.phtml" />
+			<block type="aion_banner/banner" name="banner_icon_banners" as="icon_banners" template="aion/banner/icon_banners.phtml" />
+		</block>
+		<block type="aion_banner/banner" name="banner_content_bottom" template="aion/banner/banner.phtml" after="-" >
+			<action method="setPosition"><name>CONTENT_BOTTOM</name></action>
+		</block>
+		<block type="aion_banner/banner" name="banner_content_background" template="aion/banner/background.phtml" after="-" >
+			<action method="setPosition"><name>BODY_BACKGROUND</name></action>
+		</block>
+	</default>
+
+	<cms_index_index translate="label">
+		<reference name="before_main">
+			<action method="insert"><block>banner_content_top</block></action>
+		</reference>
+	</cms_index_index>
+
+	<!--<cms_page>-->
+	<!--<reference name="content">-->
+	<!--<action method="insert"><block>banner_content_top</block></action>-->
+	<!--<action method="append"><block>banner_content_bottom</block></action>-->
+	<!--</reference>-->
+	<!--</cms_page>-->
+
+	<!--<catalog_category_default>-->
+	<!--<reference name="content">-->
+	<!--<action method="insert"><block>banner_content_top</block></action>-->
+	<!--<action method="append"><block>banner_content_bottom</block><after>-</after></action>-->
+	<!--</reference>-->
+	<!--</catalog_category_default>-->
+
+	<!--<catalog_category_layered>-->
+	<!--<reference name="content">-->
+	<!--<action method="insert"><block>banner_content_top</block></action>-->
+	<!--<action method="append"><block>banner_content_bottom</block></action>-->
+	<!--</reference>-->
+	<!--</catalog_category_layered>-->
+
+	<!--<customer_account_login>-->
+	<!--<reference name="content">-->
+	<!--<block type="aion_banner/banner" name="banner" template="aion/banner/banner.phtml" before="-" >-->
+	<!--<action method="setBanner"><name>login</name></action>-->
+	<!--</block>-->
+	<!--</reference>-->
+	<!--</customer_account_login>-->
+</layout>
+

@@ -1,0 +1,120 @@
+@import 'base';
+
+.catalog-product-compare-index .main-container {
+  .page-title {
+    border-bottom: 1px solid @g9f;
+    display: table;
+    width: 100%;
+    h1 {
+      float: left;
+      line-height: 28px;
+    }
+    .link-print {
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+  }
+  .button {
+    border: 0;
+    display: table;
+    max-width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    &:hover {
+      .opacity(0.8);
+      text-decoration: none;
+    }
+    &.link-wishlist {
+      .nfont-sbold(@g64, 11, 28);
+      background: @geb;
+    }
+    &.btn-cart {
+      .nfont-sbold(@white, 11, 28);
+      background: @blue;
+      margin-bottom: 10px;
+    }
+    &.btn-remove {
+      .nfont-sbold(@white, 11, 28);
+      background: @blue;
+    }
+    &.link-print {
+      .nfont-sbold(@white, 11, 28);
+      background: @blue;
+      float: right;
+    }
+    i {
+      font-size: 13px;
+      padding-right: 5px;
+    }
+  }
+
+  .compare-table-container {
+    padding-top: 25px;
+    overflow-x: auto;
+    .compare-table {
+      width: 100%;
+      tr {
+        &.first {
+          th {
+            border-top: 1px solid @g9f;
+          }
+          td {
+            border-bottom: 0;
+            padding-bottom: 0;
+            padding-top: 0;
+          }
+        }
+        &.last {
+          th {
+            border-bottom: 1px solid @g9f;
+          }
+        }
+        &.no-border td {
+          border-bottom: 0;
+        }
+      }
+      th {
+        .nfont-normal(@g64, 12, 18);
+        background-color: @geb;
+        border-left: 1px solid @g9f;
+        border-right: 1px solid @g9f;
+        padding: 10px;
+        text-transform: uppercase;
+        vertical-align: top;
+      }
+      td {
+        .nfont-normal(@g64, 12, 18);
+        border-bottom: 1px solid @gea;
+        min-width: 150px;
+        padding: 10px;
+        vertical-align: top;
+      }
+      .product-image {
+        border: 1px solid @gea;
+        display: table;
+        height: 125px;
+      }
+      .product-name {
+        .nfont-light(@g64, 16, 18);
+        display: inline-block;
+        padding: 10px 0;
+      }
+      .ratings {
+        padding-bottom: 5px;
+      }
+      .price-box {
+        padding-top: 3px;
+        p {
+          margin-bottom: 3px;
+        }
+        .price-label {
+          .nfont-sbold(@g64, 14, 14);
+        }
+        .price {
+          .nfont-sbold(@blue, 15, 15);
+        }
+      }
+    }
+  }
+}

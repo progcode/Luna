@@ -1,0 +1,175 @@
+@import 'base';
+
+/**
+  @btn-bc: background-color;
+  @btn-hover-bc: background-color(hover);
+  @btn-border: border-color;
+  @btn-tc button text color
+*/
+.auth-btn(@btn-bc: @blue, @btn-hover-bc: @white, @btn-border :@blue, @btn-tc: @blue) {
+    background-color: @btn-bc;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: @btn-hover-bc;
+      border: 1px solid @btn-border;
+      color: @btn-tc;
+    }
+}
+
+.page-title {
+   h1 {
+       .nfont-light(@dgray, 22,19);
+       text-transform: uppercase;
+   }
+    hr {
+        border-top: 1px solid @g9f;
+    }
+}
+
+.aion-login-form {
+    padding: 5px;
+    .login-nop {
+        padding: 0;
+    }
+    h2 {
+        .nfont-light(@dgray, 22,19);
+        text-transform: uppercase;
+    }
+    hr {
+        border-top: 1px solid @g9f;
+    }
+    .content {
+        color: @dgray;
+    }
+    .form-instructions {
+        margin-bottom: 20px;
+    }
+    .aion-checkbox-label {
+        .nfont-normal(@dgray, 13, 13);
+        background: @gea;
+        font-weight: 600 !important;
+        padding: 10px;
+    }
+    label {
+        color: @dgray;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: 600;
+        em {
+            color: @red;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    }
+    .aion-required {
+        display: inline-block;
+        margin-right: 5px;
+        .required {
+            .nfont-normal(@dgray, 12, 12);
+            font-weight: 600;
+            .red {
+                color: @red;
+            }
+        }
+    }
+    .form-control {
+        .bordered(@top-color:@g9f,@right-color:@g9f,@bottom-color:@g9f,@left-color:@g9f);
+        .border-radius(0);
+    }
+    .aion-submit-registration {
+        margin-right: 0;
+        margin-left: 0;
+        .no-padding {
+            padding: 0;
+        }
+        .aion-checkbox-label {
+            margin-left: 8px;
+        }
+        .aion-required {
+            line-height: 30px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        button, .aion-required {
+            display: inline-block;
+        }
+
+    }
+    .new-users {
+        .buttons-set {
+            float: right;
+        }
+    }
+    .aion-login-actions {
+        float: right;
+    }
+    .button {
+        .nfont-sbold(@white,11,30);
+        .auth-btn(@btn-bc: @blue, @btn-hover-bc: @white, @btn-border :@blue, @btn-tc: @blue);
+    }
+    .btn-grey {
+        .nfont-sbold(@white,11,30);
+        .auth-btn(@btn-bc: @gray, @btn-hover-bc: @white, @btn-border :@gray, @btn-tc: @gray);
+    }
+}
+
+// XS------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Small devices (tablets, 320px and up)
+@media (min-width: 320px) and (max-width: @screen-md-min) {
+    .new-users {
+        .buttons-set {
+            float: none !important;
+            .button {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+    .aion-login-form {
+        .form-group {
+            .checkbox {
+                margin-left: 0;
+                input {
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+    .aion-login-form, .aion-login-actions {
+        float: none !important;
+        .btn-grey,
+        .button {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            width: 100%;
+        }
+        div.checkbox {
+            margin-bottom: -30px;
+            margin-top: -30px;
+            margin-left: 15px;
+        }
+    }
+}
+
+// SM ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Small devices (tablets, 768px and up)
+@media (min-width: @screen-sm-min) {
+}
+
+// MD ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Medium devices (desktops, 992px and up)
+@media (max-width: @screen-md-min) {
+}
+
+// LG ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Large devices (large desktops, 1200px and up)
+@media (max-width: @screen-lg-min) {
+}

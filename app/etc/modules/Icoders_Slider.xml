@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Icoders_Slider>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Icoders_MobileDetect />
+            </depends>
+        </Icoders_Slider>
+    </modules>
+</config>

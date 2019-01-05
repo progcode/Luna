@@ -1,0 +1,2176 @@
+.aion-checkbox,
+.aion-radio {
+  display: none;
+}
+.aion-checkbox + label,
+.aion-radio + label {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 25px;
+  position: relative;
+  margin: 0;
+  min-height: 20px;
+  vertical-align: top !important;
+}
+.aion-checkbox + label span,
+.aion-radio + label span {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #cacece;
+  display: block;
+  left: 0;
+  padding: 7px;
+  position: absolute;
+  vertical-align: middle !important;
+  top: 0;
+}
+.aion-checkbox.input-right-pos + label,
+.aion-radio.input-right-pos + label {
+  padding-right: 25px;
+  padding-left: 0;
+  text-align: right;
+}
+.aion-checkbox.input-right-pos + label span,
+.aion-radio.input-right-pos + label span {
+  right: 0;
+  left: auto;
+}
+.aion-checkbox + label:active span,
+.aion-checkbox:checked + label:active span,
+.aion-radio + label:active span,
+.aion-radio:checked:active + label span {
+  background-color: #63b626;
+}
+.aion-checkbox:checked + label span,
+.aion-radio:checked + label span {
+  background-color: #fff;
+  border: 1px solid #7d7d7d;
+}
+.aion-checkbox:checked + label span:after {
+  bottom: 0;
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  top: -3px;
+  vertical-align: middle !important;
+  content: '\25A0';
+}
+@media screen and (-moz-images-in-menus: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+  *::-ms-backdrop,
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -1px;
+  }
+}
+@-moz-document url-prefix() {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+.aion-radio + label span {
+  border-radius: 8px;
+}
+.aion-radio:checked + label span:after {
+  background: #99a1a7;
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+label {
+  color: #595959;
+  font-family: 'Open Sans';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 8px 0 0 0;
+  text-transform: uppercase;
+}
+.a-center {
+  text-align: center;
+}
+.a-right,
+.align-right {
+  text-align: right;
+}
+.a-left {
+  text-align: left;
+}
+.v-top {
+  vertical-align: top !important;
+}
+.v-middle {
+  vertical-align: middle !important;
+}
+.v-bottom {
+  vertical-align: bottom !important;
+}
+.no-display {
+  display: none !important;
+}
+.nobr,
+.nowrap {
+  white-space: nowrap;
+}
+.hidden {
+  display: none;
+}
+/*custom text-color (just for mixins)*/
+/*custom width and color to a solid border*/
+/*create default buttons*/
+@media screen and (max-width: 580px) {
+  .customer-account .control-container {
+    margin-left: 0 !important;
+  }
+  .customer-address-form .form-list input[type="text"],
+  .customer-account-edit .form-list input[type="text"],
+  .customer-address-form .form-list input[type="password"],
+  .customer-account-edit .form-list input[type="password"],
+  .customer-address-form .form-list input[type="email"],
+  .customer-account-edit .form-list input[type="email"],
+  .customer-address-form .form-list input[type="company"],
+  .customer-account-edit .form-list input[type="company"],
+  .customer-address-form .form-list input[type="tel"],
+  .customer-account-edit .form-list input[type="tel"],
+  .customer-address-form .form-list #country,
+  .customer-account-edit .form-list #country {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #order-info-tabs li {
+    display: block;
+    top: 0px !important;
+    width: 100%;
+  }
+  #order-info-tabs li span {
+    top: 0px !important;
+    bottom: 0px !important;
+  }
+  #order-info-tabs li a {
+    display: block;
+  }
+  .sales-order-view .link-reorder,
+  .sales-order-invoice .link-reorder,
+  .sales-order-creditmemo .link-reorder,
+  .sales-order-view .link-print,
+  .sales-order-invoice .link-print,
+  .sales-order-creditmemo .link-print {
+    margin-bottom: 10px !important;
+    width: 100% !important;
+  }
+  .review-customer-index #my-reviews-table,
+  .sales-order-history #my-reviews-table,
+  .review-customer-index #my-orders-table,
+  .sales-order-history #my-orders-table {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    display: block;
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .review-customer-index #my-reviews-table .rating-box,
+  .sales-order-history #my-reviews-table .rating-box,
+  .review-customer-index #my-orders-table .rating-box,
+  .sales-order-history #my-orders-table .rating-box {
+    margin-top: 3px;
+  }
+  .review-customer-index #my-reviews-table thead,
+  .sales-order-history #my-reviews-table thead,
+  .review-customer-index #my-orders-table thead,
+  .sales-order-history #my-orders-table thead,
+  .review-customer-index #my-reviews-table tbody,
+  .sales-order-history #my-reviews-table tbody,
+  .review-customer-index #my-orders-table tbody,
+  .sales-order-history #my-orders-table tbody,
+  .review-customer-index #my-reviews-table th,
+  .sales-order-history #my-reviews-table th,
+  .review-customer-index #my-orders-table th,
+  .sales-order-history #my-orders-table th,
+  .review-customer-index #my-reviews-table td,
+  .sales-order-history #my-reviews-table td,
+  .review-customer-index #my-orders-table td,
+  .sales-order-history #my-orders-table td,
+  .review-customer-index #my-reviews-table tr,
+  .sales-order-history #my-reviews-table tr,
+  .review-customer-index #my-orders-table tr,
+  .sales-order-history #my-orders-table tr {
+    display: block;
+  }
+  .review-customer-index #my-reviews-table thead tr,
+  .sales-order-history #my-reviews-table thead tr,
+  .review-customer-index #my-orders-table thead tr,
+  .sales-order-history #my-orders-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .review-customer-index #my-reviews-table tr,
+  .sales-order-history #my-reviews-table tr,
+  .review-customer-index #my-orders-table tr,
+  .sales-order-history #my-orders-table tr {
+    border-bottom: 1px solid #eaeaea;
+    margin: 10px 0;
+  }
+  .review-customer-index #my-reviews-table td,
+  .sales-order-history #my-reviews-table td,
+  .review-customer-index #my-orders-table td,
+  .sales-order-history #my-orders-table td {
+    border: none;
+    padding-bottom: 0;
+    position: relative;
+    clear: both;
+  }
+  .review-customer-index #my-reviews-table td.last,
+  .sales-order-history #my-reviews-table td.last,
+  .review-customer-index #my-orders-table td.last,
+  .sales-order-history #my-orders-table td.last {
+    width: auto !important;
+  }
+  .review-customer-index #my-reviews-table .small-label,
+  .sales-order-history #my-reviews-table .small-label,
+  .review-customer-index #my-orders-table .small-label,
+  .sales-order-history #my-orders-table .small-label {
+    color: #646464;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  .review-customer-index #my-reviews-table td:before,
+  .sales-order-history #my-reviews-table td:before,
+  .review-customer-index #my-orders-table td:before,
+  .sales-order-history #my-orders-table td:before {
+    color: #646464;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  .review-customer-index #my-reviews-table .btn-xs,
+  .sales-order-history #my-reviews-table .btn-xs,
+  .review-customer-index #my-orders-table .btn-xs,
+  .sales-order-history #my-orders-table .btn-xs {
+    border-bottom: 1px solid #d7d7d7;
+    padding: 0;
+  }
+  .review-customer-index #my-reviews-table .btn-xs-eye,
+  .sales-order-history #my-reviews-table .btn-xs-eye,
+  .review-customer-index #my-orders-table .btn-xs-eye,
+  .sales-order-history #my-orders-table .btn-xs-eye {
+    background: #9f9f9f;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    width: 100% !important;
+  }
+  .review-customer-index #my-reviews-table .btn-xs-eye i,
+  .sales-order-history #my-reviews-table .btn-xs-eye i,
+  .review-customer-index #my-orders-table .btn-xs-eye i,
+  .sales-order-history #my-orders-table .btn-xs-eye i {
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px 0 0;
+  }
+  .review-customer-index #my-reviews-table .btn-xs-eye span,
+  .sales-order-history #my-reviews-table .btn-xs-eye span,
+  .review-customer-index #my-orders-table .btn-xs-eye span,
+  .sales-order-history #my-orders-table .btn-xs-eye span {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  .review-customer-index #my-reviews-table .btn-xs-eye:hover,
+  .sales-order-history #my-reviews-table .btn-xs-eye:hover,
+  .review-customer-index #my-orders-table .btn-xs-eye:hover,
+  .sales-order-history #my-orders-table .btn-xs-eye:hover {
+    text-decoration: none;
+  }
+  .sales-order-view #my-orders-table,
+  .customer-account #my-orders-table,
+  .my-account #my-orders-table {
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .sales-order-view #my-orders-table > tbody + tbody,
+  .customer-account #my-orders-table > tbody + tbody,
+  .my-account #my-orders-table > tbody + tbody {
+    border-top: 0px solid #ddd;
+  }
+  .sales-order-view #my-orders-table thead,
+  .customer-account #my-orders-table thead,
+  .my-account #my-orders-table thead,
+  .sales-order-view #my-orders-table tbody,
+  .customer-account #my-orders-table tbody,
+  .my-account #my-orders-table tbody,
+  .sales-order-view #my-orders-table th,
+  .customer-account #my-orders-table th,
+  .my-account #my-orders-table th,
+  .sales-order-view #my-orders-table td,
+  .customer-account #my-orders-table td,
+  .my-account #my-orders-table td,
+  .sales-order-view #my-orders-table tr,
+  .customer-account #my-orders-table tr,
+  .my-account #my-orders-table tr {
+    display: block !important;
+  }
+  .sales-order-view #my-orders-table thead tr,
+  .customer-account #my-orders-table thead tr,
+  .my-account #my-orders-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .sales-order-view #my-orders-table tbody td,
+  .customer-account #my-orders-table tbody td,
+  .my-account #my-orders-table tbody td {
+    border: 0px solid #9f9f9f;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0 10px !important;
+    text-align: left;
+  }
+  .sales-order-view #my-orders-table tbody td.price-td,
+  .customer-account #my-orders-table tbody td.price-td,
+  .my-account #my-orders-table tbody td.price-td {
+    color: #646464;
+  }
+  .sales-order-view #my-orders-table tbody td:last-child,
+  .customer-account #my-orders-table tbody td:last-child,
+  .my-account #my-orders-table tbody td:last-child {
+    border-bottom: 1px solid #9f9f9f;
+  }
+  .sales-order-view #my-orders-table tbody td[data-rwd-label]:before,
+  .customer-account #my-orders-table tbody td[data-rwd-label]:before,
+  .my-account #my-orders-table tbody td[data-rwd-label]:before {
+    content: attr(data-rwd-label) ":";
+    font-weight: 500;
+  }
+  .sales-order-view #my-orders-table tbody td.lin-hide,
+  .customer-account #my-orders-table tbody td.lin-hide,
+  .my-account #my-orders-table tbody td.lin-hide {
+    display: none !important;
+  }
+  .sales-order-view #my-orders-table tbody td.a-right,
+  .customer-account #my-orders-table tbody td.a-right,
+  .my-account #my-orders-table tbody td.a-right,
+  .sales-order-view #my-orders-table tbody td.a-center,
+  .customer-account #my-orders-table tbody td.a-center,
+  .my-account #my-orders-table tbody td.a-center {
+    text-align: left;
+  }
+  .sales-order-view #my-orders-table tbody td span,
+  .customer-account #my-orders-table tbody td span,
+  .my-account #my-orders-table tbody td span {
+    font-weight: 700;
+  }
+  .sales-order-view #my-orders-table tr.bundle,
+  .customer-account #my-orders-table tr.bundle,
+  .my-account #my-orders-table tr.bundle {
+    padding: 0;
+  }
+  .sales-order-view #my-orders-table tr.bundle td,
+  .customer-account #my-orders-table tr.bundle td,
+  .my-account #my-orders-table tr.bundle td {
+    border-width: 0;
+    padding-left: 20px !important;
+  }
+  .sales-order-view #my-orders-table tr.bundle.parent td,
+  .customer-account #my-orders-table tr.bundle.parent td,
+  .my-account #my-orders-table tr.bundle.parent td {
+    padding-left: 10px !important;
+  }
+  .sales-order-view #my-orders-table tfoot td span,
+  .customer-account #my-orders-table tfoot td span,
+  .my-account #my-orders-table tfoot td span {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .sales-order-view #my-orders-table tfoot td:first-child,
+  .customer-account #my-orders-table tfoot td:first-child,
+  .my-account #my-orders-table tfoot td:first-child {
+    float: left;
+    text-align: left;
+    width: 60%;
+  }
+  .customer-account .col-main .box-account.box-recent .box-content,
+  .my-account .col-main .box-account.box-recent .box-content {
+    padding: 0;
+  }
+  .customer-account #my-orders-table tbody,
+  .my-account #my-orders-table tbody {
+    border-width: 0;
+  }
+  .customer-account #my-orders-table tbody tr,
+  .my-account #my-orders-table tbody tr {
+    margin-top: 10px;
+  }
+  .customer-account #my-orders-table tbody td[data-rwd-label]:before,
+  .my-account #my-orders-table tbody td[data-rwd-label]:before {
+    margin-right: 5px;
+  }
+  .customer-account #my-orders-table tbody td.last,
+  .my-account #my-orders-table tbody td.last {
+    padding: 5px 10px !important;
+  }
+  .customer-account #my-orders-table tbody td.last a,
+  .my-account #my-orders-table tbody td.last a {
+    float: none;
+    margin: 0 0 10px 0;
+    width: 49%;
+  }
+  .customer-account #my-orders-table tbody td.last a.btn-eye,
+  .my-account #my-orders-table tbody td.last a.btn-eye {
+    float: right;
+  }
+  .customer-account #my-orders-table tbody tr.last td.last,
+  .my-account #my-orders-table tbody tr.last td.last {
+    border-bottom-width: 0;
+  }
+  .customer-account .pager,
+  .my-account .pager {
+    margin-bottom: 20px !important;
+  }
+  .sales-order-history #my-orders-table {
+    border-color: transparent;
+  }
+  .review-customer-index #my-reviews-table {
+    border-color: transparent;
+  }
+}
+.customer-account .sidebar,
+.my-account .sidebar {
+  padding: 0 15px;
+}
+.customer-account .buttons-set .required em,
+.my-account .buttons-set .required em {
+  color: #f23b0a;
+}
+.customer-account .block-account,
+.my-account .block-account {
+  border: 1px solid #9f9f9f;
+  float: left;
+  width: 100%;
+}
+.customer-account .block-account .block-title,
+.my-account .block-account .block-title {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  background: #eaeaea;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+.customer-account .block-account .block-title:before,
+.my-account .block-account .block-title:before {
+  color: #005983;
+  content: "\f0da";
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  margin-right: 10px;
+}
+.customer-account .block-account .block-title.active:before,
+.my-account .block-account .block-title.active:before {
+  content: "\f0d7";
+  font-family: 'FontAwesome';
+  margin-right: 6px;
+}
+.customer-account .block-account a,
+.my-account .block-account a {
+  color: #005983 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 47px !important;
+  background: #eaeaea !important;
+  border-bottom: 3px solid #fff;
+  float: left;
+  height: 47px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.customer-account .block-account a:hover,
+.my-account .block-account a:hover,
+.customer-account .block-account a:active,
+.my-account .block-account a:active {
+  background: #005983;
+  color: #fff;
+  text-decoration: none;
+}
+.customer-account .block-account .current,
+.my-account .block-account .current {
+  color: #fff !important;
+  font-family: 'Open Sans' !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 47px !important;
+  background: #005983;
+  border-bottom: 3px solid #fff;
+  float: left;
+  height: 47px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.customer-account .block-account ul,
+.my-account .block-account ul {
+  margin: 0;
+  padding: 0;
+}
+.customer-account .block-account ul li,
+.my-account .block-account ul li {
+  list-style: none;
+}
+.customer-account .block-account ul li:last-child a,
+.my-account .block-account ul li:last-child a {
+  border-bottom: 0;
+}
+.customer-account .block-account ul li:first-child a,
+.my-account .block-account ul li:first-child a {
+  border-top: 3px solid #fff;
+}
+.customer-account .ratings .rating-box,
+.my-account .ratings .rating-box,
+.customer-account .ratings .rating-box .rating,
+.my-account .ratings .rating-box .rating,
+.customer-account .rating-box .rating-number:after,
+.my-account .rating-box .rating-number:after,
+.customer-account .ratings-table .rating-box,
+.my-account .ratings-table .rating-box,
+.customer-account .ratings-table .rating-box .rating,
+.my-account .ratings-table .rating-box .rating {
+  background-image: url('../../images/icon_sprite.png');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .customer-account .ratings .rating-box,
+  .my-account .ratings .rating-box,
+  .customer-account .ratings .rating-box .rating,
+  .my-account .ratings .rating-box .rating,
+  .customer-account .rating-box .rating-number:after,
+  .my-account .rating-box .rating-number:after,
+  .customer-account .ratings-table .rating-box,
+  .my-account .ratings-table .rating-box,
+  .customer-account .ratings-table .rating-box .rating,
+  .my-account .ratings-table .rating-box .rating {
+    background-image: url('../../images/icon_sprite@2x.png');
+    background-size: 100px 1000px;
+  }
+}
+.customer-account .rating-box,
+.my-account .rating-box {
+  background-position: 0 -615px;
+  background-repeat: repeat-x;
+  display: block;
+  height: 13px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 65px;
+}
+.customer-account .rating-box .rating,
+.my-account .rating-box .rating {
+  background-position: 0 -600px;
+  background-repeat: repeat-x;
+  float: left;
+  height: 13px;
+  text-indent: -9999px;
+}
+.customer-account .col-main .page-title h1,
+.my-account .col-main .page-title h1 {
+  border-bottom: 1px solid #9f9f9f;
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.customer-account .col-main .welcome-msg,
+.my-account .col-main .welcome-msg {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 0;
+}
+.customer-account .col-main .welcome-msg strong,
+.my-account .col-main .welcome-msg strong {
+  font-size: 16px;
+}
+.customer-account .col-main .hello,
+.my-account .col-main .hello {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.customer-account .col-main .box-reviews .box-head a,
+.my-account .col-main .box-reviews .box-head a {
+  color: #005983 !important;
+}
+.customer-account .col-main .box-reviews .table-reviews,
+.my-account .col-main .box-reviews .table-reviews {
+  background: #fff;
+  border: 0;
+  border-collapse: inherit;
+  margin: 0 !important;
+}
+.customer-account .col-main .box-reviews .table-reviews td,
+.my-account .col-main .box-reviews .table-reviews td {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px 0;
+}
+.customer-account .col-main .box-reviews .table-reviews tr:first-child td,
+.my-account .col-main .box-reviews .table-reviews tr:first-child td {
+  border-top: 0;
+}
+.customer-account .col-main .box-reviews .table-reviews h3,
+.my-account .col-main .box-reviews .table-reviews h3 {
+  background: #fff !important;
+  margin: 0;
+  padding: 0;
+}
+.customer-account .col-main .box-reviews .table-reviews a,
+.my-account .col-main .box-reviews .table-reviews a {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+.customer-account .col-main .box-reviews .table-reviews a:hover,
+.my-account .col-main .box-reviews .table-reviews a:hover {
+  color: #256599;
+  text-decoration: none;
+}
+.customer-account .col-main .box-reviews .table-reviews .number,
+.my-account .col-main .box-reviews .table-reviews .number {
+  padding: 0 10px 0 20px;
+}
+.customer-account .col-main .box-reviews .table-reviews .ratings,
+.my-account .col-main .box-reviews .table-reviews .ratings {
+  padding: 5px 20px 0 0;
+}
+.customer-account .col-main .box-account,
+.my-account .col-main .box-account {
+  background: #eaeaea;
+  border: 1px solid #9f9f9f;
+  float: left;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.customer-account .col-main .box-account .box,
+.my-account .col-main .box-account .box {
+  background: #fff;
+  float: left;
+  width: 100%;
+}
+.customer-account .col-main .box-account h2,
+.my-account .col-main .box-account h2 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  border-bottom: 1px solid #9f9f9f;
+  padding: 12px 20px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.customer-account .col-main .box-account h2 i,
+.my-account .col-main .box-account h2 i {
+  font-size: 18px;
+}
+.customer-account .col-main .box-account h3,
+.my-account .col-main .box-account h3 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  background: #eaeaea;
+  padding: 13px 20px;
+  margin: 0;
+}
+.customer-account .col-main .box-account h3 i,
+.my-account .col-main .box-account h3 i {
+  font-size: 18px;
+}
+.customer-account .col-main .box-account .col1,
+.my-account .col-main .box-account .col1 {
+  padding: 0;
+  margin: 0;
+}
+.customer-account .col-main .box-account .col2,
+.my-account .col-main .box-account .col2 {
+  padding: 0;
+  margin: 0;
+}
+.customer-account .col-main .box-account .box-content,
+.my-account .col-main .box-account .box-content {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+  background: #fff;
+  min-height: 110px;
+  padding: 20px;
+}
+.customer-account .col-main .box-account address,
+.my-account .col-main .box-account address {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+}
+.customer-account .messages,
+.my-account .messages {
+  margin-bottom: 0 !important;
+}
+.customer-account .main-container form li,
+.my-account .main-container form li {
+  list-style: none;
+}
+.customer-account .main-container .button,
+.my-account .main-container .button,
+.customer-account .main-container .btn-edit,
+.my-account .main-container .btn-edit,
+.customer-account .main-container .btn-save,
+.my-account .main-container .btn-save,
+.customer-account .main-container .btn-add,
+.my-account .main-container .btn-add,
+.customer-account .main-container .link-print,
+.my-account .main-container .link-print,
+.customer-account .main-container .link-reorder,
+.my-account .main-container .link-reorder,
+.customer-account .main-container .btn-change,
+.my-account .main-container .btn-change {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  background: #256599;
+  border: 0;
+  display: inline-block;
+  float: left;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 190px;
+}
+.customer-account .main-container .button:hover,
+.my-account .main-container .button:hover,
+.customer-account .main-container .btn-edit:hover,
+.my-account .main-container .btn-edit:hover,
+.customer-account .main-container .btn-save:hover,
+.my-account .main-container .btn-save:hover,
+.customer-account .main-container .btn-add:hover,
+.my-account .main-container .btn-add:hover,
+.customer-account .main-container .link-print:hover,
+.my-account .main-container .link-print:hover,
+.customer-account .main-container .link-reorder:hover,
+.my-account .main-container .link-reorder:hover,
+.customer-account .main-container .btn-change:hover,
+.my-account .main-container .btn-change:hover,
+.customer-account .main-container .button:active,
+.my-account .main-container .button:active,
+.customer-account .main-container .btn-edit:active,
+.my-account .main-container .btn-edit:active,
+.customer-account .main-container .btn-save:active,
+.my-account .main-container .btn-save:active,
+.customer-account .main-container .btn-add:active,
+.my-account .main-container .btn-add:active,
+.customer-account .main-container .link-print:active,
+.my-account .main-container .link-print:active,
+.customer-account .main-container .link-reorder:active,
+.my-account .main-container .link-reorder:active,
+.customer-account .main-container .btn-change:active,
+.my-account .main-container .btn-change:active {
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  filter: alpha(opacity=80);
+  color: #fff;
+  text-decoration: none;
+}
+.customer-account .main-container .button span,
+.my-account .main-container .button span,
+.customer-account .main-container .btn-edit span,
+.my-account .main-container .btn-edit span,
+.customer-account .main-container .btn-save span,
+.my-account .main-container .btn-save span,
+.customer-account .main-container .btn-add span,
+.my-account .main-container .btn-add span,
+.customer-account .main-container .link-print span,
+.my-account .main-container .link-print span,
+.customer-account .main-container .link-reorder span,
+.my-account .main-container .link-reorder span,
+.customer-account .main-container .btn-change span,
+.my-account .main-container .btn-change span {
+  padding: 0 5px;
+}
+.customer-account .main-container .button i,
+.my-account .main-container .button i,
+.customer-account .main-container .btn-edit i,
+.my-account .main-container .btn-edit i,
+.customer-account .main-container .btn-save i,
+.my-account .main-container .btn-save i,
+.customer-account .main-container .btn-add i,
+.my-account .main-container .btn-add i,
+.customer-account .main-container .link-print i,
+.my-account .main-container .link-print i,
+.customer-account .main-container .link-reorder i,
+.my-account .main-container .link-reorder i,
+.customer-account .main-container .btn-change i,
+.my-account .main-container .btn-change i {
+  margin: 0 5px 0 0;
+}
+.customer-account .main-container .link-reorder,
+.my-account .main-container .link-reorder {
+  margin: 0 0 0 10px;
+}
+.customer-account .main-container .link-print,
+.my-account .main-container .link-print {
+  background: #7d7d7d;
+  margin: 0;
+}
+.customer-account .main-container .link-back,
+.my-account .main-container .link-back {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  background: #9f9f9f;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 0 12px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.customer-account .main-container .link-back:hover,
+.my-account .main-container .link-back:hover {
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  filter: alpha(opacity=80);
+  color: #fff;
+  text-decoration: none;
+}
+.customer-account .main-container .link-back i,
+.my-account .main-container .link-back i {
+  margin: 0 5px 0 0;
+}
+.customer-address-index .box-account {
+  background: #fff !important;
+  border: 0 !important;
+  margin-top: 20px;
+}
+.customer-address-index .box-head {
+  background: #eaeaea;
+}
+.customer-address-index ol {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+.customer-address-index ol li {
+  list-style: none;
+}
+.customer-address-index .col1,
+.customer-address-index .col2 {
+  border: 1px solid #9f9f9f;
+}
+.customer-address-index .col2 {
+  margin-top: 20px !important;
+}
+.customer-address-index .col2 li {
+  border-bottom: 1px solid #9f9f9f;
+}
+.customer-address-index .col2 li.empty {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px;
+}
+.customer-address-index .col2 li:last-child {
+  border-bottom: 0;
+}
+.customer-address-index .col2 .fa {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.customer-address-index address {
+  background: #fff;
+  padding: 20px;
+}
+.customer-address-form h2,
+.customer-account-edit h2 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  background: #eaeaea;
+  border: 1px solid #9f9f9f;
+  border-bottom: 0;
+  float: left;
+  padding: 12px 20px;
+  margin: 20px 0 0 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+.customer-address-form .form-list,
+.customer-account-edit .form-list {
+  border: 1px solid #9f9f9f;
+  border-top: 0;
+  float: left;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+}
+.customer-address-form .form-list li,
+.customer-account-edit .form-list li {
+  list-style: none;
+}
+.customer-address-form .form-list .field,
+.customer-account-edit .form-list .field {
+  float: left;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+.customer-address-form .form-list label,
+.customer-account-edit .form-list label {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  width: 200px;
+}
+.customer-address-form .form-list label em,
+.customer-account-edit .form-list label em {
+  margin-left: 5px;
+}
+.customer-address-form .form-list input[type="text"],
+.customer-account-edit .form-list input[type="text"],
+.customer-address-form .form-list input[type="password"],
+.customer-account-edit .form-list input[type="password"],
+.customer-address-form .form-list input[type="email"],
+.customer-account-edit .form-list input[type="email"],
+.customer-address-form .form-list input[type="company"],
+.customer-account-edit .form-list input[type="company"],
+.customer-address-form .form-list input[type="tel"],
+.customer-account-edit .form-list input[type="tel"],
+.customer-address-form .form-list #country,
+.customer-account-edit .form-list #country {
+  border: 1px solid #9f9f9f;
+  border-radius: 0;
+  float: left;
+  height: 30px;
+  padding: 0 10px;
+  width: 280px;
+}
+.customer-address-form .form-list .control,
+.customer-account-edit .form-list .control {
+  float: left;
+  width: 100%;
+}
+.customer-address-form .form-list .control .control-container,
+.customer-account-edit .form-list .control .control-container {
+  background: #eaeaea;
+  cursor: pointer;
+  float: left;
+  margin: 20px 0 0 0;
+  max-width: 100%;
+  padding: 10px 20px;
+  width: 280px;
+}
+.customer-address-form .form-list .control label,
+.customer-account-edit .form-list .control label {
+  cursor: pointer;
+  float: left;
+  padding: 3px 0 0 10px;
+  width: 220px;
+}
+.customer-address-form .form-list .control .checkbox,
+.customer-account-edit .form-list .control .checkbox {
+  float: left;
+}
+.customer-address-form .form-list .validation-advice,
+.customer-account-edit .form-list .validation-advice {
+  color: #f23b0a;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  float: left;
+  padding: 1px 0 0 10px;
+}
+.customer-address-form .buttons-set,
+.customer-account-edit .buttons-set {
+  float: right;
+  margin: 10px 0 0 0;
+  text-align: right;
+  width: 100%;
+}
+.customer-address-form .required,
+.customer-account-edit .required {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  display: inline-block;
+  padding: 10px 10px 0 0;
+}
+.customer-address-form .btn-save,
+.customer-account-edit .btn-save {
+  float: right !important;
+}
+.newsletter-manage-index h2 {
+  display: none;
+}
+.newsletter-manage-index .my-account {
+  padding: 0;
+  margin: 0;
+}
+.newsletter-manage-index .my-account .form-list .checkbox {
+  display: inline-block;
+}
+.newsletter-manage-index .my-account .form-list label {
+  padding-left: 8px;
+}
+.newsletter-manage-index .my-account .aion-checkbox-label {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+  background: #eaeaea;
+  font-weight: 600 !important;
+  padding: 10px;
+}
+.newsletter-manage-index .back-link {
+  display: none;
+}
+.newsletter-manage-index .buttons-set {
+  float: left;
+  width: 100%;
+}
+.review-customer-index h1,
+.sales-order-history h1 {
+  border: 0 !important;
+  padding: 0 !important;
+}
+.review-customer-index .count-container,
+.sales-order-history .count-container {
+  background: #eaeaea;
+  border: 1px solid #9f9f9f;
+  display: block;
+  float: left;
+  padding: 10px 15px;
+  text-align: center;
+  width: 100%;
+}
+.review-customer-index .count-container label,
+.sales-order-history .count-container label,
+.review-customer-index .count-container p,
+.sales-order-history .count-container p {
+  margin-bottom: 0;
+  padding: 0;
+}
+.review-customer-index .count-container .sort-by,
+.sales-order-history .count-container .sort-by {
+  float: left;
+}
+.review-customer-index .count-container .view-mode,
+.sales-order-history .count-container .view-mode {
+  float: left;
+}
+.review-customer-index .count-container .sort-by,
+.sales-order-history .count-container .sort-by {
+  margin-right: 20px;
+}
+.review-customer-index .count-container .sort-by select,
+.sales-order-history .count-container .sort-by select {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px;
+}
+.review-customer-index .count-container .count-container,
+.sales-order-history .count-container .count-container,
+.review-customer-index .count-container .amount,
+.sales-order-history .count-container .amount,
+.review-customer-index .count-container .limiter,
+.sales-order-history .count-container .limiter {
+  float: right;
+}
+.review-customer-index .count-container .limiter select,
+.sales-order-history .count-container .limiter select {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px;
+}
+.review-customer-index .count-container .amount,
+.sales-order-history .count-container .amount {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.review-customer-index .pager,
+.sales-order-history .pager {
+  color: #7d7d7d;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  float: left;
+  margin: 20px 0 40px 0;
+  width: 100%;
+}
+.review-customer-index .pager ol,
+.sales-order-history .pager ol {
+  margin: 0;
+  padding: 0;
+}
+.review-customer-index .pager .pages,
+.sales-order-history .pager .pages {
+  position: relative;
+  top: 20px;
+}
+.review-customer-index .pager .pages strong,
+.sales-order-history .pager .pages strong {
+  display: none !important;
+}
+.review-customer-index .pager li,
+.sales-order-history .pager li {
+  padding: 0 10px;
+}
+.review-customer-index .pager li > a,
+.sales-order-history .pager li > a {
+  border: 0;
+  color: #7d7d7d;
+  padding: 0;
+}
+.review-customer-index .pager li > a:hover,
+.sales-order-history .pager li > a:hover {
+  background: 0;
+  color: #256599;
+}
+.review-customer-index .pager i,
+.sales-order-history .pager i {
+  font-size: 16px;
+}
+.review-customer-index .toolbar-bottom,
+.sales-order-history .toolbar-bottom {
+  position: relative;
+  top: 80px;
+}
+.review-customer-index .toolbar-bottom .pages,
+.sales-order-history .toolbar-bottom .pages {
+  position: relative;
+  top: -80px;
+}
+.review-customer-index #my-reviews-table tbody td,
+.sales-order-history #my-reviews-table tbody td {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+.review-customer-index #my-reviews-table h2 a,
+.sales-order-history #my-reviews-table h2 a {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.review-customer-index #my-reviews-table .description,
+.sales-order-history #my-reviews-table .description {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.review-customer-index #my-reviews-table .eye-holder,
+.sales-order-history #my-reviews-table .eye-holder {
+  width: 80px;
+}
+.review-customer-index #my-reviews-table a.btn-eye,
+.sales-order-history #my-reviews-table a.btn-eye {
+  width: 100%;
+  text-align: center;
+}
+.review-customer-index #my-orders-table tbody td,
+.sales-order-history #my-orders-table tbody td {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+.review-customer-index #my-orders-table h2 a,
+.sales-order-history #my-orders-table h2 a {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.review-customer-index #my-orders-table .number,
+.sales-order-history #my-orders-table .number,
+.review-customer-index #my-orders-table .date,
+.sales-order-history #my-orders-table .date,
+.review-customer-index #my-orders-table .ship,
+.sales-order-history #my-orders-table .ship {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.review-customer-index #my-orders-table .status,
+.sales-order-history #my-orders-table .status {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+#my-orders-table .product-name,
+.my-invoice-table .product-name {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+#my-orders-table dl.item-options,
+.my-invoice-table dl.item-options {
+  margin-bottom: 0px;
+}
+#my-orders-table dl.item-options dt,
+.my-invoice-table dl.item-options dt {
+  float: left;
+  margin-right: 5px;
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+#my-orders-table dl.item-options dd,
+.my-invoice-table dl.item-options dd {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
+#my-orders-table td.price-td,
+.my-invoice-table td.price-td {
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.review-customer-view .product-img-box {
+  border: 1px solid #7d7d7d;
+  margin-top: 20px;
+}
+.review-customer-view h2 {
+  color: #646464 !important;
+  font-family: 'Open Sans' !important;
+  font-size: 24px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: 30px !important;
+  padding: 0 0 10px 0;
+  text-transform: none;
+}
+.review-customer-view h3 {
+  display: none;
+}
+.review-customer-view .ratings-table {
+  margin-bottom: 20px;
+}
+.review-customer-view .ratings-table th {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 10px 0 0 !important;
+  text-transform: uppercase;
+}
+.review-customer-view .ratings-table td {
+  padding: 0 10px 0 0 !important;
+}
+.review-customer-view .ratings-table .rating-box {
+  background-position: 0 -615px;
+  background-repeat: repeat-x;
+  display: inline-block;
+  height: 13px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 65px;
+}
+.review-customer-view .ratings-table .rating-box .rating {
+  background-position: 0 -600px;
+  background-repeat: repeat-x;
+  float: left;
+  height: 13px;
+  text-indent: -9999px;
+}
+.review-customer-view .product-review-summery-box {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.review-customer-view .product-review-summery-box p.label {
+  display: none !important;
+}
+.review-customer-view .product-review-summery-box .ratings {
+  display: inline-block;
+  float: none;
+  margin: 10px auto;
+  text-align: center;
+}
+.review-customer-view .ratings-description {
+  color: #7d7d7d;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  float: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.review-customer-view .rating-box {
+  float: left;
+  margin-top: 3px;
+}
+.review-customer-view .rating-links {
+  float: left;
+  margin: 0 0 0 10px !important;
+  width: 150px !important;
+}
+.review-customer-view .rating-links span {
+  display: none !important;
+}
+.review-customer-view .rating-links em {
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+.review-customer-view .rating-links a {
+  color: #7d7d7d !important;
+  font-family: 'Open Sans' !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  float: left;
+}
+.sales-order-history .back-link {
+  display: none;
+}
+.sales-order-history #my-orders-table td.last {
+  width: 150px;
+}
+#order-info-tabs {
+  background: #fff;
+  border-bottom: 1px solid #9f9f9f;
+  display: block;
+  margin: 30px 0 20px 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+#order-info-tabs li {
+  border-top: 1px solid #9f9f9f;
+  border-right: 1px solid #9f9f9f;
+  border-left: 1px solid #9f9f9f;
+  float: left;
+  list-style: none;
+  margin: 0 10px 0 0;
+  position: relative;
+  top: -3px;
+}
+#order-info-tabs li span {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  bottom: -2px;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 25px;
+  position: relative;
+  text-transform: uppercase;
+}
+#order-info-tabs .current {
+  background-color: #9f9f9f;
+  border: 0;
+  color: #fff;
+}
+#order-info-tabs .current span {
+  background-color: #9f9f9f !important;
+  color: #fff;
+  position: relative;
+  top: 4px;
+  z-index: 5;
+}
+#order-info-tabs:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.sales-order-view .order-gift-message,
+.sales-order-invoice .order-gift-message,
+.sales-order-shipment .order-gift-message,
+.sales-order-creditmemo .order-gift-message {
+  border: 1px solid #9f9f9f;
+  padding: 20px 20px 0 20px;
+}
+.sales-order-view .order-gift-message h2,
+.sales-order-invoice .order-gift-message h2,
+.sales-order-shipment .order-gift-message h2,
+.sales-order-creditmemo .order-gift-message h2 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+.sales-order-view .order-gift-message dd,
+.sales-order-invoice .order-gift-message dd,
+.sales-order-shipment .order-gift-message dd,
+.sales-order-creditmemo .order-gift-message dd {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 0 0 0 !important;
+  text-transform: uppercase;
+}
+.sales-order-view .box-account,
+.sales-order-invoice .box-account,
+.sales-order-shipment .box-account,
+.sales-order-creditmemo .box-account {
+  background: 0 !important;
+}
+.sales-order-view .box-head,
+.sales-order-invoice .box-head,
+.sales-order-shipment .box-head,
+.sales-order-creditmemo .box-head {
+  background: #eaeaea;
+}
+.sales-order-view .box-content,
+.sales-order-invoice .box-content,
+.sales-order-shipment .box-content,
+.sales-order-creditmemo .box-content {
+  background: none;
+}
+.sales-order-view address,
+.sales-order-invoice address,
+.sales-order-shipment address,
+.sales-order-creditmemo address {
+  padding: 0 !important;
+}
+.sales-order-view .table-items,
+.sales-order-invoice .table-items,
+.sales-order-shipment .table-items,
+.sales-order-creditmemo .table-items {
+  margin-bottom: 20px;
+}
+.sales-order-view .table-items th,
+.sales-order-invoice .table-items th,
+.sales-order-shipment .table-items th,
+.sales-order-creditmemo .table-items th {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 10px 0 0 !important;
+  text-transform: uppercase;
+}
+.sales-order-view .table-items td,
+.sales-order-invoice .table-items td,
+.sales-order-shipment .table-items td,
+.sales-order-creditmemo .table-items td {
+  padding: 0 10px 0 0 !important;
+}
+.sales-order-view .order-date,
+.sales-order-invoice .order-date,
+.sales-order-shipment .order-date,
+.sales-order-creditmemo .order-date {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.sales-order-view .table-caption,
+.sales-order-invoice .table-caption,
+.sales-order-shipment .table-caption,
+.sales-order-creditmemo .table-caption {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.sales-order-view .order-links,
+.sales-order-invoice .order-links,
+.sales-order-shipment .order-links,
+.sales-order-creditmemo .order-links {
+  display: none;
+}
+.sales-order-view .sub-title,
+.sales-order-invoice .sub-title,
+.sales-order-shipment .sub-title,
+.sales-order-creditmemo .sub-title {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  float: left;
+  margin: 20px 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+.sales-order-view .table-caption-sub,
+.sales-order-invoice .table-caption-sub,
+.sales-order-shipment .table-caption-sub,
+.sales-order-creditmemo .table-caption-sub {
+  margin-top: 0 !important;
+}
+.sales-order-view .my-invoice-table,
+.sales-order-invoice .my-invoice-table,
+.sales-order-shipment .my-invoice-table,
+.sales-order-creditmemo .my-invoice-table {
+  border: 1px solid #9f9f9f;
+}
+.sales-order-view .my-invoice-table tbody,
+.sales-order-invoice .my-invoice-table tbody,
+.sales-order-shipment .my-invoice-table tbody,
+.sales-order-creditmemo .my-invoice-table tbody {
+  border: 0;
+}
+.sales-order-view .my-invoice-table tbody td,
+.sales-order-invoice .my-invoice-table tbody td,
+.sales-order-shipment .my-invoice-table tbody td,
+.sales-order-creditmemo .my-invoice-table tbody td {
+  padding: 12px 0 !important;
+}
+.sales-order-view .my-invoice-table tbody td:first-child,
+.sales-order-invoice .my-invoice-table tbody td:first-child,
+.sales-order-shipment .my-invoice-table tbody td:first-child,
+.sales-order-creditmemo .my-invoice-table tbody td:first-child {
+  padding-left: 10px !important;
+}
+.sales-order-view .my-invoice-table tbody td:last-child,
+.sales-order-invoice .my-invoice-table tbody td:last-child,
+.sales-order-shipment .my-invoice-table tbody td:last-child,
+.sales-order-creditmemo .my-invoice-table tbody td:last-child {
+  padding-right: 10px !important;
+}
+.sales-order-view .back-link a,
+.sales-order-invoice .back-link a,
+.sales-order-shipment .back-link a,
+.sales-order-creditmemo .back-link a {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  background: #9f9f9f;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 0 12px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.sales-order-view .back-link a:hover,
+.sales-order-invoice .back-link a:hover,
+.sales-order-shipment .back-link a:hover,
+.sales-order-creditmemo .back-link a:hover {
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  filter: alpha(opacity=80);
+  color: #fff;
+  text-decoration: none;
+}
+.sales-order-view .back-link a i,
+.sales-order-invoice .back-link a i,
+.sales-order-shipment .back-link a i,
+.sales-order-creditmemo .back-link a i {
+  margin: 0 5px 0 0;
+}
+#my-reviews-table,
+#my-orders-table,
+.my-invoice-table {
+  width: 100%;
+}
+#my-reviews-table th,
+#my-orders-table th,
+.my-invoice-table th {
+  border-bottom: 1px solid #9f9f9f;
+  padding: 12px 10px !important;
+}
+#my-reviews-table thead th,
+#my-orders-table thead th,
+.my-invoice-table thead th,
+#my-reviews-table thead td,
+#my-orders-table thead td,
+.my-invoice-table thead td {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 12px 10px !important;
+  text-transform: uppercase;
+}
+#my-reviews-table tbody tr,
+#my-orders-table tbody tr,
+.my-invoice-table tbody tr {
+  border: 0 !important;
+}
+#my-reviews-table tbody td,
+#my-orders-table tbody td,
+.my-invoice-table tbody td {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 12px 10px;
+}
+#my-reviews-table tbody td h2,
+#my-orders-table tbody td h2,
+.my-invoice-table tbody td h2,
+#my-reviews-table tbody td h3,
+#my-orders-table tbody td h3,
+.my-invoice-table tbody td h3,
+#my-reviews-table tbody td h4,
+#my-orders-table tbody td h4,
+.my-invoice-table tbody td h4 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+#my-reviews-table tbody td a,
+#my-orders-table tbody td a,
+.my-invoice-table tbody td a {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+#my-reviews-table tbody td a:hover,
+#my-orders-table tbody td a:hover,
+.my-invoice-table tbody td a:hover,
+#my-reviews-table tbody td a:active,
+#my-orders-table tbody td a:active,
+.my-invoice-table tbody td a:active {
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  filter: alpha(opacity=80);
+}
+#my-reviews-table tbody td:last-child,
+#my-orders-table tbody td:last-child,
+.my-invoice-table tbody td:last-child {
+  padding-right: 0;
+}
+#my-reviews-table tfoot td,
+#my-orders-table tfoot td,
+.my-invoice-table tfoot td {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  background: #eaeaea;
+  border: 0;
+  padding: 0 10px 12px 10px !important;
+}
+#my-reviews-table tfoot tr:first-child td,
+#my-orders-table tfoot tr:first-child td,
+.my-invoice-table tfoot tr:first-child td {
+  padding-top: 12px !important;
+}
+#my-reviews-table tfoot .grand_total td,
+#my-orders-table tfoot .grand_total td,
+.my-invoice-table tfoot .grand_total td {
+  border-top: 1px solid #fff;
+  padding: 12px 10px !important;
+}
+#my-reviews-table tfoot .grand_total .price,
+#my-orders-table tfoot .grand_total .price,
+.my-invoice-table tfoot .grand_total .price {
+  color: #256599;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+#my-reviews-table .description,
+#my-orders-table .description,
+.my-invoice-table .description {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+}
+#my-reviews-table .btn-reorder,
+#my-orders-table .btn-reorder,
+.my-invoice-table .btn-reorder,
+#my-reviews-table .btn-eye,
+#my-orders-table .btn-eye,
+.my-invoice-table .btn-eye {
+  background: #9f9f9f;
+  display: inline-block;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  width: 48%;
+}
+#my-reviews-table .btn-reorder i,
+#my-orders-table .btn-reorder i,
+.my-invoice-table .btn-reorder i,
+#my-reviews-table .btn-eye i,
+#my-orders-table .btn-eye i,
+.my-invoice-table .btn-eye i {
+  color: #fff;
+  font-size: 16px;
+}
+#my-reviews-table .btn-reorder span,
+#my-orders-table .btn-reorder span,
+.my-invoice-table .btn-reorder span,
+#my-reviews-table .btn-eye span,
+#my-orders-table .btn-eye span,
+.my-invoice-table .btn-eye span {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+#my-reviews-table .btn-reorder:hover,
+#my-orders-table .btn-reorder:hover,
+.my-invoice-table .btn-reorder:hover,
+#my-reviews-table .btn-eye:hover,
+#my-orders-table .btn-eye:hover,
+.my-invoice-table .btn-eye:hover {
+  text-decoration: none;
+}
+#my-reviews-table .btn-reorder,
+#my-orders-table .btn-reorder,
+.my-invoice-table .btn-reorder {
+  margin: 0 0 0 2%;
+}
+#my-reviews-table .btn-eye,
+#my-orders-table .btn-eye,
+.my-invoice-table .btn-eye {
+  margin: 0 2% 0 0;
+}
+@media (min-width: 768px) {
+  .customer-account .breadcrumbs,
+  .my-account .breadcrumbs {
+    padding: 0 15px 10px 15px;
+  }
+  .customer-account .block-account,
+  .my-account .block-account {
+    border: 0;
+  }
+  .customer-account .block-account .block-title,
+  .my-account .block-account .block-title {
+    display: none;
+  }
+  .customer-account .block-account ul,
+  .my-account .block-account ul {
+    margin: 0;
+    padding: 0;
+  }
+  .customer-account .block-account li,
+  .my-account .block-account li {
+    list-style: none;
+  }
+  .customer-account .block-account li:first-child a,
+  .my-account .block-account li:first-child a {
+    border-top: 0;
+  }
+  .customer-account .block-account a,
+  .my-account .block-account a {
+    color: #005983 !important;
+    font-family: 'Open Sans' !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 18px !important;
+    background: #eaeaea !important;
+    border-bottom: 3px solid #fff;
+    float: left;
+    height: auto;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .customer-account .block-account a:hover,
+  .my-account .block-account a:hover,
+  .customer-account .block-account a:active,
+  .my-account .block-account a:active {
+    background: #005983;
+    color: #fff;
+    text-decoration: none;
+  }
+  .customer-account .block-account .current,
+  .my-account .block-account .current {
+    color: #fff !important;
+    font-family: 'Open Sans' !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 18px !important;
+    background: #005983;
+    border-bottom: 3px solid #fff;
+    float: left;
+    height: auto;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .customer-account .col-main .page-title h1,
+  .my-account .col-main .page-title h1 {
+    margin-top: 0;
+  }
+  .customer-account .col-main .box-account h3,
+  .my-account .col-main .box-account h3 {
+    font-size: 13px;
+  }
+  .customer-account .col1 .box,
+  .my-account .col1 .box {
+    border-right: 1px solid #9f9f9f;
+  }
+  .customer-account .col1,
+  .my-account .col1,
+  .customer-account .col2,
+  .my-account .col2 {
+    margin-top: 0 !important;
+  }
+  .customer-account .col1,
+  .my-account .col1 {
+    border-right: 0;
+  }
+  .customer-account .col2,
+  .my-account .col2 {
+    border-left: 0;
+  }
+  .customer-account .col2 li,
+  .my-account .col2 li {
+    border-bottom: 1px solid #9f9f9f;
+  }
+  .customer-account .col2 li:last-child,
+  .my-account .col2 li:last-child {
+    border-bottom: 0;
+  }
+  .customer-account .col2 i,
+  .my-account .col2 i {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .customer-account .control-container,
+  .my-account .control-container {
+    margin: 20px 0 0 !important;
+  }
+  .customer-account #my-orders-table thead th,
+  .my-account #my-orders-table thead th,
+  .customer-account #my-orders-table thead td,
+  .my-account #my-orders-table thead td,
+  .customer-account #my-orders-table tbody td,
+  .my-account #my-orders-table tbody td {
+    padding: 10px 2px !important;
+    font-size: 12px !important;
+  }
+  .customer-account #my-orders-table .number,
+  .my-account #my-orders-table .number,
+  .customer-account #my-orders-table .date,
+  .my-account #my-orders-table .date,
+  .customer-account #my-orders-table .ship,
+  .my-account #my-orders-table .ship,
+  .customer-account #my-orders-table .status,
+  .my-account #my-orders-table .status {
+    font-size: 12px !important;
+  }
+  .customer-account #my-orders-table .btn-reorder span,
+  .my-account #my-orders-table .btn-reorder span,
+  .customer-account #my-orders-table .btn-eye span,
+  .my-account #my-orders-table .btn-eye span {
+    display: none;
+  }
+  .sales-order-view #my-orders-table {
+    border: 1px solid #9f9f9f;
+  }
+  .sales-order-view #my-orders-table tbody tr td,
+  .sales-order-view #my-orders-table thead tr th {
+    border-top: none;
+  }
+  .sales-order-view #my-orders-table tbody tr td:first-child,
+  .sales-order-view #my-orders-table thead tr th:first-child,
+  .sales-order-view #my-orders-table tbody tr td:last-child,
+  .sales-order-view #my-orders-table thead tr th:last-child {
+    padding: 10px 20px !important;
+  }
+  .sales-order-view #my-orders-table tfoot tr td {
+    border-top: none;
+  }
+  .sales-order-view #my-orders-table tfoot tr td:last-child {
+    padding: 10px 20px !important;
+  }
+  .sales-order-view #my-orders-table tbody {
+    border-top: none;
+  }
+  .sales-order-view #my-orders-table thead tr,
+  .sales-order-view #my-orders-table tbody tr.border {
+    border-bottom: 1px solid #9f9f9f !important;
+  }
+  .sales-order-view #my-orders-table tr.bundle {
+    display: table-row;
+  }
+  .sales-order-view #my-orders-table tr.bundle .option-label {
+    text-align: left;
+  }
+  .sales-order-view #my-orders-table tr.bundle.label td:first-child,
+  .sales-order-view #my-orders-table tr.bundle.child td:first-child {
+    font-weight: normal;
+  }
+  .sales-order-view #my-orders-table tr.bundle:not(.parent) td {
+    border-width: 0;
+  }
+  .sales-order-view #my-orders-table tr.bundle:not(.parent) td:first-child {
+    padding-left: 30px !important;
+  }
+  .sales-order-view .table-items td {
+    padding: 10px !important;
+  }
+}
+@media (min-width: 992px) {
+  .customer-account .block-account a {
+    color: #005983 !important;
+    font-family: 'Open Sans' !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 47px !important;
+    padding: 0 10px;
+  }
+  .customer-account .block-account .current {
+    color: #fff !important;
+    font-family: 'Open Sans' !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 47px !important;
+    padding: 0 10px;
+  }
+  .customer-account .col-main .box-account h3 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .customer-account .block-account a {
+    color: #005983 !important;
+    font-family: 'Open Sans' !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 47px !important;
+    padding: 0 20px !important;
+  }
+  .customer-account .block-account .current {
+    color: #fff !important;
+    font-family: 'Open Sans' !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 47px !important;
+    padding: 0 20px !important;
+  }
+}

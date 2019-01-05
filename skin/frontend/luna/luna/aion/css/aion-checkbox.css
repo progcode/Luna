@@ -1,0 +1,214 @@
+.aion-checkbox,
+.aion-radio {
+  display: none;
+}
+.aion-checkbox + label,
+.aion-radio + label {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 25px;
+  position: relative;
+  margin: 0;
+  min-height: 20px;
+  vertical-align: top !important;
+}
+.aion-checkbox + label span,
+.aion-radio + label span {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #cacece;
+  display: block;
+  left: 0;
+  padding: 7px;
+  position: absolute;
+  vertical-align: middle !important;
+  top: 0;
+}
+.aion-checkbox.input-right-pos + label,
+.aion-radio.input-right-pos + label {
+  padding-right: 25px;
+  padding-left: 0;
+  text-align: right;
+}
+.aion-checkbox.input-right-pos + label span,
+.aion-radio.input-right-pos + label span {
+  right: 0;
+  left: auto;
+}
+.aion-checkbox + label:active span,
+.aion-checkbox:checked + label:active span,
+.aion-radio + label:active span,
+.aion-radio:checked:active + label span {
+  background-color: #63b626;
+}
+.aion-checkbox:checked + label span,
+.aion-radio:checked + label span {
+  background-color: #ffffff;
+  border: 1px solid #7d7d7d;
+}
+.aion-checkbox:checked + label span:after {
+  bottom: 0;
+  color: #0070ce;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  top: -3px;
+  vertical-align: middle !important;
+  content: '\25A0';
+}
+@media screen and (-moz-images-in-menus: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+  *::-ms-backdrop,
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -1px;
+  }
+}
+@-moz-document url-prefix() {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+.aion-radio + label span {
+  border-radius: 8px;
+}
+.aion-radio:checked + label span:after {
+  background: #99a1a7;
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+label {
+  color: #595959;
+  font-family: 'Open Sans';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 8px 0 0 0;
+  text-transform: uppercase;
+}
+.a-center {
+  text-align: center;
+}
+.a-right,
+.align-right {
+  text-align: right;
+}
+.a-left {
+  text-align: left;
+}
+.v-top {
+  vertical-align: top !important;
+}
+.v-middle {
+  vertical-align: middle !important;
+}
+.v-bottom {
+  vertical-align: bottom !important;
+}
+.no-display {
+  display: none !important;
+}
+.nobr,
+.nowrap {
+  white-space: nowrap;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 992px) {
+  .no-padding {
+    padding: 0;
+  }
+  .no-padding-right {
+    padding-right: 0;
+  }
+}
+/*custom text-color (just for mixins)*/
+/*custom width and color to a solid border*/
+/*create default buttons*/
+.aion-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.aion-checkbox:checked + .aion-checkbox-label:before {
+  background: #000000;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+.aion-radio {
+  opacity: 0;
+  position: absolute;
+}
+.aion-radio:checked + .aion-radio-label:before {
+  background: #cccccc;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+.aion-checkbox,
+.aion-checkbox-label,
+.aion-radio,
+.aion-radio-label {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+}
+.aion-checkbox-label {
+  position: relative;
+}
+.aion-radio-label {
+  position: relative;
+}
+.aion-checkbox + .aion-checkbox-label:before {
+  background: #ffffff;
+  border: 1px solid #646464;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-right: 10px;
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}
+.aion-radio + .aion-radio-label:before {
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #646464;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin-right: 10px;
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}

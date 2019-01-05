@@ -1,0 +1,46 @@
+<?php
+/**
+ * Aion_Rbanner_Block_Banner
+ *
+ * @category  Aion
+ * @package   Aion_Rbanner
+ * @author    Kovacs Daniel Akos <daniel.kovacs@aionhill.com>
+ * @copyright 2017 AionNext Kft. (http://aionhill.com)
+ * @license   Aion License https://aionhill.com/licence
+ * @link      https://www.aionhill.com
+ */
+
+/** @var Aion_Rbanner_Block_Banner $this */
+/** @var Aion_Rbanner_Model_Banner $banner */
+
+$mobileHelper = Mage::helper('aion_mobiledetect/data');
+$banner       = $this->getBanner();
+
+if ($banner->getId()) :
+    $slides = $banner->getSlides(); ?>
+    <div class="aion-responsive-banner">
+        <div class="container">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 no-padding">
+                <div class="owl-carousel owl-theme" id="aionResponsiveBanner">
+                    <?php
+                    foreach ($slides as $slide):
+                        echo $this->getChild('banner_slide')->setSlide($slide)->toHtml();
+                    endforeach;
+                    ?>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 no-padding">
+                <?php echo $this->getChildHtml('small_banners'); ?>
+            </div>
+
+        </div>
+    </div>
+
+<?php endif; ?>
+
+<div class="clearfix"></div>
+
+<div class="container">
+    <?php echo $this->getChildHtml('icon_banners'); ?>
+</div>

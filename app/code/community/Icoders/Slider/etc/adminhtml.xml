@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <cms>
+            <children>
+                <icoders_slider translate="title" module="icoders_slider">
+                    <title>Responsive Sliders</title>
+                    <sort_order>50</sort_order>
+                    <children>
+                        <icoders_slider_banners translate="title" module="icoders_slider">
+                            <title>Banners</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/banner/index</action>
+                        </icoders_slider_banners>
+                        <icoders_slider_slide translate="title" module="icoders_slider">
+                            <title>Slides</title>
+                            <sort_order>20</sort_order>
+                            <action>adminhtml/slide/index</action>
+                        </icoders_slider_slide>
+                    </children>
+                </icoders_slider>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <icoders_slider translate="title" module="icoders_slider">
+                                <title>Responsive Sliders</title>
+                                <sort_order>65</sort_order>
+                                <save translate="title">
+                                    <title>Save Banner</title>
+                                    <sort_order>0</sort_order>
+                                </save>
+                                <delete translate="title">
+                                    <title>Delete Banner</title>
+                                    <sort_order>10</sort_order>
+                                </delete>
+                            </icoders_slider>
+                        </children>
+                    </cms>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <icoders_slider translate="title" module="icoders_slider">
+                                        <title>Banner Management</title>
+                                    </icoders_slider>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

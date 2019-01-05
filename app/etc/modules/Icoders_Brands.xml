@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Icoders_Brands>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Icoders_Brands>
+    </modules>
+</config>

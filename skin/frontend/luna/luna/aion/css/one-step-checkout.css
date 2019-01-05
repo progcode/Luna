@@ -1,0 +1,420 @@
+.aion-checkbox,
+.aion-radio {
+  display: none;
+}
+.aion-checkbox + label,
+.aion-radio + label {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 25px;
+  position: relative;
+  margin: 0;
+  min-height: 20px;
+  vertical-align: top !important;
+}
+.aion-checkbox + label span,
+.aion-radio + label span {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #cacece;
+  display: block;
+  left: 0;
+  padding: 7px;
+  position: absolute;
+  vertical-align: middle !important;
+  top: 0;
+}
+.aion-checkbox.input-right-pos + label,
+.aion-radio.input-right-pos + label {
+  padding-right: 25px;
+  padding-left: 0;
+  text-align: right;
+}
+.aion-checkbox.input-right-pos + label span,
+.aion-radio.input-right-pos + label span {
+  right: 0;
+  left: auto;
+}
+.aion-checkbox + label:active span,
+.aion-checkbox:checked + label:active span,
+.aion-radio + label:active span,
+.aion-radio:checked:active + label span {
+  background-color: #63b626;
+}
+.aion-checkbox:checked + label span,
+.aion-radio:checked + label span {
+  background-color: #ffffff;
+  border: 1px solid #7d7d7d;
+}
+.aion-checkbox:checked + label span:after {
+  bottom: 0;
+  color: #0070ce;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  top: -3px;
+  vertical-align: middle !important;
+  content: '\25A0';
+}
+@media screen and (-moz-images-in-menus: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+  *::-ms-backdrop,
+  .aion-checkbox:checked + label span:after {
+    top: -3px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    top: -1px;
+  }
+}
+@-moz-document url-prefix() {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .aion-checkbox:checked + label span:after {
+    line-height: 16px;
+  }
+}
+.aion-radio + label span {
+  border-radius: 8px;
+}
+.aion-radio:checked + label span:after {
+  background: #99a1a7;
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+label {
+  color: #595959;
+  font-family: 'Open Sans';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 8px 0 0 0;
+  text-transform: uppercase;
+}
+.a-center {
+  text-align: center;
+}
+.a-right,
+.align-right {
+  text-align: right;
+}
+.a-left {
+  text-align: left;
+}
+.v-top {
+  vertical-align: top !important;
+}
+.v-middle {
+  vertical-align: middle !important;
+}
+.v-bottom {
+  vertical-align: bottom !important;
+}
+.no-display {
+  display: none !important;
+}
+.nobr,
+.nowrap {
+  white-space: nowrap;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 992px) {
+  .no-padding {
+    padding: 0;
+  }
+  .no-padding-right {
+    padding-right: 0;
+  }
+}
+/*custom text-color (just for mixins)*/
+/*custom width and color to a solid border*/
+/*create default buttons*/
+.onestepcheckout-index-index main ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.onestepcheckout-index-index main li {
+  list-style-type: none;
+}
+.onestepcheckout-index-index main h1 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  border-bottom: 1px solid #646464;
+  margin-top: 0;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.onestepcheckout-index-index main label {
+  color: #646464;
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 0;
+  text-transform: none;
+}
+.onestepcheckout-index-index main dl {
+  margin-bottom: 0;
+}
+.onestepcheckout-index-index main span.required {
+  color: #f23b0a;
+}
+.onestepcheckout-index-index main .loading-ajax {
+  padding: 10px 0;
+  text-align: center;
+}
+.onestepcheckout-index-index main .loading-ajax i {
+  font-size: 20px;
+}
+.onestepcheckout-index-index main .onestepcheckout-custom-options {
+  font-size: 11px;
+}
+.onestepcheckout-index-index main .onestepcheckout-box {
+  border: 1px solid #646464;
+  margin-bottom: 15px;
+}
+.onestepcheckout-index-index main .onestepcheckout-box .onestepcheckout-box-title {
+  background-color: #eaeaea;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 45px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.onestepcheckout-index-index main .onestepcheckout-box .onestepcheckout-box-content {
+  padding: 15px 15px 0;
+}
+.onestepcheckout-index-index main .onestepcheckout-place-order-loading {
+  display: block;
+  padding: 10px 0;
+}
+.onestepcheckout-index-index main .onestepcheckout-button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: solid 0 #0070ce;
+  color: #ffffff !important;
+  background-color: #0070ce;
+  font-size: 13px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  text-transform: uppercase;
+}
+.onestepcheckout-index-index main .onestepcheckout-button:hover {
+  opacity: 0.8;
+}
+.onestepcheckout-index-index main .input-box {
+  margin-bottom: 15px;
+}
+.onestepcheckout-index-index main .input-box .input-text,
+.onestepcheckout-index-index main .input-box select {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  border: 1px solid #646464;
+  height: 30px;
+  padding-left: 10px;
+  width: 100%;
+}
+.onestepcheckout-index-index main .input-box select::-ms-expand {
+  display: none;
+}
+.onestepcheckout-index-index main .input-box select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("../../images/arrow.png") no-repeat 100% center rgba(0, 0, 0, 0);
+  cursor: pointer;
+  padding: 0 25px 0 6px;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+.onestepcheckout-index-index main .input-address .input-text {
+  margin-bottom: -1px;
+}
+.onestepcheckout-index-index main .checkbox-field {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  background-color: #eaeaea;
+  border-radius: 0;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+}
+.onestepcheckout-index-index main .checkbox-field label {
+  padding: 0;
+}
+.onestepcheckout-index-index main .checkbox-field label span {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  padding-bottom: 0;
+  padding-top: 0;
+  position: static;
+}
+.onestepcheckout-index-index main .checkbox-field label span:after {
+  display: none;
+}
+.onestepcheckout-index-index main .checkbox-field label:before {
+  border-radius: 0;
+  float: left;
+  margin-top: 1px;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary {
+  width: 100%;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary th,
+.onestepcheckout-index-index main table.onestepcheckout-summary td {
+  color: #646464;
+  padding: 10px;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary th.name,
+.onestepcheckout-index-index main table.onestepcheckout-summary td.name {
+  text-align: left;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary th.qty,
+.onestepcheckout-index-index main table.onestepcheckout-summary td.qty {
+  text-align: center;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary th.total,
+.onestepcheckout-index-index main table.onestepcheckout-summary td.total {
+  text-align: right;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary th {
+  border-bottom: 1px solid #646464;
+  color: #646464;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary td {
+  border-bottom: 1px solid #646464;
+}
+.onestepcheckout-index-index main table.onestepcheckout-summary td .price {
+  color: #0070ce;
+  font-weight: 700;
+}
+.onestepcheckout-index-index main table.onestepcheckout-totals {
+  background-color: #eaeaea;
+  width: 100%;
+}
+.onestepcheckout-index-index main table.onestepcheckout-totals th,
+.onestepcheckout-index-index main table.onestepcheckout-totals td {
+  color: #646464;
+  padding: 7px 10px;
+}
+.onestepcheckout-index-index main table.onestepcheckout-totals th.title,
+.onestepcheckout-index-index main table.onestepcheckout-totals td.title {
+  text-align: left;
+}
+.onestepcheckout-index-index main table.onestepcheckout-totals th.value,
+.onestepcheckout-index-index main table.onestepcheckout-totals td.value {
+  text-align: right;
+}
+.onestepcheckout-index-index main table.onestepcheckout-totals td .price {
+  font-weight: 700;
+}
+.onestepcheckout-index-index main table.onestepcheckout-totals tr.grand-total .price {
+  color: #0070ce;
+  font-size: 18px;
+}
+.onestepcheckout-popup-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #646464;
+  padding: 20px;
+}
+.onestepcheckout-popup-wrapper h1 {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  border-bottom: 1px solid #646464;
+  margin-top: 0;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+.onestepcheckout-popup-wrapper table {
+  width: 100%;
+}
+.onestepcheckout-popup-wrapper .input-text {
+  color: #646464;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  border: 1px solid #646464;
+  height: 30px;
+  padding-left: 10px;
+  width: 100%;
+}
+.onestepcheckout-popup-wrapper .popup-actions {
+  padding-top: 15px;
+}
+.onestepcheckout-popup-wrapper .onestepcheckout-error {
+  color: #f23b0a;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+.onestepcheckout-popup-wrapper .popup-button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: solid 0 transparent;
+  color: #ffffff !important;
+  background-color: #0070ce;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.onestepcheckout-popup-wrapper .popup-button:hover {
+  opacity: 0.8;
+}
+.onestepcheckout-popup-wrapper .popup-forgotten {
+  padding-left: 10px;
+}

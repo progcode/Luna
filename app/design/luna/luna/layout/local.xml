@@ -1,0 +1,271 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+            <remove name="left.permanent.callout"/>
+            <remove name="right.permanent.callout"/>
+            <remove name="paypal.partner.left.logo"/>
+            <remove name="paypal.partner.right.logo"/>
+            <remove name="store_switcher"/>
+            <remove name="footer_links"/>
+            <remove name="right.poll"/>
+            <remove name="right.reports.product.compared"/>
+            <remove name="sale.reorder.sidebar"/>
+            <remove name="currency"/>
+            <!--remove name="catalog.compare.sidebar"/-->
+            <remove name="cms_footer_links"/>
+            <remove name="cms_footer_links_sm"/>
+            <remove name="footer_links2"/>
+            <remove name="right.reports.product.viewed"/>
+            <remove name="left.reports.product.viewed"/>
+        </reference>
+
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>vendor/bootstrap/js/bootstrap.min.js</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>vendor/bootstrap/css/bootstrap.min.css</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>vendor/font-awesome/css/font-awesome.min.css</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>aion/css/nila.css</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>aion/aion-fonticon/style.css</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>aion/js/home.js</name>
+                <params/>
+            </action>
+            <!--<action method="addItem">-->
+                <!--<type>skin_js</type>-->
+                <!--<name>vendor/owl.carousel/js/owl.carousel.min.js</name>-->
+                <!--<params/>-->
+            <!--</action>-->
+            <!--<action method="addItem">-->
+                <!--<type>skin_css</type>-->
+                <!--<name>vendor/owl.carousel/css/owl.carousel.css</name>-->
+                <!--<params/>-->
+            <!--</action>-->
+            <!--<action method="addItem">-->
+                <!--<type>skin_css</type>-->
+                <!--<name>vendor/owl.carousel/css/owl.theme.css</name>-->
+                <!--<params/>-->
+            <!--</action>-->
+            <!--<action method="addItem">-->
+                <!--<type>skin_css</type>-->
+                <!--<name>vendor/owl.carousel/css/owl.transitions.css</name>-->
+                <!--<params/>-->
+            <!--</action>-->
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/widgets.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/print.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/madisonisland.css</name>
+            </action>
+            <block type="core/text" name="google.font.roboto">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,800italic,700italic,600italic,400italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>]]></text>
+                </action>
+            </block>
+        </reference>
+
+        <reference name="footer">
+            <block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml">
+                <action method="setTemplate"><template helper="aion_edm/data/getNewsletterTemplate" /></action>
+            </block>
+            <block type="page/html" name="footer-menu" template="page/html/footer-menu.phtml"/>
+        </reference>
+
+    </default>
+
+    <cms_index_index>
+        <reference name="content">
+            <block type="cms/block" name="aion_promotion_banners" after="-">
+                <action method="setBlockId">
+                    <block_id>Nila-homepage-small-banners</block_id>
+                </action>
+            </block>
+        </reference>
+    </cms_index_index>
+
+    <catalog_category_default translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </catalog_category_default>
+
+    <catalog_category_layered translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </catalog_category_layered>
+
+    <catalog_product_view>
+        <block reference="header">
+            <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
+        </block>
+    </catalog_product_view>
+
+    <catalogsearch_result_index translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </catalogsearch_result_index>
+
+    <checkout_cart_index>
+        <reference name="content">
+            <remove name="checkout.cart.shipping" />
+        </reference>
+    </checkout_cart_index>
+
+    <checkout_onepage_index translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right-checkout.phtml</template></action>
+        </reference>
+    </checkout_onepage_index>
+
+    <review_product_list translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    </review_product_list>
+
+    <customer_account translate="label">
+        <reference name="left">
+            <reference name="customer_account_navigation">
+            </reference>
+        </reference>
+    </customer_account>
+
+    <customer_account translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Home</crumbName><crumbInfo><label>Home</label><title>Home</title><link>/home</link></crumbInfo></action>
+            <action method="addCrumb"><crumbName>My Account</crumbName><crumbInfo><label>My Account</label><title>My Account</title><link>/customer/account/</link></crumbInfo></action>
+        </reference>
+    </customer_account>
+
+    <!-- ACCOUNT SECTIONS -->
+    <!--Add Dashboard crumb on My Dashboard page-->
+    <customer_account_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Dashboard</crumbName><crumbInfo><label>Dashboard</label><title>Dashboard</title></crumbInfo></action>
+        </reference>
+    </customer_account_index>
+
+    <!--Add Account Information crumb on Account Information page-->
+    <customer_account_edit translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Account Information</crumbName><crumbInfo><label>Account Information</label><title>Account Information</title></crumbInfo></action>
+        </reference>
+    </customer_account_edit>
+
+    <!-- ADDRESS BOOK -->
+    <customer_address_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Address Book</crumbName><crumbInfo><label>Address Book</label><title>Address Book</title></crumbInfo></action>
+        </reference>
+    </customer_address_index>
+
+    <customer_address_form translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Address Book</crumbName><crumbInfo><label>Address Book</label><title>Address Book</title><link>/customer/address/</link></crumbInfo></action>
+            <action method="addCrumb"><crumbName>Add/Edit Address</crumbName><crumbInfo><label>Add/Edit Address</label><title>Add/Edit Address</title></crumbInfo></action>
+        </reference>
+    </customer_address_form>
+
+    <!-- MY ORDERS -->
+    <sales_order_history translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>My Orders</crumbName><crumbInfo><label>My Orders</label><title>My Orders</title></crumbInfo></action>
+        </reference>
+    </sales_order_history>
+
+    <sales_order_view translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>My Orders</crumbName><crumbInfo><label>My Orders</label><title>My Orders</title><link>/sales/order/history/</link></crumbInfo></action>
+            <action method="addCrumb"><crumbName>Order View</crumbName><crumbInfo><label>Order View</label><title>Order View</title></crumbInfo></action>
+        </reference>
+        <reference name="order_totals">
+            <action method="setLabelProperties"><value>colspan="3" class="a-right"</value></action>
+        </reference>
+    </sales_order_view>
+    <sales_order_print translate="label">
+        <reference name="order_totals">
+            <action method="setLabelProperties"><value>colspan="3" class="a-right"</value></action>
+        </reference>
+    </sales_order_print>
+
+<!-- BILING AGREEMENT -->
+    <sales_billing_agreement_index>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Billing Agreements</crumbName><crumbInfo><label>Billing Agreements</label><title>Billing Agreements</title></crumbInfo></action>
+        </reference>
+    </sales_billing_agreement_index>
+
+    <sales_recurring_profile_index>
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Recurring Profiles</crumbName><crumbInfo><label>Recurring Profiles</label><title>Recurring Profiles</title></crumbInfo></action>
+        </reference>
+    </sales_recurring_profile_index>
+
+    <!-- PRODUCT REVIEW -->
+    <review_customer_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>My Product Reviews</crumbName><crumbInfo><label>My Product Reviews</label><title>My Product Reviews</title></crumbInfo></action>
+        </reference>
+    </review_customer_index>
+
+    <!-- MY TAGS -->
+    <tag_customer_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>My Tags</crumbName><crumbInfo><label>My Tags</label><title>My Tags</title></crumbInfo></action>
+        </reference>
+    </tag_customer_index>
+
+    <wishlist_index_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>My Wishlist</crumbName><crumbInfo><label>My Wishlist</label><title>My Wishlist</title></crumbInfo></action>
+        </reference>
+    </wishlist_index_index>
+
+    <downloadable_customer_products translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Downloadable Customer Products</crumbName><crumbInfo><label>Downloadable Customer Products</label><title>Downloadable Customer Products</title></crumbInfo></action>
+        </reference>
+    </downloadable_customer_products>
+
+    <newsletter_manage_index translate="label">
+        <reference name="breadcrumbs">
+            <action method="addCrumb"><crumbName>Newsletter Manage</crumbName><crumbInfo><label>Newsletter Manage</label><title>Newsletter Manage</title></crumbInfo></action>
+        </reference>
+    </newsletter_manage_index>
+
+</layout>

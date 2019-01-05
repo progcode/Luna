@@ -1,0 +1,367 @@
+@import "base";
+@import "aionbanner";
+
+.aion-aion-banner {
+  .carousel {
+    max-width: 100%;
+  }
+  .carousel-indicators {
+    li {
+      .border-radius(0);
+      background-color: @white;
+      border: 0;
+      margin: 0;
+      height: 15px;
+      width: 15px;
+      &.active {
+        background-color: @black;
+      }
+    }
+  }
+  .carousel-control-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .carousel-control {
+      background-color: transparent;
+      opacity: 1;
+      width: 60px;
+      z-index: 11;
+      &.left {
+        background-color: transparent;
+        background-image: none;
+      }
+      &.right {
+        background-color: transparent;
+        background-image: none;
+      }
+      .icon-nav {
+        display: inline-block;
+        left: 0;
+        margin-top: -30px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        z-index: 5;
+      }
+    }
+  }
+  .caption-background {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: 0 20%;
+    background-size: auto;
+    width: 100%;
+    height: 450px;
+    .carousel-caption {
+      bottom: 130px;
+      right: 10%;
+      left: 10%;
+      @media(max-width: @screen-sm-min) {
+        left: inherit;
+        right: inherit;
+      }
+
+      text-align: left;
+
+      .caption-title {
+        background: @white;
+        padding: 15px;
+        h2 {
+          .nfont-light(@blue, 2.917em, 2.917em);
+          letter-spacing: 2px;
+          margin: 0;
+          text-transform: uppercase;
+          text-shadow: none;
+        }
+      }
+      .caption-text {
+        background: @black;
+        display: inline-block;
+        padding: 8px;
+        p {
+          .nfont-normal(@white, 1.000em, 1.200em);
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.aion-small-banners {
+  padding-top: 0;
+  .small-banner {
+    background-size: cover;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    a {
+      .nfont-light(@blue, 22, 34);
+      background-color: @white;
+      display: inline-block;
+      float: right;
+      margin-top: 40px;
+      padding: 0 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    p {
+      .nfont-normal(@white, 16, 22);
+      background-color: @black;
+      display: inline-block;
+      float: right;
+      padding: 0 10px;
+    }
+    &.banner {
+      &-yellow {
+        background-color: @mustard;
+      }
+      &-green {
+        background-color: @cgreen;
+      }
+      &-purple {
+        background-color: @lpurple;
+      }
+      &-first  { background-image: url('../../img/banner-1.jpg') };
+      &-second { background-image: url('../../img/banner-2.jpg') };
+      &-third  { background-image: url('../../img/banner-3.jpg') };
+    }
+  }
+}
+
+.aion-icon-banners {
+  margin-top: 30px;
+}
+
+.aion-promotional-banners {
+  padding-top: 20px;
+  .small-banner {
+    background-size: cover;
+    height: 165px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    a {
+      .nfont-light(@blue, 22, 34);
+      background-color: @white;
+      display: inline-block;
+      margin-top: 40px;
+      padding: 0 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    p {
+      background-color: @black;
+      display: inline-block;
+      .nfont-normal(@white, 16, 22);
+      padding: 0 10px;
+    }
+    &.banner {
+      &-yellow {
+        background-color: @mustard;
+      }
+      &-green {
+        background-color: @cgreen;
+      }
+      &-purple {
+        background-color: @lpurple;
+      }
+      &-first  { background-image: url('../../img/banner-1.jpg') };
+      &-second { background-image: url('../../img/banner-2.jpg') };
+      &-third  { background-image: url('../../img/banner-3.jpg') };
+    }
+  }
+}
+
+.aion-icon-banners {
+  .icon-banner{
+    margin-bottom: 15px;
+
+    &-icon {
+      background-color: @blue;
+      border-radius: 1em;
+      color: @white;
+      float: left;
+      font-size: 3.5em;
+      height: 1.25em;
+      text-align: center;
+      width: 1.25em;
+
+      i{
+        color: @white;
+        font-size: 1.25em;
+      }
+    }
+    &-text{
+      a {
+        .nfont-normal(@blue, 22, 34);
+        display: inline-block;
+        padding: 0 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      div {
+        .nfont-normal(@black, 14, 14);
+        display: table-cell;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.aion-home-grid {
+  .widget-title {
+    hr {
+      border: 0;
+      border-top: 2px solid #eee;
+      margin-bottom: 0;
+    }
+    h2 {
+      .nfont-light(@blue, 24, 24);
+      text-transform: uppercase;
+    }
+  }
+  .widget-products {
+    margin-left: 0;
+    margin-right: -15px;
+    .products-grid {
+      padding-top: 20px;
+      .product-info {
+        .product-name a {
+          .nfont-normal(@black, 15, 16);
+        }
+        .price {
+          display: inline-block;
+          margin-bottom: 10px;
+          .nfont-bold(@blue, 15, 16);
+        }
+        .actions {
+          button {
+            .nfont-sbold(@white, 11, 30);
+            background-color: @blue;
+            border: 1px solid transparent;
+            display: inline-block;
+            padding: 0 15px;
+            text-transform: uppercase;
+
+            &:hover {
+              background-color: @white;
+              border: 1px solid @blue;
+              color: @blue;
+            }
+
+          }
+        }
+        .add-to-links {
+          list-style-type: none;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+//// SM ------------------------------------------------------------------------------------------------------------------------------------------------------------
+//// Small devices (tablets, 768px and down)
+//@media (max-width: @screen-sm-min) {
+//  .aion-aion-banner {
+//    padding-bottom: 15px;
+//    .carousel-control {
+//      &.right {
+//        background-color: transparent;
+//        background-image: none;
+//      }
+//    }
+//  }
+//}
+
+// LG ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Large devices (large desktops, 1200px and up)
+@media (max-width: @screen-lg-min) {
+  .aion-aion-banner {
+    .carousel-caption {
+      h2 {
+        font-size: 45px;
+        line-height: 55px;
+      }
+    }
+  }
+}
+
+// MD ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Medium devices (desktops, 992px and up)
+@media (max-width: @screen-md-min) {
+  .aion-aion-banner {
+    padding-bottom: 15px;
+    .carousel-control-container {
+      position: static;
+    }
+    .carousel-caption {
+      .container {
+        padding: 0;
+        width: auto;
+      }
+      h2 {
+        font-size: 40px;
+        line-height: 45px;
+        padding: 0 80px;
+      }
+      p {
+        padding: 0 100px;
+      }
+    }
+  }
+
+  .aion-small-banners {
+    div {
+      padding: 0;
+    }
+  }
+}
+
+// SM ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Small devices (tablets, 768px and up)
+@media (max-width: @screen-sm-min) {
+  .aion-aion-banner {
+    .carousel-caption {
+      h2 {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 0 60px;
+      }
+      p {
+        padding: 0 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+  .aion-small-banners {
+    .small-banner {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .aion-aion-banner {
+    .carousel-caption {
+      padding: 10px 0;
+      h2 {
+        font-size: 15px;
+        line-height: 15px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 12px;
+      }
+    }
+  }
+}

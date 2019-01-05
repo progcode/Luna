@@ -1,0 +1,154 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Shopping cart template
+ *
+ * @var $this Mage_Checkout_Block_Cart
+ */
+?>
+<?php $_priceDisplay = ($this->helper('tax')->displayCartBothPrices()) ? 'display-both-prices' : 'display-single-price'; ?>
+<div class="cart <?php echo $_priceDisplay; ?>">
+    <?php echo $this->getMessagesBlock()->toHtml() ?>
+    <?php echo $this->getChildHtml('form_before') ?>
+    <h2 class="page-title h2 col-md-9"><?php echo $this->__('Shopping Cart') ?></h2>
+    <?php if(!$this->hasError()): ?>
+        <ul class="checkout-types col-md-3">
+            <?php foreach ($this->getMethods('top_methods') as $method): ?>
+                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                    <li><?php echo $methodHtml; ?></li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+    <form action="<?php echo $this->getFormActionUrl() ?>" method="post">
+        <?php echo $this->getBlockHtml('formkey'); ?>
+        <div id="shopping-cart-table" class="cart-form col-md-9">
+
+        <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
+            <div class="cart-form-header hidden-xs hidden-sm">
+                <div class="col-md-4">
+                    <span class="nobr"><?php echo $this->__('Product') ?></span>
+                </div>
+                <div class="a-center cart-price-head col-md-2" colspan="<?php echo $mergedCells; ?>">
+                        <span class="nobr"><?php echo $this->__('Price') ?></span>
+                </div>
+                <div class="a-center col-md-2">
+                    <?php echo $this->__('Qty') ?>
+                </div>
+
+                <div class="a-center cart-total-head col-md-2">
+                    <?php echo $this->__('Subtotal') ?>
+                </div>
+                <div class="clearfix"></div>
+                <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
+                <div>
+                    <div class="a-center cart-price-head"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></div>
+                    <div class="a-center cart-price-head"><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></div>
+                    <div class="a-center cart-total-head"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></div>
+                    <div class="a-center cart-total-head"><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></div>
+                </div>
+                <?php endif; ?>
+            </div>
+            <div class="cart-items">
+            <?php foreach($this->getItems() as $_item): ?>
+                <?php echo $this->getItemHtml($_item) ?>
+            <?php endforeach ?>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="cart-footer-actions row">
+                    <!-- Make this button the first responder rather than empty cart -->
+                <div class="hidden">
+                    <button type="submit" style="visibility:hidden;" data-cart-item-update name="update_cart_action" value="update_qty" title="<?php echo $this->quoteEscape($this->__('Update Shopping Cart')); ?>" class="button2 btn-update"><span><span><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
+                </div>
+                <div class="hidden">
+                    <button type="submit" name="update_cart_action" data-cart-item-update value="update_qty" title="<?php echo $this->quoteEscape($this->__('Update Shopping Cart')); ?>" class="button2 btn-update"><span><?php echo $this->__('Update Shopping Cart'); ?></span></button>
+                </div>
+
+                <?php if($this->getContinueShoppingUrl()): ?>
+                <div class="col-xs-6 col-md-3">
+                    <button class="btn-back" type="button" title="<?php echo $this->quoteEscape($this->__('Continue Shopping')) ?>" class="button2 btn-continue" onclick="setLocation('<?php echo Mage::helper('core')->quoteEscape($this->getContinueShoppingUrl()) ?>')"><i class="fa fa-arrow-left"></i><span><?php echo $this->quoteEscape($this->__('Continue Shopping')) ?></span></button>
+                </div>
+                <?php endif; ?>
+
+                <div class="col-xs-6 col-md-3 col-md-offset-6">
+                    <button class="btn-empty-cart" type="submit" name="update_cart_action" data-cart-empty value="empty_cart" title="<?php echo $this->quoteEscape($this->__('Empty Cart')); ?>" class="button2 btn-empty" id="empty_cart_button"><i class="fa fa-times-circle"></i><span><?php echo $this->quoteEscape($this->__('Empty Cart')); ?></span></button>
+                </div>
+
+                    <!--[if lt IE 8]>
+                    <input type="hidden" id="update_cart_action_container" data-cart-item-update />
+                    <script type="text/javascript">
+                        //<![CDATA[
+                            Event.observe(window, 'load', function()
+                            {
+                                // Internet Explorer (lt 8) does not support value attribute in button elements
+                                $emptyCartButton = $('empty_cart_button');
+                                $cartActionContainer = $('update_cart_action_container');
+                                if ($emptyCartButton && $cartActionContainer) {
+                                    Event.observe($emptyCartButton, 'click', function()
+                                    {
+                                        $emptyCartButton.setAttribute('name', 'update_cart_action_temp');
+                                        $cartActionContainer.setAttribute('name', 'update_cart_action');
+                                        $cartActionContainer.setValue('empty_cart');
+                                    });
+                                }
+
+                            });
+                        //]]>
+                    </script>
+                    <![endif]-->
+            </div>
+        </div>
+        <script type="text/javascript">decorateTable('shopping-cart-table')</script>
+    </form>
+
+    <?php echo $this->getChildHtml('shopping.cart.table.after'); ?>
+    <div class="cart-forms col-md-3">
+        <?php /* Extensions placeholder */ ?>
+        <?php echo $this->getChildHtml('checkout_cart_widget') ?>
+        <?php echo $this->getChildHtml('coupon') ?>
+        <?php echo $this->getChildHtml('checkout.cart.extra') ?>
+        <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
+    </div>
+    <div class="cart-totals-wrapper col-md-3">
+        <div class="cart-totals">
+            <?php echo $this->getChildHtml('totals'); ?>
+            <?php if(!$this->hasError()): ?>
+            <ul class="checkout-types bottom">
+            <?php foreach ($this->getMethods('methods') as $method): ?>
+                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                <li class="method-<?php echo preg_replace("/[^_a-zA-Z0-9-]/", '-', $method); ?>"><?php echo $methodHtml; ?></li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+        </div>
+    </div>
+    <?php echo $this->getChildHtml('crosssell') ?>
+</div>

@@ -1,0 +1,93 @@
+<?php
+/**
+ * Aion_Banner template for Nila
+ *
+ * @category  Aion
+ * @package   Aion_Banner
+ * @author    Kovacs Daniel Akos <kovacs.daniel@aion.hu>
+ * @copyright 2016 AionNext Kft. (http://www.aion.hu)
+ * @license   http://aion.hu/license Aion License
+ * @link      http://www.aion.hu
+ */
+
+$helper = Mage::helper('aion_mobiledetect/data');
+$banner = $this->getBanner();
+
+if ($banner->getId()): ?>
+    <?php $images = $banner->getImages(); ?>
+    <?php $links = $banner->getLinks() ?>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 no-padding-right">
+            <div class="aion-aion-banner">
+                <div class="aion-banner-container">
+
+                    <div id="banner-<?php echo $banner->getId() ?>" class="carousel slide" data-ride="carousel" style="width: 100%;">
+
+                        <?php if (count($images) > 1): ?>
+                            <ol class="carousel-indicators">
+                                <?php for ($i = 0; $i < count($images); $i++) : ?>
+                                    <li data-target="#banner-<?php echo $banner->getId() ?>" data-slide-to="<?php echo $i ?>" class="<?php echo ($i==0) ? 'active' : '' ?>"></li>
+                                <?php endfor; ?>
+                            </ol>
+                        <?php endif; ?>
+
+                        <div class="carousel-inner">
+                            <?php $num = 0;
+                            foreach ($images as $image): ?>
+                                <div class="<?php if ($num == 0): ?>active<?php endif; ?> item">
+                                    <a <?php if (!empty($image->getLink())): ?> href="<?php echo $image->getLink() ?>"<?php else: ?> href="#" <?php endif; ?>>
+                                        <div class="caption-background" style="background-image: url('<?php echo $image->getImageUrl() ?>'); no-repeat center center fixed">
+                                            <div class="carousel-caption">
+                                                <div class="caption-title">
+                                                    <h2><?php echo $image->getLabel() ?></h2>
+                                                </div>
+
+                                                <div class="caption-text">
+                                                    <p><?php echo $image->getHtml() ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php $num++;
+                            endforeach; ?>
+                        </div>
+
+                        <?php if (count($images) > 1): ?>
+                            <div class="carousel-control-container">
+                                <a class="carousel-control left" href="#banner-<?php echo $banner->getId() ?>" data-slide="prev">
+                                    <i class="icon-nav fa fa-angle-left fa-3x"></i>
+                                </a>
+                                <a class="carousel-control right" href="#banner-<?php echo $banner->getId() ?>" data-slide="next">
+                                    <i class="icon-nav fa fa-angle-right fa-3x"></i>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 no-padding">
+            <?php echo $this->getChildHtml('small_banners'); ?>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="container">
+    <?php echo $this->getChildHtml('icon_banners'); ?>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery("#banner-<?php echo $banner->getId() ?>").carousel(<?php echo $banner->getAdvancedSettings() ?>);
+    })
+</script>
+
+<?php endif; ?>
+

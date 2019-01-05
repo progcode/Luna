@@ -1,0 +1,239 @@
+@import 'base';
+
+.onestepcheckout-index-index main {
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  h1 {
+    .nfont-light(@g64, 24, 30);
+    border-bottom: 1px solid @g9f;
+    margin-top: 0;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+  label {
+    color: @g64;
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 0;
+    text-transform: none;
+  }
+  dl {
+    margin-bottom: 0;
+  }
+  span.required {
+    color: @red;
+  }
+
+  .loading-ajax {
+    padding: 10px 0;
+    text-align: center;
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .onestepcheckout-custom-options {
+    font-size: 11px;
+  }
+
+  .onestepcheckout-box {
+    border: 1px solid @g9f;
+    margin-bottom: 15px;
+
+    .onestepcheckout-box-title {
+      background-color: @gea;
+      color: @dgray;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 45px;
+      padding: 0 15px;
+      text-transform: uppercase;
+    }
+    .onestepcheckout-box-content {
+      padding: 15px 15px 0;
+    }
+  }
+
+  .onestepcheckout-place-order-loading {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .onestepcheckout-button {
+    .btn-default(@blue, @white, @blue);
+    font-size: 13px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .input-box {
+    margin-bottom: 15px;
+    .input-text,
+    select {
+      .nfont-sbold(@g64, 13, 15);
+      border: 1px solid @g9f;
+      height: 30px;
+      padding-left: 10px;
+      width: 100%;
+    }
+    select::-ms-expand {
+      .hidden;
+    }
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: url("../../images/arrow.png") no-repeat 100% center rgba(0, 0, 0, 0);
+      cursor: pointer;
+      padding: 0 25px 0 6px;
+      text-indent: 0.01px;
+      text-overflow: "";
+    }
+  }
+
+  .input-address .input-text {
+    margin-bottom: -1px;
+  }
+
+  .checkbox-field {
+    .box-shadow(none);
+    .nfont-sbold(@g64, 13, 15);
+    background-color: @gea;
+    border-radius: 0;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    label {
+      padding: 0;
+      span {
+        background-color: transparent;
+        border: 0;
+        display: inline;
+        padding-bottom: 0;
+        padding-top: 0;
+        position: static;
+        &:after {
+          display: none;
+        }
+      }
+      &:before {
+        border-radius: 0;
+        float: left;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  table.onestepcheckout-summary {
+    width: 100%;
+    th,
+    td {
+      color: @g64;
+      padding: 10px;
+      &.name {
+        text-align: left;
+      }
+      &.qty {
+        text-align: center;
+      }
+      &.total {
+        text-align: right;
+      }
+    }
+    th {
+      border-bottom: 1px solid @g9f;
+      color: @g9f;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    td {
+      border-bottom: 1px solid @g9f;
+      .price {
+        color: @blue;
+        font-weight: 700;
+      }
+    }
+  }
+
+  table.onestepcheckout-totals {
+    background-color: @gea;
+    width: 100%;
+    th,
+    td {
+      color: @g64;
+      padding: 7px 10px;
+      &.title {
+        text-align: left;
+      }
+      &.value {
+        text-align: right;
+      }
+    }
+    td {
+      .price {
+        font-weight: 700;
+      }
+    }
+    tr.grand-total .price {
+      color: @blue;
+      font-size: 18px;
+    }
+  }
+}
+
+.onestepcheckout-popup-wrapper {
+  background-color: @white;
+  border: 1px solid @g9f;
+  padding: 20px;
+
+  h1 {
+    .nfont-light(@g64, 24, 30);
+    border-bottom: 1px solid @g9f;
+    margin-top: 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  table {
+    width: 100%;
+  }
+  .input-text {
+    .nfont-sbold(@g64, 13, 15);
+    border: 1px solid @g9f;
+    height: 30px;
+    padding-left: 10px;
+    width: 100%;
+  }
+  .popup-actions {
+    padding-top: 15px;
+  }
+  .onestepcheckout-error {
+    color: @red;
+    font-size: 11px;
+    padding-bottom: 5px;
+  }
+  .popup-button {
+    .btn-default(transparent, @white, @blue);
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .popup-forgotten {
+    padding-left: 10px;
+  }
+}

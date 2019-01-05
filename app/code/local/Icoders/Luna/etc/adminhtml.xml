@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Aion
+ * @package   Aion_Nila
+ * @author    Sági Attila <sagi.attila@aionhill.hu>
+ * @copyright 2016 AionNext Kft. (http://www.aionhill.hu)
+ * @license   http://aionhill.hu/license Aion License
+ * @link      http://www.aionhill.hu
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <nila translate="title" module="aion_nila">
+                                        <title>Nila Management</title>
+                                    </nila>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

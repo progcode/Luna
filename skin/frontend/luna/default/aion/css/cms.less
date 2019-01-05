@@ -1,0 +1,161 @@
+@import "base";
+
+/**
+  @btn-bc: background-color;
+  @btn-hover-bc: background-color(hover);
+  @btn-border: border-color;
+  @btn-tc button text color
+*/
+.cms-btn(@btn-bc: @blue, @btn-hover-bc: @white, @btn-border :@blue, @btn-tc: @blue) {
+    background-color: @btn-bc;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: @btn-hover-bc;
+        border: 1px solid @btn-border;
+        color: @btn-tc;
+    }
+}
+
+.aion-cms-cms {
+    .page-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        h1 {
+            border-bottom: 1px solid @g9f;
+            .nfont-light(@g64, 24, 30);
+            margin-top: 0;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+    }
+
+    .form-control {
+        .bordered(@top-color:@g9f,@right-color:@g9f,@bottom-color:@g9f,@left-color:@g9f);
+        .border-radius(0);
+    }
+
+    .button {
+        .nfont-sbold(@white,11,30);
+        .cms-btn(@btn-bc: @blue, @btn-hover-bc: @white, @btn-border :@blue, @btn-tc: @blue);
+    }
+
+    .aion-cms-menu {
+        margin-top: -5px;
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            .menu-item a {
+                .nfont-sbold(@dblue, 12, 37);
+                background-color: @gea;
+                border-bottom: 3px solid @white;
+                float: left;
+                height: 47px;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                width: 100%;
+
+                &:hover,
+                &:active {
+                    background: @dblue;
+                    color: @white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .std {
+        .nfont-normal(@g64, 15, 21);
+
+        /** Fonts, titles */
+        h2 {
+            .nfont-light(@g64, 20, 26);
+        }
+
+        h3 {
+            .nfont-light(@g64, 18, 24);
+        }
+
+        h4 {
+            .nfont-light(@g64, 16, 22);
+        }
+
+        /** Demo content - bootstrap/table.less */
+        .table, table {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        border-top: 0;
+                    }
+                }
+            }
+
+            thead, tbody {
+                border-top: 1px solid @g9f;
+                > tr {
+                    > th, > td {
+                        .nfont-normal(@g64, 15, 21);
+                        border-bottom: 1px solid @g9f;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-lg-min) {
+    .page-title {
+        margin-top: 0 !important;
+    }
+
+    .aion-cms-cms {
+        .aion-cms-menu {
+            .menu {
+                .menu-item a {
+                    .nfont-sbold(@dblue, 12, 37);
+                    padding: 0 10px;
+                }
+
+                .current {
+                    .nfont-sbold(@white, 12, 37);
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+// LG ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Large devices (large desktops, 1200px and up)
+@media (min-width: @screen-lg-min) {
+    .page-title {
+        margin-top: 0 !important;
+    }
+
+    .aion-cms-cms {
+        .aion-cms-menu {
+            .menu {
+                .menu-item a {
+                    .nfont-sbold(@dblue, 14, 47);
+                    padding: 0 20px !important;
+                }
+
+                .current {
+                    .nfont-sbold(@white, 14, 47);
+                    padding: 0 20px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'aion-icon';
+  src:  url('fonts/aion-icon.eot?8rajcp');
+  src:  url('fonts/aion-icon.eot?8rajcp#iefix') format('embedded-opentype'),
+    url('fonts/aion-icon.ttf?8rajcp') format('truetype'),
+    url('fonts/aion-icon.woff?8rajcp') format('woff'),
+    url('fonts/aion-icon.svg?8rajcp#aion-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i.aion-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'aion-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.aion-icon-arrow-tocart:before {
+  content: "\e900";
+}
+.aion-icon-close-cart:before {
+  content: "\e901";
+}
+.aion-icon-delete:before {
+  content: "\e902";
+}
+.aion-icon-edit:before {
+  content: "\e903";
+}
+.aion-icon-info:before {
+  content: "\e904";
+}
+.aion-icon-reload:before {
+  content: "\e905";
+}
+.aion-icon-badge-freedelivery:before {
+  content: "\e906";
+}
+.aion-icon-badge-hotline:before {
+  content: "\e907";
+}
+.aion-icon-badge-moneyback:before {
+  content: "\e908";
+}
+.aion-icon-icons-contact-form:before {
+  content: "\e909";
+}
+.aion-icon-icons-contact-mail:before {
+  content: "\e90a";
+}
+.aion-icon-icons-contact-map:before {
+  content: "\e90b";
+}
+.aion-icon-icons-contact-tel:before {
+  content: "\e90c";
+}
+.aion-icon-icons-search:before {
+  content: "\e90d";
+}
+.aion-icon-icons-social-facebook:before {
+  content: "\e90e";
+}
+.aion-icon-icons-social-gplus:before {
+  content: "\e90f";
+}
+.aion-icon-icons-social-pinterest:before {
+  content: "\e910";
+}
+.aion-icon-icons-social-twitter:before {
+  content: "\e911";
+}
+.aion-icon-icons-user-cart:before {
+  content: "\e912";
+}
+.aion-icon-icons-user-profile:before {
+  content: "\e913";
+}

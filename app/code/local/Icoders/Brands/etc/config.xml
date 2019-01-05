@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aion_NilaBrands>
+            <version>0.1.2</version>
+        </Aion_NilaBrands>
+    </modules>
+
+    <global>
+        <models>
+            <aion_nilabrands>
+                <class>Aion_NilaBrands_Model</class>
+                <resourceModel>aion_nilabrands_resource</resourceModel>
+            </aion_nilabrands>
+            <aion_nilabrands_resource>
+                <class>Aion_NilaBrands_Model_Resource_Setup</class>
+            </aion_nilabrands_resource>
+        </models>
+        <resources>
+            <aion_nilabrands_setup>
+                <setup>
+                    <module>Aion_NilaBrands</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </aion_nilabrands_setup>
+        </resources>
+    </global>
+</config>

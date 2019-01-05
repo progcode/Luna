@@ -1,0 +1,313 @@
+@import "base";
+@import "aionbanner";
+
+.aion-aion-banner {
+  .carousel {
+    max-width: 100%;
+  }
+  .carousel-indicators {
+    li {
+      .border-radius(0);
+      background-color: @white;
+      border: 0;
+      margin: 0;
+      height: 15px;
+      width: 15px;
+      &.active {
+        background-color: @blue;
+      }
+    }
+  }
+  .carousel-control-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .carousel-control {
+      background-color: transparent;
+      opacity: 1;
+      width: 60px;
+      z-index: 11;
+      &.left {
+        background-color: transparent;
+        background-image: none;
+      }
+      &.right {
+        background-color: transparent;
+        background-image: none;
+      }
+      .icon-nav {
+        display: inline-block;
+        left: 0;
+        margin-top: -30px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        z-index: 5;
+      }
+    }
+  }
+  .carousel-caption {
+    left: 0;
+    padding: 50px 0;
+    right: 0;
+    h2 {
+      .nfont-light(@white, 55, 65);
+      letter-spacing: 2px;
+      margin-top: 0;
+      padding: 0 150px;
+      text-transform: uppercase;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 0;
+      padding: 0 200px;
+    }
+    &.vertical-center {
+      bottom: initial;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.vertical-top {
+      bottom: initial;
+      top: 0;
+    }
+    &.horizontal-left {
+      text-align: left;
+      h2,
+      p {
+        padding-left: 60px;
+      }
+    }
+    &.horizontal-right {
+      text-align: right;
+      h2,
+      p {
+        padding-right: 60px;
+      }
+    }
+  }
+}
+
+.aion-small-banners {
+  padding-top: 20px;
+  .small-banner {
+    width: 100%;
+    padding: 15px;
+    a {
+      .nfont-light(@white, 32, 32);
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    p {
+      display: inline-block;
+      margin-top: 15px;
+      .nfont-normal(@white, 21, 21);
+      text-transform: uppercase;
+    }
+    &.banner{
+      &-yellow {
+        background-color: @mustard;
+      }
+      &-green {
+        background-color: @cgreen;
+      }
+      &-purple {
+        background-color: @lpurple;
+      }
+    }
+  }
+}
+
+.aion-home-grid {
+  .widget-title {
+    hr {
+      border: 0;
+      border-top: 2px solid #eee;
+      margin-bottom: 0;
+    }
+    h2 {
+      .nfont-light(@blue, 24, 24);
+      text-transform: uppercase;
+    }
+  }
+  .widget-products {
+    margin-left: 0;
+    margin-right: -15px;
+    .products-grid {
+      padding-top: 20px;
+      .product-thumbnail {
+        .bordered(@top-color:@black,@right-color:@black,@bottom-color:@black,@left-color:@black);
+        .border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0);
+      }
+      .product-info {
+        .product-name a {
+          .nfont-normal(@black, 15, 16);
+        }
+        .price {
+          display: inline-block;
+          margin-bottom: 10px;
+          .nfont-bold(@blue, 15, 16);
+        }
+        .actions {
+          button {
+            .nfont-sbold(@white, 11, 30);
+            background-color: @blue;
+            border: 1px solid transparent;
+            display: inline-block;
+            padding: 0 15px;
+            text-transform: uppercase;
+
+            &:hover {
+              background-color: @white;
+              border: 1px solid @blue;
+              color: @blue;
+            }
+
+          }
+        }
+        .add-to-links {
+          list-style-type: none;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+// SM ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Small devices (tablets, 768px and down)
+@media (max-width: @screen-sm-min) {
+  .aion-small-banners {
+    padding-top: 40px;
+    .small-banner {
+      margin-bottom: 15px;
+      padding: 15px;
+      width: 100%;
+      a {
+        .nfont-light(@white, 21, 21);
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      p {
+        display: inline-block;
+        margin-top: 15px;
+        .nfont-normal(@white, 18, 18);
+        text-transform: uppercase;
+      }
+      &.banner{
+        &-yellow {
+          background-color: @mustard;
+        }
+        &-green {
+          background-color: @cgreen;
+        }
+        &-purple {
+          background-color: @lpurple;
+        }
+      }
+    }
+  }
+  .aion-aion-banner {
+    .carousel-control {
+      &.right {
+        background-color: transparent;
+        background-image: none;
+      }
+    }
+  }
+}
+
+// LG ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Large devices (large desktops, 1200px and up)
+@media (max-width: @screen-lg-min) {
+  .aion-aion-banner {
+    .carousel-caption {
+      h2 {
+        font-size: 45px;
+        line-height: 55px;
+        padding: 0 100px;
+      }
+      p {
+        padding: 0 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .aion-banner-container {
+    padding: 0;
+    width: auto;
+  }
+}
+
+// MD ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Medium devices (desktops, 992px and up)
+@media (max-width: @screen-md-min) {
+  .aion-aion-banner {
+    .carousel-control-container {
+      position: static;
+    }
+    .carousel-caption {
+      .container {
+        padding: 0;
+        width: auto;
+      }
+      h2 {
+        font-size: 40px;
+        line-height: 45px;
+        padding: 0 80px;
+      }
+      p {
+        padding: 0 100px;
+      }
+    }
+  }
+}
+
+// SM ------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Small devices (tablets, 768px and up)
+@media (max-width: @screen-sm-min) {
+  .aion-aion-banner {
+    .carousel-caption {
+      h2 {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 0 60px;
+      }
+      p {
+        padding: 0 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+  .aion-small-banners {
+    .small-banner {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .aion-aion-banner {
+    .carousel-caption {
+      padding: 10px 0;
+      h2 {
+        font-size: 15px;
+        line-height: 15px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 12px;
+      }
+    }
+  }
+}

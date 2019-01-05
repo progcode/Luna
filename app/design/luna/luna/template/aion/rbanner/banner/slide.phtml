@@ -1,0 +1,49 @@
+<?php
+/**
+ * Aion_Rbanner_Block_Banner_Slide
+ *
+ * @category  Aion
+ * @package   Aion_Rbanner
+ * @author    Kovacs Daniel Akos <daniel.kovacs@aionhill.com>
+ * @copyright 2017 AionNext Kft. (http://aionhill.com)
+ * @license   Aion License https://aionhill.com/licence
+ * @link      https://www.aionhill.com
+ */
+
+/** @var Aion_Rbanner_Block_Banner_Slide $this */
+
+/** @var Aion_MobileDetect_Helper_Data $mobileHelper */
+$mobileHelper = Mage::helper('aion_mobiledetect/data');
+/** @var Aion_Rbanner_Model_Slide $slide */
+$slide        = $this->getSlide();
+?>
+<div class="item">
+    <div class="slide-image">
+        <?php if(!$mobileHelper->isBrowserIe()): ?>
+            <a href="<?php echo $slide->getLink(); ?>" title="<?php echo $slide->getTitle(); ?>">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="<?php echo $slide->getMobileImageUrl(); ?>#mobile">
+                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="<?php echo $slide->getTabletImageUrl(); ?>#tablet">
+                    <source media="(min-width: 992px)" srcset="<?php echo $slide->getDesktopImageUrl(); ?>#desktop">
+
+                    <img src="<?php echo $slide->getDesktopImageUrl(); ?>#desktop" alt="<?php echo $slide->getTitle(); ?>">
+                </picture>
+            </a>
+        <?php else:
+            /** Fallback for IE and Edge */
+            ?>
+            <a href="<?php echo $slide->getLink(); ?>" title="<?php echo $slide->getTitle(); ?>">
+                <img class="responsive-banner"
+                     src=""
+                     data-mobile-src="<?php echo $slide->getMobileImageUrl(); ?>#mobile"
+                     data-tablet-src="<?php echo $slide->getTabletImageUrl(); ?>#tablet"
+                     data-desktop-src="<?php echo $slide->getDesktopImageUrl(); ?>#desktop"
+                     alt="<?php echo $slide->getTitle(); ?>"
+                />
+            </a>
+        <?php endif; ?>
+    </div>
+    <div class="slide-caption">
+        <?php echo $slide->getHtml(); ?>
+    </div>
+</div>
