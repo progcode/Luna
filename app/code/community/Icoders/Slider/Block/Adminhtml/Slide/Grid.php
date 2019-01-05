@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Aion_Rbanner_Block_Adminhtml_Slide_Grid
+ * Icoders_Slider_Block_Adminhtml_Slide_Grid
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2013 AionNext Kft. (http://aionhill.com)
- * @license   Aion License http://aionhill.com/licence
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2013 Icoders (http://icoders.co)
+ * @license   Icoders License http://icoders.co/licence
+ * @link      http://www.icoders.co
  */
-class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Icoders_Slider_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     /**
      * Construct
@@ -18,7 +18,7 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
     public function __construct()
     {
         parent::__construct();
-        $this->setId("aion_rbanner_slide_grid");
+        $this->setId("icoders_slider_slide_grid");
         $this->setDefaultSort("entity_id");
         $this->setDefaultDir("ASC");
         $this->setSaveParametersInSession(true);
@@ -31,7 +31,7 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel("aion_rbanner/slide")->getCollection();
+        $collection = Mage::getModel("icoders_slider/slide")->getCollection();
         if (($bannerId = $this->getRequest()->getParam('id'))) {
             $collection->addFieldToFilter('banner_id', $bannerId);
         }
@@ -49,7 +49,7 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
         $this->addColumn(
             "entity_id",
             array(
-                "header" => Mage::helper("aion_rbanner")->__("ID"),
+                "header" => Mage::helper("icoders_slider")->__("ID"),
                 "align"  => "right",
                 "width"  => "50px",
                 "type"   => "number",
@@ -60,7 +60,7 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
         $this->addColumn(
             "title",
             array(
-                "header" => Mage::helper("aion_rbanner")->__("Title"),
+                "header" => Mage::helper("icoders_slider")->__("Title"),
                 "index"  => "title",
             )
         );
@@ -68,16 +68,16 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
         $this->addColumn(
             "banner_id",
             array(
-                "header"   => Mage::helper("aion_rbanner")->__("Banner"),
+                "header"   => Mage::helper("icoders_slider")->__("Banner"),
                 "index"    => "banner_id",
-                "renderer" => 'Aion_Rbanner_Block_Adminhtml_Slide_Grid_Renderer_Banner'
+                "renderer" => 'Icoders_Slider_Block_Adminhtml_Slide_Grid_Renderer_Banner'
             )
         );
 
         $this->addColumn(
             "position",
             array(
-                "header" => Mage::helper("aion_rbanner")->__("Position"),
+                "header" => Mage::helper("icoders_slider")->__("Position"),
                 "align"  => "right",
                 "width"  => "50px",
                 "type"   => "number",
@@ -88,13 +88,13 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
         $this->addColumn(
             'edit',
             array(
-                'header'    => Mage::helper('aion_rbanner')->__('Action'),
+                'header'    => Mage::helper('icoders_slider')->__('Action'),
                 'width'     => '100',
                 'type'      => 'action',
                 'getter'    => 'getId',
                 'actions'   => array(
                     array(
-                        'caption' => Mage::helper('aion_rbanner')->__('Edit'),
+                        'caption' => Mage::helper('icoders_slider')->__('Edit'),
                         'url'     => array('base' => '*/*/edit'),
                         'field'   => 'id'
                     )
@@ -137,29 +137,29 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Grid extends Mage_Adminhtml_Block_Widge
         $this->getMassactionBlock()->addItem(
             'remove_banner',
             array(
-                'label'   => Mage::helper('aion_rbanner')->__('Remove'),
+                'label'   => Mage::helper('icoders_slider')->__('Remove'),
                 'url'     => $this->getUrl('*/*/massDelete'),
-                'confirm' => Mage::helper('aion_rbanner')->__('Are you sure you want to delete the selected Banners?')
+                'confirm' => Mage::helper('icoders_slider')->__('Are you sure you want to delete the selected Banners?')
             )
         );
 
         $this->getMassactionBlock()->addItem('connect_slides', array(
-                'label'      => Mage::helper('aion_rbanner')->__('Connect to Banner'),
+                'label'      => Mage::helper('icoders_slider')->__('Connect to Banner'),
                 'url'        => $this->getUrl('*/*/massConnect', array('_current' => true)),
                 'additional' => array(
                     'visibility' => array(
                         'name'   => 'banner_id',
                         'type'   => 'select',
                         'class'  => 'required-entry',
-                        'label'  => Mage::helper('aion_rbanner')->__('Banner'),
-                        'values' => Mage::getModel('aion_rbanner/banner')->getCollection()->toOptionArray()
+                        'label'  => Mage::helper('icoders_slider')->__('Banner'),
+                        'values' => Mage::getModel('icoders_slider/banner')->getCollection()->toOptionArray()
                     )
                 )
             )
         );
 
         $this->getMassactionBlock()->addItem('deconnect_slides', array(
-                'label' => Mage::helper('aion_rbanner')->__('Delete connection'),
+                'label' => Mage::helper('icoders_slider')->__('Delete connection'),
                 'url'   => $this->getUrl('*/*/massDeconnect', array('_current' => true))
             )
         );

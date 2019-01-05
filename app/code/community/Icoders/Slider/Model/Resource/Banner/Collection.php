@@ -1,17 +1,17 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Model_Resource_Banner_Collection
+ * Class Icoders_Slider_Model_Resource_Banner_Collection
  */
-class Aion_Rbanner_Model_Resource_Banner_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Icoders_Slider_Model_Resource_Banner_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
 {
     const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 0;
@@ -23,7 +23,7 @@ class Aion_Rbanner_Model_Resource_Banner_Collection extends Mage_Core_Model_Reso
      */
     protected function _construct()
     {
-        $this->_init('aion_rbanner/banner');
+        $this->_init('icoders_slider/banner');
     }
 
     /**

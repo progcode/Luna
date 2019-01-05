@@ -1,20 +1,20 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Adminhtml_BannerController
+ * Class Icoders_Slider_Adminhtml_BannerController
  */
-class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_Action
+class Icoders_Slider_Adminhtml_BannerController extends Mage_Adminhtml_Controller_Action
 {
 
-    const UPLOAD_DIR = 'rbanners';
+    const UPLOAD_DIR = 'sliders';
 
     /**
      * Init actions
@@ -24,7 +24,7 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
     protected function _initAction()
     {
         $this->loadLayout()
-            ->_setActiveMenu('cms/aion_rbanner/aion_rbanner_banner')
+            ->_setActiveMenu('cms/icoders_slider/icoders_slider_banner')
             ->_addBreadcrumb(
                 $this->getHelper()->__('Banners'),
                 $this->getHelper()->__('Banners')
@@ -69,8 +69,8 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
         $this->_title($this->getHelper()->__('Banner'))
             ->_title($this->getHelper()->__('Manage Banners'));
 
-        /** @var $model Aion_Rbanner_Model_Banner */
-        $model = Mage::getModel('aion_rbanner/banner');
+        /** @var $model Icoders_Slider_Model_Banner */
+        $model = Mage::getModel('icoders_slider/banner');
 
         $bannerId = $this->getRequest()->getParam('id');
 
@@ -120,7 +120,7 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
             $this->_getSession()->addError($this->getHelper()->__('Please select Banner.'));
         } else {
             try {
-                $model = Mage::getSingleton('aion_rbanner/banner')->load($id);
+                $model = Mage::getSingleton('icoders_slider/banner')->load($id);
                 $model->delete();
                 $this->_getSession()->addSuccess(
                     $this->getHelper()->__('Banner was successfully deleted')
@@ -152,7 +152,7 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
             $this->_getSession()->addError($this->getHelper()->__('Please select Banner(s).'));
         } else {
             try {
-                $banners = Mage::getModel('aion_rbanner/resource_banner_collection');
+                $banners = Mage::getModel('icoders_slider/resource_banner_collection');
                 $banners->addFieldToFilter('entity_id', ['in' => $ids]);
                 foreach ($ids as $id) {
                     $model = $banners->getItemByColumnValue('entity_id', $id);
@@ -197,7 +197,7 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
     {
         if ($data = $this->getRequest()->getPost()) {
 
-            $model = Mage::getModel('aion_rbanner/banner');
+            $model = Mage::getModel('icoders_slider/banner');
 
             if (isset($data['stores']) && !empty($data['stores'])) {
                 if (in_array('0', $data['stores'])) {
@@ -245,7 +245,7 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
      */
     protected function _isAllowed()
     {
-        return Mage::helper('aion_rbanner/admin')->isActionAllowed(
+        return Mage::helper('icoders_slider/admin')->isActionAllowed(
             $this->getRequest()->getActionName()
         );
     }
@@ -253,11 +253,11 @@ class Aion_Rbanner_Adminhtml_BannerController extends Mage_Adminhtml_Controller_
     /**
      * Get helper
      *
-     * @return Aion_Rbanner_Helper_Data
+     * @return Icoders_Slider_Helper_Data
      */
     public function getHelper()
     {
-        return Mage::helper('aion_rbanner');
+        return Mage::helper('icoders_slider');
     }
 
 }

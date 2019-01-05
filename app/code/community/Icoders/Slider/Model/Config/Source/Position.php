@@ -1,13 +1,13 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
-class Aion_Rbanner_Model_Config_Source_Position
+class Icoders_Slider_Model_Config_Source_Position
 {
     /** @var integer */
     const CONTENT_TOP     = 1;

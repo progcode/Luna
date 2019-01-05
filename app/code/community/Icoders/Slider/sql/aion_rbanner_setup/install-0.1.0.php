@@ -1,23 +1,23 @@
 <?php
 /**
- * Class Aion_Rbanner create aion_rbanner table
+ * Class Icoders_Slider create icoders_slider table
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 /** @var $installer Mage_Core_Model_Resource_Setup */
 
 $installer = $this;
 
 /**
- * Create aion_rbanner_entity table
+ * Create icoders_slider_entity table
  */
 $table = $installer->getConnection()
-    ->newTable($installer->getTable('aion_rbanner/banner'))
+    ->newTable($installer->getTable('icoders_slider/banner'))
     ->addColumn(
         'entity_id',
         Varien_Db_Ddl_Table::TYPE_INTEGER,
@@ -62,7 +62,7 @@ $table = $installer->getConnection()
     )
     ->addIndex(
         $installer->getIdxName(
-            $installer->getTable('aion_rbanner/banner'),
+            $installer->getTable('icoders_slider/banner'),
             array('title'),
             Varien_Db_Adapter_Interface::INDEX_TYPE_INDEX
         ),
@@ -75,10 +75,10 @@ $installer->getConnection()->createTable($table);
 
 
 /**
- * Create aion_rbanner_slide table
+ * Create icoders_slider_slide table
  */
 $table = $installer->getConnection()
-    ->newTable($installer->getTable('aion_rbanner/slide'))
+    ->newTable($installer->getTable('icoders_slider/slide'))
     ->addColumn(
         'entity_id',
         Varien_Db_Ddl_Table::TYPE_INTEGER,
@@ -170,7 +170,7 @@ $table = $installer->getConnection()
     )
     ->addIndex(
         $installer->getIdxName(
-            $installer->getTable('aion_rbanner/slide'),
+            $installer->getTable('icoders_slider/slide'),
             array('banner_id'),
             Varien_Db_Adapter_Interface::INDEX_TYPE_INDEX
         ),
@@ -179,13 +179,13 @@ $table = $installer->getConnection()
     )
     ->addForeignKey(
         $installer->getFkName(
-            'aion_rbanner/banner',
+            'icoders_slider/banner',
             'entity_id',
-            'aion_rbanner/slide',
+            'icoders_slider/slide',
             'banner_id'
         ),
         'banner_id',
-        $installer->getTable('aion_rbanner/banner'),
+        $installer->getTable('icoders_slider/banner'),
         'entity_id',
         Varien_Db_Ddl_Table::ACTION_CASCADE,
         Varien_Db_Ddl_Table::ACTION_CASCADE

@@ -2,17 +2,17 @@
 /**
  * PHP version 5.6
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 Aion Next Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders Next Kft. (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Copyright © 2017 Aion Next Kft. All rights reserved.
+ * Copyright © 2017 Icoders Next Kft. All rights reserved.
  */
-class Aion_Rbanner_Exception extends Exception
+class Icoders_Slider_Exception extends Exception
 {
 }

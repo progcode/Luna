@@ -1,26 +1,26 @@
 <?php
 /**
- * Aion_Nila_Helper_Data
+ * Icoders_Luna_Helper_Data
  *
- * @category  Aion
- * @package   Aion_Nila
- * @author    Sági Attila <sagi.attila@aionhill.hu>
- * @copyright 2016 AionNext Kft. (http://www.aionhill.hu)
- * @license   http://aionhill.hu/license Aion License
- * @link      http://www.aionhill.hu
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @author    Sági Attila <sagi.attila@icoders.co>
+ * @copyright 2016 Icoders (http://www.icoders.co)
+ * @license   http://icoders.co/license Icoders License
+ * @link      http://www.icoders.co
  */
 
 /**
- * Class Aion_Nila_Helper_Data
+ * Class Icoders_Luna_Helper_Data
  */
-class Aion_Nila_Helper_Data extends Mage_Core_Helper_Abstract
+class Icoders_Luna_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
      * Path to store config if category view all enabled
      *
      * @var string
      */
-    const XML_PATH_VIEW_ALL_ENABLED = 'nila/view/category_view_all';
+    const XML_PATH_VIEW_ALL_ENABLED = 'luna/view/category_view_all';
 
     /**
      * Checks whether category view all enabled

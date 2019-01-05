@@ -1,17 +1,17 @@
 <?php
 /**
- * Aion_MobileDetect_Helper_Data
+ * Icoders_MobileDetect_Helper_Data
  *
- * @category  Aion
- * @package   Aion_MobileDetect
- * @author    Kovacs Daniel Akos <kovacs.daniel@aion.hu>
- * @copyright 2016 AionNext Ltd.. (http://www.aion.hu)
+ * @category  Icoders
+ * @package   Icoders_MobileDetect
+ * @author    Kovacs Daniel Akos <kovacs.daniel@icoders.co>
+ * @copyright 2016 IcodersNext Ltd.. (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aion.hu
+ * @link      http://www.icoders.co
  *
  */
 
-class Aion_MobileDetect_Helper_Data extends Mage_Core_Helper_Abstract {
+class Icoders_MobileDetect_Helper_Data extends Mage_Core_Helper_Abstract {
 
     /**
      * Mobile detection type.

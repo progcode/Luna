@@ -1,15 +1,15 @@
 <?php
 /**
- * Aion_Rbanner_Block_Adminhtml_Slide_Edit_Tabs
+ * Icoders_Slider_Block_Adminhtml_Slide_Edit_Tabs
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2013 AionNext Kft. (http://aionhill.com)
- * @license   Aion License http://aionhill.com/licence
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2013 Icoders (http://icoders.co)
+ * @license   Icoders License http://icoders.co/licence
+ * @link      http://www.icoders.co
  */
-class Aion_Rbanner_Block_Adminhtml_Slide_Edit_Tabs extends Mage_Adminhtml_Block_Widget_Tabs
+class Icoders_Slider_Block_Adminhtml_Slide_Edit_Tabs extends Mage_Adminhtml_Block_Widget_Tabs
 {
     /**
      * Construct function
@@ -17,9 +17,9 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Edit_Tabs extends Mage_Adminhtml_Block_
     public function __construct()
     {
         parent::__construct();
-        $this->setId("aion_rbanner_slide_tabs");
+        $this->setId("icoders_slider_slide_tabs");
         $this->setDestElementId("edit_form");
-        $this->setTitle(Mage::helper("aion_rbanner")->__("Slide Information"));
+        $this->setTitle(Mage::helper("icoders_slider")->__("Slide Information"));
     }
 
     /**
@@ -32,9 +32,9 @@ class Aion_Rbanner_Block_Adminhtml_Slide_Edit_Tabs extends Mage_Adminhtml_Block_
         $this->addTab(
             "form_section",
             array(
-                "label" => Mage::helper("aion_rbanner")->__("Slide Information"),
-                "title" => Mage::helper("aion_rbanner")->__("Slide Information"),
-                "content" => $this->getLayout()->createBlock("aion_rbanner/adminhtml_slide_edit_tab_form")->toHtml(),
+                "label" => Mage::helper("icoders_slider")->__("Slide Information"),
+                "title" => Mage::helper("icoders_slider")->__("Slide Information"),
+                "content" => $this->getLayout()->createBlock("icoders_slider/adminhtml_slide_edit_tab_form")->toHtml(),
             )
         );
 

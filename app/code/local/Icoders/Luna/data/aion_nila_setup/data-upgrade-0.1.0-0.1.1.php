@@ -1,12 +1,12 @@
 <?php
 /**
- * Aion Magento Basic Settings
+ * Icoders Magento Basic Settings
  *
- * @category  Aion
- * @package   Aion_Nila
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 /* @var $installer Mage_Core_Model_Resource_Setup */
 
@@ -19,7 +19,7 @@ $installer->setConfigData('general/country/default','US');
 $installer->setConfigData('general/locale/timezone','America/Los_Angeles');
 $installer->setConfigData('general/locale/code','en_US');
 $installer->setConfigData('general/locale/firstday', '1');
-$installer->setConfigData('general/store_information/name','Nila Shop');
+$installer->setConfigData('general/store_information/name','Luna Shop');
 $installer->setConfigData('general/store_information/phone','479-769-5800');
 $installer->setConfigData('general/store_information/hours','9-17.30');
 $installer->setConfigData('general/store_information/merchant_country','US');
@@ -31,25 +31,25 @@ $installer->setConfigData('web/seo/use_rewrites', '1');
 $installer->setConfigData('web/default/show_cms_breadcrumbs','0');
 
 /* SYSTEM / CONFIGURATION / GENERAL / DESIGN */
-$installer->setConfigData('design/package/name','nila');
+$installer->setConfigData('design/package/name','luna');
 $installer->setConfigData('design/theme/locale','default');
 $installer->setConfigData('design/theme/template','default');
 $installer->setConfigData('design/theme/skin','default');
 $installer->setConfigData('design/theme/layout','default');
 $installer->setConfigData('design/theme/default','default');
-$installer->setConfigData('design/head/default_title', 'Nila Shop');
+$installer->setConfigData('design/head/default_title', 'Luna Shop');
 $installer->setConfigData('design/head/title_prefix','');
 $installer->setConfigData('design/head/title_suffix','');
-$installer->setConfigData('design/head/default_description','Nila Shop');
-$installer->setConfigData('design/head/default_keywords','Nila Shop');
+$installer->setConfigData('design/head/default_description','Luna Shop');
+$installer->setConfigData('design/head/default_keywords','Luna Shop');
 $installer->setConfigData('design/head/default_robots','NOINDEX,NOFOLLOW');
 $installer->setConfigData('design/head/demonotice','1');
-$installer->setConfigData('design/head/shortcut_icon','nila/favicon.png');
+$installer->setConfigData('design/head/shortcut_icon','luna/favicon.png');
 $installer->setConfigData('design/header/logo_src','img/logo.png');
-$installer->setConfigData('design/header/logo_alt','Nila Shop');
+$installer->setConfigData('design/header/logo_alt','Luna Shop');
 $installer->setConfigData('design/header/logo_src_small','img/logo-small.png');
 $installer->setConfigData('design/header/welcome','Welcome to Our store!');
-$installer->setConfigData('design/footer/copyright','2016. Nila Shop');
+$installer->setConfigData('design/footer/copyright','2016. Luna Shop');
 
 /* SYSTEM / CONFIGURATION / GENERAL / CURRENCY SETUP */
 $installer->setConfigData('currency/options/base','USD');
@@ -57,16 +57,16 @@ $installer->setConfigData('currency/options/default','USD');
 $installer->setConfigData('currency/options/allow','USD');
 
 /* SYSTEM / CONFIGURATION / GENERAL / STORE EMAIL ADDRESSES */
-$installer->setConfigData('trans_email/ident_general/name','Nila Shop');
-$installer->setConfigData('trans_email/ident_general/email','nila@nila.nila');
-$installer->setConfigData('trans_email/ident_sales/name','Nila Shop');
-$installer->setConfigData('trans_email/ident_sales/email','nila@nila.nila');
-$installer->setConfigData('trans_email/ident_support/name','Nila Shop');
-$installer->setConfigData('trans_email/ident_support/email','nila@nila.nila');
-$installer->setConfigData('trans_email/ident_custom1/name','Nila Shop');
-$installer->setConfigData('trans_email/ident_custom1/email','nila@nila.nila');
-$installer->setConfigData('trans_email/ident_custom2/name','Nila Shop');
-$installer->setConfigData('trans_email/ident_custom2/email','nila@nila.nila');
+$installer->setConfigData('trans_email/ident_general/name','Luna Shop');
+$installer->setConfigData('trans_email/ident_general/email','luna@luna.luna');
+$installer->setConfigData('trans_email/ident_sales/name','Luna Shop');
+$installer->setConfigData('trans_email/ident_sales/email','luna@luna.luna');
+$installer->setConfigData('trans_email/ident_support/name','Luna Shop');
+$installer->setConfigData('trans_email/ident_support/email','luna@luna.luna');
+$installer->setConfigData('trans_email/ident_custom1/name','Luna Shop');
+$installer->setConfigData('trans_email/ident_custom1/email','luna@luna.luna');
+$installer->setConfigData('trans_email/ident_custom2/name','Luna Shop');
+$installer->setConfigData('trans_email/ident_custom2/email','luna@luna.luna');
 
 /* SYSTEM / CONFIGURATION / GENERAL / CONTACTS */
 

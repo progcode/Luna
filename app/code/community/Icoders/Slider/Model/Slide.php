@@ -1,15 +1,15 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Model_Slide
+ * Class Icoders_Slider_Model_Slide
  * @method int getEntityId()
  * @method int getBannerId()
  * @method string getTitle()
@@ -19,20 +19,20 @@
  * @method string getLink()
  * @method string getHtml()
  * @method int getPosition()
- * @method Aion_Rbanner_Model_Slide setEntityId($value)
- * @method Aion_Rbanner_Model_Slide setBannerId($value)
- * @method Aion_Rbanner_Model_Slide setTitle($value)
- * @method Aion_Rbanner_Model_Slide setDesktopImage($value)
- * @method Aion_Rbanner_Model_Slide setTabletImage($value)
- * @method Aion_Rbanner_Model_Slide setMobileImage($value)
- * @method Aion_Rbanner_Model_Slide setLink($value)
- * @method Aion_Rbanner_Model_Slide setHtml($value)
- * @method Aion_Rbanner_Model_Slide setPosition($value)
+ * @method Icoders_Slider_Model_Slide setEntityId($value)
+ * @method Icoders_Slider_Model_Slide setBannerId($value)
+ * @method Icoders_Slider_Model_Slide setTitle($value)
+ * @method Icoders_Slider_Model_Slide setDesktopImage($value)
+ * @method Icoders_Slider_Model_Slide setTabletImage($value)
+ * @method Icoders_Slider_Model_Slide setMobileImage($value)
+ * @method Icoders_Slider_Model_Slide setLink($value)
+ * @method Icoders_Slider_Model_Slide setHtml($value)
+ * @method Icoders_Slider_Model_Slide setPosition($value)
  */
-class Aion_Rbanner_Model_Slide extends Mage_Core_Model_Abstract
+class Icoders_Slider_Model_Slide extends Mage_Core_Model_Abstract
 {
     /** @var string */
-    const CACHE_TAG = 'rbanner_slide';
+    const CACHE_TAG = 'slider_slide';
     /** @var string */
     const SLIDE_TYPE_DESKTOP = 'desktop';
     /** @var string */
@@ -49,7 +49,7 @@ class Aion_Rbanner_Model_Slide extends Mage_Core_Model_Abstract
      */
     protected function _construct()
     {
-        $this->_init('aion_rbanner/slide');
+        $this->_init('icoders_slider/slide');
     }
 
     /**

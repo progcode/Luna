@@ -1,32 +1,32 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2014 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2014 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Model_Banner
+ * Class Icoders_Slider_Model_Banner
  * @method int getEntityId()
  * @method string getTitle()
  * @method string getStores()
  * @method int getStatus()
  * @method string getPageId()
  * @method string getCategoryId()
- * @method Aion_Rbanner_Model_Banner setEntityId($value)
- * @method Aion_Rbanner_Model_Banner setTitle($value)
- * @method Aion_Rbanner_Model_Banner setStores($value)
- * @method Aion_Rbanner_Model_Banner setStatus($value)
- * @method Aion_Rbanner_Model_Banner setPageId($value)
- * @method Aion_Rbanner_Model_Banner setCategoryId($value)
+ * @method Icoders_Slider_Model_Banner setEntityId($value)
+ * @method Icoders_Slider_Model_Banner setTitle($value)
+ * @method Icoders_Slider_Model_Banner setStores($value)
+ * @method Icoders_Slider_Model_Banner setStatus($value)
+ * @method Icoders_Slider_Model_Banner setPageId($value)
+ * @method Icoders_Slider_Model_Banner setCategoryId($value)
  */
-class Aion_Rbanner_Model_Banner extends Mage_Core_Model_Abstract
+class Icoders_Slider_Model_Banner extends Mage_Core_Model_Abstract
 {
     /** @var string */
-    const CACHE_TAG = 'rbanner';
+    const CACHE_TAG = 'slider';
 
     /**
      * Constructor
@@ -35,18 +35,18 @@ class Aion_Rbanner_Model_Banner extends Mage_Core_Model_Abstract
      */
     protected function _construct()
     {
-        $this->_init('aion_rbanner/banner');
+        $this->_init('icoders_slider/banner');
     }
 
     /**
      * Get banner images
      *
-     * @return Aion_Rbanner_Model_Resource_Slide_Collection|null
+     * @return Icoders_Slider_Model_Resource_Slide_Collection|null
      */
     public function getSlides()
     {
         if ($this->getId()) {
-            return Mage::getModel('aion_rbanner/slide')->getCollection()
+            return Mage::getModel('icoders_slider/slide')->getCollection()
                 ->addFieldToFilter('banner_id', $this->getId())
                 ->setOrder('position', 'asc');
         }

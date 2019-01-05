@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Aion_Rbanner_Block_Banner
+ * Icoders_Slider_Block_Banner
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2013 AionNext Kft. (http://aionhill.com)
- * @license   Aion License http://aionhill.com/licence
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2013 Icoders (http://icoders.co)
+ * @license   Icoders License http://icoders.co/licence
+ * @link      http://www.icoders.co
  */
-class Aion_Rbanner_Block_Banner extends Mage_Core_Block_Template
+class Icoders_Slider_Block_Banner extends Mage_Core_Block_Template
 {
     /**
      * Construct
@@ -23,7 +23,7 @@ class Aion_Rbanner_Block_Banner extends Mage_Core_Block_Template
         $this->addData(
             array(
                 'cache_lifetime' => 120,
-                'cache_tags'     => array(Aion_Rbanner_Model_Banner::CACHE_TAG),
+                'cache_tags'     => array(Icoders_Slider_Model_Banner::CACHE_TAG),
                 'cache_key'      => 'AIONRBANNER_STORE_' .
                     Mage::app()->getStore()->getId() .
                     '_ID_' . $this->getRequest()->getRequestUri()
@@ -36,24 +36,24 @@ class Aion_Rbanner_Block_Banner extends Mage_Core_Block_Template
      *
      * @param int|string $identifier banner id or title
      *
-     * @return Aion_Rbanner_Model_Banner
+     * @return Icoders_Slider_Model_Banner
      * @throws Exception
      */
     public function getBanner($identifier = null)
     {
         if (is_null($identifier) && !($position = $this->getPosition())) {
             $identifier = $this->getData('banner_id');
-            $e = Mage::exception('Aion_Rbanner', Mage::helper('aion_rbanner')->__('The banner has not been specified'));
+            $e = Mage::exception('Icoders_Slider', Mage::helper('icoders_slider')->__('The banner has not been specified'));
             Mage::throwException($e);
         }
 
         $position = $this->getPosition();
 
-        $constant = "Aion_Rbanner_Model_Config_Source_Position::{$position}";
+        $constant = "Icoders_Slider_Model_Config_Source_Position::{$position}";
         $posId   = defined($constant) ? constant($constant) : null;
 
-        /** @var Aion_Rbanner_Model_Resource_Banner_Collection $banners */
-        $banners = Mage::getModel('aion_rbanner/banner')->getCollection();
+        /** @var Icoders_Slider_Model_Resource_Banner_Collection $banners */
+        $banners = Mage::getModel('icoders_slider/banner')->getCollection();
         $banners->addEnabledFilter();
 
         if (!Mage::app()->isSingleStoreMode()) {

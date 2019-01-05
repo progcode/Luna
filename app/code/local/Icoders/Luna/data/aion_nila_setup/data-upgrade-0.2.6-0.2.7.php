@@ -1,27 +1,27 @@
 <?php
 /**
- * Aion Magento Basic Settings
+ * Icoders Magento Basic Settings
  *
- * @category  Aion
- * @package   Aion_Nila
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 /* @var $installer Mage_Core_Model_Resource_Setup */
 
 $installer = $this;
 $installer->startSetup();
 
-$identifier = 'aion-icon-banners';
-$title = 'Aion Icon Banners';
+$identifier = 'icoders-icon-banners';
+$title = 'Icoders Icon Banners';
 
 try {
     $contentCmsBlock = <<<EOT
-    <div class="aion-icon-banners">
+    <div class="icoders-icon-banners">
             <div class="icon-banner col-xs-12 col-sm-6 col-md-4">
                 <div class="icon-banner-icon">
-                    <i class="aion-icon aion-icon-badge-freedelivery"></i>
+                    <i class="icoders-icon icoders-icon-badge-freedelivery"></i>
                 </div>
                 <div class="icon-banner-text">
                     <a href="{{config path="web/secure/base_url"}}" title="Trusted Delivery">
@@ -34,7 +34,7 @@ try {
             </div>
             <div class="icon-banner col-xs-12 col-sm-6 col-md-4">
                 <div class="icon-banner-icon">
-                    <i class="aion-icon aion-icon-badge-hotline"></i>
+                    <i class="icoders-icon icoders-icon-badge-hotline"></i>
                 </div>
                 <div class="icon-banner-text">
                     <a href="{{config path="web/secure/base_url"}}" title="Trusted Service">
@@ -47,7 +47,7 @@ try {
             </div>
             <div class="icon-banner col-xs-12 col-sm-12 col-md-4">
                 <div class="icon-banner-icon">
-                    <i class="aion-icon aion-icon-badge-moneyback"></i>
+                    <i class="icoders-icon icoders-icon-badge-moneyback"></i>
                 </div>
                 <div class="icon-banner-text">
                     <a href="{{config path="web/secure/base_url"}}" title="Trusted Payment">

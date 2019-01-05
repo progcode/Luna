@@ -1,13 +1,13 @@
 <?php
 /**
- * Aion Nila - Homepage Content
+ * Icoders Luna - Homepage Content
  *
- * @category  Aion
- * @package   Aion_Nila
- * @author    Kovacs Daniel Akos <kovacs.daniel@aion.hu>
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @author    Kovacs Daniel Akos <kovacs.daniel@icoders.co>
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 
 /* @var $installer Mage_Core_Model_Resource_Setup */

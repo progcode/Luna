@@ -1,23 +1,23 @@
 <?php
 /**
- * Class Aion_Rbanner create aion_rbanner table
+ * Class Icoders_Slider create icoders_slider table
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 /** @var $installer Mage_Core_Model_Resource_Setup */
 
 $installer = $this;
 
 /**
- * Create aion_rbanner_entity table
+ * Create icoders_slider_entity table
  */
 $table = $installer->getConnection()->addColumn(
-    $installer->getTable('aion_rbanner/banner'),
+    $installer->getTable('icoders_slider/banner'),
     'position',
     [
         'type'     => Varien_Db_Ddl_Table::TYPE_INTEGER,

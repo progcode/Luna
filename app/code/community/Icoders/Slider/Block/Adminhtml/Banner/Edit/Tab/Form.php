@@ -1,19 +1,19 @@
 <?php
 /**
- * Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form
+ * Icoders_Slider_Block_Adminhtml_Banner_Edit_Tab_Form
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2013 AionNext Kft. (http://aionhill.com)
- * @license   Aion License http://aionhill.com/licence
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2013 Icoders (http://icoders.co)
+ * @license   Icoders License http://icoders.co/licence
+ * @link      http://www.icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form
+ * Class Icoders_Slider_Block_Adminhtml_Banner_Edit_Tab_Form
  */
-class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_Block_Widget_Form
+class Icoders_Slider_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_Block_Widget_Form
 {
     /**
      * Prepare the form
@@ -26,9 +26,9 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_B
         $model = Mage::registry('banner_item');
         $this->setForm($form);
         $fieldset = $form->addFieldset(
-            "aion_rbanner_banner_form",
+            "icoders_slider_banner_form",
             array(
-                "legend" => Mage::helper("aion_rbanner")->__("Banner information")
+                "legend" => Mage::helper("icoders_slider")->__("Banner information")
             )
         );
 
@@ -36,7 +36,7 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_B
             "title",
             "text",
             array(
-                "label" => Mage::helper("aion_rbanner")->__("Title"),
+                "label" => Mage::helper("icoders_slider")->__("Title"),
                 "name"  => "title",
             )
         );
@@ -45,10 +45,10 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_B
             'status',
             'select',
             array(
-                'label'  => Mage::helper('aion_rbanner')->__('Enabled'),
+                'label'  => Mage::helper('icoders_slider')->__('Enabled'),
                 'values' => [
-                    Aion_Rbanner_Model_Resource_Banner_Collection::STATUS_DISABLED => Mage::helper('aion_rbanner')->__('Disabled'),
-                    Aion_Rbanner_Model_Resource_Banner_Collection::STATUS_ENABLED  => Mage::helper('aion_rbanner')->__('Enabled'),
+                    Icoders_Slider_Model_Resource_Banner_Collection::STATUS_DISABLED => Mage::helper('icoders_slider')->__('Disabled'),
+                    Icoders_Slider_Model_Resource_Banner_Collection::STATUS_ENABLED  => Mage::helper('icoders_slider')->__('Enabled'),
                 ],
                 'name'   => 'status',
             )
@@ -58,9 +58,9 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Form extends Mage_Adminhtml_B
             'position',
             'select',
             array(
-                'label'  => Mage::helper('aion_rbanner')->__('Position'),
+                'label'  => Mage::helper('icoders_slider')->__('Position'),
                 'name'   => 'position',
-                'values' => Mage::getSingleton('aion_rbanner/config_source_position')->toOptionArray(),
+                'values' => Mage::getSingleton('icoders_slider/config_source_position')->toOptionArray(),
                 'value'  => $model->getPosition()
             )
         );

@@ -1,14 +1,14 @@
 <?php
 /**
- * AION Nila Data Installer
+ * AION Luna Data Installer
  *
- * @category  Aion
- * @package   Aion_Nila
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
-/* @var $installer Aion_Nila_Model_Resource_Setup */
+/* @var $installer Icoders_Luna_Model_Resource_Setup */
 
 $installer = $this;
 

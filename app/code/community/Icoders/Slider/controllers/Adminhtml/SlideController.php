@@ -1,20 +1,20 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Adminhtml_SlideController
+ * Class Icoders_Slider_Adminhtml_SlideController
  */
-class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_Action
+class Icoders_Slider_Adminhtml_SlideController extends Mage_Adminhtml_Controller_Action
 {
     /** @var string */
-    const UPLOAD_DIR = 'rbanners';
+    const UPLOAD_DIR = 'sliders';
 
     /**
      * Init actions
@@ -24,7 +24,7 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
     protected function _initAction()
     {
         $this->loadLayout()
-            ->_setActiveMenu('cms/aion_rbanner/aion_rbanner_slide')
+            ->_setActiveMenu('cms/icoders_slider/icoders_slider_slide')
             ->_addBreadcrumb(
                 $this->getHelper()->__('Banner'),
                 $this->getHelper()->__('Banner')
@@ -69,8 +69,8 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
         $this->_title($this->getHelper()->__('Banners'))
             ->_title($this->getHelper()->__('Manage Slides'));
 
-        /** @var $model Aion_Rbanner_Model_Slide */
-        $model = Mage::getModel('aion_rbanner/slide');
+        /** @var $model Icoders_Slider_Model_Slide */
+        $model = Mage::getModel('icoders_slider/slide');
 
         $slideId = $this->getRequest()->getParam('id');
 
@@ -122,7 +122,7 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
             $this->_getSession()->addError($this->getHelper()->__('Please select Slide.'));
         } else {
             try {
-                $model = Mage::getSingleton('aion_rbanner/slide')->load($id);
+                $model = Mage::getSingleton('icoders_slider/slide')->load($id);
                 $model->delete();
                 $this->_getSession()->addSuccess(
                     $this->getHelper()->__('Slide was successfully deleted')
@@ -154,8 +154,8 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
             $this->_getSession()->addError($this->getHelper()->__('Please select Slide(s).'));
         } else {
             try {
-                /** @var Aion_Rbanner_Model_Resource_Slide_Collection $slides */
-                $slides = Mage::getModel('aion_rbanner/slide')->getCollection();
+                /** @var Icoders_Slider_Model_Resource_Slide_Collection $slides */
+                $slides = Mage::getModel('icoders_slider/slide')->getCollection();
                 $slides->addFieldToFilter('entity_id', $ids);
                 foreach ($ids as $id) {
                     $model = $slides->getItemByColumnValue('entity_id', $id);
@@ -189,7 +189,7 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
 
         if ($data = $this->getRequest()->getPost()) {
 
-            $model = Mage::getModel('aion_rbanner/slide');
+            $model = Mage::getModel('icoders_slider/slide');
 
             try {
                 $uploadFiles = ['desktop_image', 'tablet_image', 'mobile_image'];
@@ -291,7 +291,7 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
                 $this->_getSession()->addError($this->getHelper()->__('Please select Slide(s).'));
             } else {
                 try {
-                    $collection = Mage::getModel('aion_rbanner/slide')->getCollection();
+                    $collection = Mage::getModel('icoders_slider/slide')->getCollection();
                     $collection->addFieldToFilter('entity_id', ['in' => $ids]);
                     $collection->setDataToAll('banner_id', $this->getRequest()->getParam('banner_id'));
                     $collection->save();
@@ -328,7 +328,7 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
             $this->_getSession()->addError($this->getHelper()->__('Please select Slide(s).'));
         } else {
             try {
-                $collection = Mage::getModel('aion_rbanner/slide')->getCollection();
+                $collection = Mage::getModel('icoders_slider/slide')->getCollection();
                 $collection->addFieldToFilter('entity_id', ['in' => $ids]);
                 foreach ($collection as $slide) {
                     $slide->setbannerId(null);
@@ -359,7 +359,7 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
      */
     protected function _isAllowed()
     {
-        return Mage::helper('aion_rbanner/admin')->isActionAllowed(
+        return Mage::helper('icoders_slider/admin')->isActionAllowed(
             $this->getRequest()->getActionName()
         );
     }
@@ -367,11 +367,11 @@ class Aion_Rbanner_Adminhtml_SlideController extends Mage_Adminhtml_Controller_A
     /**
      * Get helper
      *
-     * @return Aion_Rbanner_Helper_Data
+     * @return Icoders_Slider_Helper_Data
      */
     public function getHelper()
     {
-        return Mage::helper('aion_rbanner');
+        return Mage::helper('icoders_slider');
     }
 
 }

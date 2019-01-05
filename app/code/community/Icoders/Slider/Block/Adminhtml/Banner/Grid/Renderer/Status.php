@@ -1,15 +1,15 @@
 <?php
 /**
- * Aion_Rbanner_Block_Adminhtml_Banner_Grid_Renderer_Status
+ * Icoders_Slider_Block_Adminhtml_Banner_Grid_Renderer_Status
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2013 AionNext Kft. (http://aionhill.com)
- * @license   Aion License http://aionhill.com/licence
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2013 Icoders (http://icoders.co)
+ * @license   Icoders License http://icoders.co/licence
+ * @link      http://www.icoders.co
  */
-class Aion_Rbanner_Block_Adminhtml_Banner_Grid_Renderer_Status extends Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Abstract
+class Icoders_Slider_Block_Adminhtml_Banner_Grid_Renderer_Status extends Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Abstract
 {
     /**
      * Render column
@@ -20,10 +20,10 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Grid_Renderer_Status extends Mage_Admi
      */
     public function render(Varien_Object $row)
     {
-        if ($row['status'] == Aion_Rbanner_Model_Resource_Banner_Collection::STATUS_ENABLED) {
-            return Mage::helper('aion_rbanner')->__('Enabled');
+        if ($row['status'] == Icoders_Slider_Model_Resource_Banner_Collection::STATUS_ENABLED) {
+            return Mage::helper('icoders_slider')->__('Enabled');
         } else {
-            return Mage::helper('aion_rbanner')->__('Disabled');
+            return Mage::helper('icoders_slider')->__('Disabled');
         }
     }
 }

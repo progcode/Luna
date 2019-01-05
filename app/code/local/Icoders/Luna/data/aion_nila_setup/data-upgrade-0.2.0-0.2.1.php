@@ -1,13 +1,13 @@
 <?php
 /**
- * Aion Nila - OneStepCheckout Config
+ * Icoders Luna - OneStepCheckout Config
  *
- * @category  Aion
- * @package   Aion_Nila
- * @author    Toth Attila <toth.attila@aion.hu>
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @author    Toth Attila <toth.attila@icoders.co>
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 
 /* @var $installer Mage_Core_Model_Resource_Setup */
@@ -56,30 +56,30 @@ try {
         <div class="footer-col footer-col1 col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="footer-header">Menu (1)</div>
             <ul>
-                <li><a href="/nila-cms-page">Example Page (1)</a></li>
-                <li><a href="/nila-cms-page">Example Page (2)</a></li>
-                <li><a href="/nila-cms-page">Example Page (3)</a></li>
-                <li><a href="/nila-cms-page">Example Page (4)</a></li>
+                <li><a href="/luna-cms-page">Example Page (1)</a></li>
+                <li><a href="/luna-cms-page">Example Page (2)</a></li>
+                <li><a href="/luna-cms-page">Example Page (3)</a></li>
+                <li><a href="/luna-cms-page">Example Page (4)</a></li>
             </ul>
         </div>
 
         <div class="footer-col footer-col2 col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="footer-header">Menu (2)</div>
             <ul>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
             </ul>
         </div>
 
         <div class="footer-col footer-col3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="footer-header">Menu (3)</div>
             <ul>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
-                <li><a href="/nila-cms-page">Nila CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
+                <li><a href="/luna-cms-page">Luna CMS Page</a></li>
             </ul>
         </div>
 

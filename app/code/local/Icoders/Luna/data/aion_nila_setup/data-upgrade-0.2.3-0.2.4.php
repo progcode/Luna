@@ -1,20 +1,20 @@
 <?php
 /**
- * Aion Magento Basic Settings
+ * Icoders Magento Basic Settings
  *
- * @category  Aion
- * @package   Aion_Nila
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 /* @var $installer Mage_Core_Model_Resource_Setup */
 
 $this->startSetup();
 
-$identifier = 'Nila-homepage-small-banners';
+$identifier = 'Luna-homepage-small-banners';
 $contentCmsBlock = <<<EOT
-<div class="row aion-promotional-banners">
+<div class="row icoders-promotional-banners">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
             <div class="small-banner banner-first banner-yellow text-center">
                 <a href="{{config path="web/secure/base_url"}}" title="Home & Decor">

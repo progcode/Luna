@@ -1,15 +1,15 @@
 <?php
 /**
- * AION NilaBrands
+ * AION Brands
  *
- * @category  Aion
- * @package   Aion_NilaBrands
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Brands
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 
-/* @var $installer Aion_NilaBrands_Model_Resource_Setup */
+/* @var $installer Icoders_Brands_Model_Resource_Setup */
 
 $installer = $this;
 

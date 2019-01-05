@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides
+ * Icoders_Slider_Block_Adminhtml_Banner_Edit_Tab_Slides
  *
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2013 AionNext Kft. (http://aionhill.com)
- * @license   Aion License http://aionhill.com/licence
- * @link      http://www.aion.hu
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2013 Icoders (http://icoders.co)
+ * @license   Icoders License http://icoders.co/licence
+ * @link      http://www.icoders.co
  */
-class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml_Block_Widget_Grid
+class Icoders_Slider_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml_Block_Widget_Grid
 {
     /**
      * Set grid params
@@ -18,7 +18,7 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
     public function __construct()
     {
         parent::__construct();
-        $this->setId('aion_rbanner_edit_tab_slides');
+        $this->setId('icoders_slider_edit_tab_slides');
         $this->setDefaultSort('position');
         $this->setUseAjax(true);
         if (!$this->_getBanner()->getId()) {
@@ -36,9 +36,9 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
         if (Mage::registry('banner_item')) {
             return Mage::registry('banner_item');
         } else if (($id = $this->getRequest()->getParam('id'))) {
-            return Mage::getModel('aion_rbanner/banner')->load($id);
+            return Mage::getModel('icoders_slider/banner')->load($id);
         } else {
-            return Mage::getModel('aion_rbanner/banner');
+            return Mage::getModel('icoders_slider/banner');
         }
     }
 
@@ -49,7 +49,7 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
      */
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('aion_rbanner/slide')->getCollection();
+        $collection = Mage::getModel('icoders_slider/slide')->getCollection();
         if ($this->_getBanner()->getId()) {
             $collection->addFieldToFilter('banner_id', $this->_getBanner()->getId());
         } else {
@@ -80,7 +80,7 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
         $this->addColumn(
             'entity_id',
             array(
-                'header'   => Mage::helper('aion_rbanner')->__('ID'),
+                'header'   => Mage::helper('icoders_slider')->__('ID'),
                 'sortable' => true,
                 'width'    => 60,
                 'index'    => 'entity_id'
@@ -90,7 +90,7 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
         $this->addColumn(
             'title_slides',
             array(
-                'header' => Mage::helper('aion_rbanner')->__('Title'),
+                'header' => Mage::helper('icoders_slider')->__('Title'),
                 'index'  => 'title'
             )
         );
@@ -98,7 +98,7 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
         $this->addColumn(
             'link',
             array(
-                'header' => Mage::helper('aion_rbanner')->__('Link'),
+                'header' => Mage::helper('icoders_slider')->__('Link'),
                 'index'  => 'link'
             )
         );
@@ -106,16 +106,16 @@ class Aion_Rbanner_Block_Adminhtml_Banner_Edit_Tab_Slides extends Mage_Adminhtml
         $this->addColumn(
             "banner_id",
             array(
-                "header"   => Mage::helper("aion_rbanner")->__("Banner"),
+                "header"   => Mage::helper("icoders_slider")->__("Banner"),
                 "index"    => "banner_id",
-                "renderer" => 'Aion_Rbanner_Block_Adminhtml_Slide_Grid_Renderer_Banner'
+                "renderer" => 'Icoders_Slider_Block_Adminhtml_Slide_Grid_Renderer_Banner'
             )
         );
 
         $this->addColumn(
             'position_slides',
             array(
-                'header'         => Mage::helper('aion_rbanner')->__('Position'),
+                'header'         => Mage::helper('icoders_slider')->__('Position'),
                 'name'           => 'position',
                 'type'           => 'number',
                 'validate_class' => 'validate-number',

@@ -1,17 +1,17 @@
 <?php
 /**
- * @category  Aion
- * @package   Aion_Rbanner
- * @author    Dombi István <istvan.dombi@aionhill.com>
- * @copyright 2017 AionNext Kft. (http://aionhill.com)
- * @license   http://aionhill.com/licence Aion License
- * @link      http://aionhill.com
+ * @category  Icoders
+ * @package   Icoders_Slider
+ * @author    Dombi István <istvan.dombi@icoders.co>
+ * @copyright 2017 Icoders (http://icoders.co)
+ * @license   http://icoders.co/licence Icoders License
+ * @link      http://icoders.co
  */
 
 /**
- * Class Aion_Rbanner_Helper_Admin
+ * Class Icoders_Slider_Helper_Admin
  */
-class Aion_Rbanner_Helper_Admin extends Mage_Core_Helper_Abstract
+class Icoders_Slider_Helper_Admin extends Mage_Core_Helper_Abstract
 {
     /**
      * Check permission for passed action
@@ -22,7 +22,7 @@ class Aion_Rbanner_Helper_Admin extends Mage_Core_Helper_Abstract
      */
     public function isActionAllowed($action)
     {
-        return Mage::getSingleton('admin/session')->isAllowed('aion/rbanner/manage/' . $action);
+        return Mage::getSingleton('admin/session')->isAllowed('icoders/slider/manage/' . $action);
     }
 
 }

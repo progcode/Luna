@@ -1,13 +1,13 @@
 <?php
 /**
- * Aion Nila
+ * Icoders Luna
  *
- * @category  Aion
- * @package   Aion_Nila
- * @author    Kovacs Daniel Akos <kovacs.daniel@aion.hu>
- * @copyright 2002-2016. AionHill (http://www.aionhill.com)
+ * @category  Icoders
+ * @package   Icoders_Luna
+ * @author    Kovacs Daniel Akos <kovacs.daniel@icoders.co>
+ * @copyright 2002-2016. Icoders (http://www.icoders.co)
  * @license   http://www.magentocommerce.com/license/enterprise-edition GNU General Public License
- * @link      http://www.aionhill.com
+ * @link      http://www.icoders.co
  */
 
 /* @var $installer Mage_Core_Model_Resource_Setup */
@@ -18,12 +18,12 @@ $installer->startSetup();
 try {
 
     /* SYSTEM / CONFIGURATION / GENERAL / DESIGN */
-    $installer->setConfigData('design/package/name','nila');
-    $installer->setConfigData('design/theme/locale','nila2');
-    $installer->setConfigData('design/theme/template','nila2');
-    $installer->setConfigData('design/theme/skin','nila2');
-    $installer->setConfigData('design/theme/layout','nila2');
-    $installer->setConfigData('design/theme/default','nila2');
+    $installer->setConfigData('design/package/name','luna');
+    $installer->setConfigData('design/theme/locale','luna2');
+    $installer->setConfigData('design/theme/template','luna2');
+    $installer->setConfigData('design/theme/skin','luna2');
+    $installer->setConfigData('design/theme/layout','luna2');
+    $installer->setConfigData('design/theme/default','luna2');
 
 } catch (Exception $e) {
     Mage::throwException($e->getMessage());
