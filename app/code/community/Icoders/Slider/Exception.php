@@ -4,7 +4,7 @@
  *
  * @category  Icoders
  * @package   Icoders_Slider
- * @author    Dombi István <istvan.dombi@icoders.co>
+ * @author    iCoders <support@icoders.co>
  * @copyright 2017 Icoders Next Kft. (http://icoders.co)
  * @license   http://icoders.co/licence Icoders License
  * @link      http://icoders.co

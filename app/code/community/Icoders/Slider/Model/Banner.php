@@ -2,7 +2,7 @@
 /**
  * @category  Icoders
  * @package   Icoders_Slider
- * @author    Dombi István <istvan.dombi@icoders.co>
+ * @author    iCoders <support@icoders.co>
  * @copyright 2014 Icoders (http://icoders.co)
  * @license   http://icoders.co/licence Icoders License
  * @link      http://icoders.co

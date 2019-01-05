@@ -4,7 +4,7 @@
  *
  * @category  Icoders
  * @package   Icoders_Luna
- * @author    Sági Attila <sagi.attila@icoders.co>
+ * @author    iCoders <support@icoders.co>
  * @copyright 2016 Icoders (http://www.icoders.co)
  * @license   http://icoders.co/license Icoders License
  * @link      http://www.icoders.co
