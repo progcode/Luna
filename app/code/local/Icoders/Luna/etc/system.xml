@@ -1,19 +1,10 @@
 <?xml version="1.0"?>
-<!--
-/**
- * @category  Icoders
- * @package   Icoders_Nila
- * @author    Sági Attila <iCoders <support@icoders.co>>
- * @copyright 2016 iCoders. (http://icoders.co)
- * @license   http://icoders.co/license Icoders License
- * @link      http://icoders.co
- */
--->
+
 <config>
     <sections>
         <luna>
             <class>separator-top</class>
-            <label>Icoders Nila</label>
+            <label>Icoders Luna</label>
             <tab>Icoders_Extensions</tab>
             <frontend_type>text</frontend_type>
             <sort_order>500</sort_order>

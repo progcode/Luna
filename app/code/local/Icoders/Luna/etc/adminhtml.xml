@@ -1,14 +1,5 @@
 <?xml version="1.0"?>
-<!--
-/**
- * @category  Icoders
- * @package   Icoders_Nila
- * @author    Sági Attila <iCoders <support@icoders.co>>
- * @copyright 2016 iCoders. (http://icoders.co)
- * @license   http://icoders.co/license Icoders License
- * @link      http://icoders.co
- */
--->
+
 <config>
     <acl>
         <resources>
@@ -19,7 +10,7 @@
                             <config>
                                 <children>
                                     <luna translate="title" module="icoders_luna">
-                                        <title>Nila Management</title>
+                                        <title>Luna Management</title>
                                     </luna>
                                 </children>
                             </config>

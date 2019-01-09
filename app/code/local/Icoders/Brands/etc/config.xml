@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Icoders_NilaBrands>
+        <Icoders_Brands>
             <version>0.1.2</version>
-        </Icoders_NilaBrands>
+        </Icoders_Brands>
     </modules>
 
     <global>
         <models>
             <icoders_brands>
-                <class>Icoders_NilaBrands_Model</class>
+                <class>Icoders_Brands_Model</class>
                 <resourceModel>icoders_brands_resource</resourceModel>
             </icoders_brands>
             <icoders_brands_resource>
-                <class>Icoders_NilaBrands_Model_Resource_Setup</class>
+                <class>Icoders_Brands_Model_Resource_Setup</class>
             </icoders_brands_resource>
         </models>
         <resources>
             <icoders_brands_setup>
                 <setup>
-                    <module>Icoders_NilaBrands</module>
+                    <module>Icoders_Brands</module>
                     <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
                 <connection>

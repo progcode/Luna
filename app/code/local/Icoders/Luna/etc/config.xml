@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Icoders_Nila>
+        <Icoders_Luna>
             <version>0.2.8</version>
-        </Icoders_Nila>
+        </Icoders_Luna>
     </modules>
     <global>
         <models>
@@ -28,7 +28,7 @@
         <resources>
             <icoders_luna_setup>
                 <setup>
-                    <module>Icoders_Nila</module>
+                    <module>Icoders_Luna</module>
                     <class>Icoders_Luna_Model_Resource_Setup</class>
                 </setup>
             </icoders_luna_setup>
