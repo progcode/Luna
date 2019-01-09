@@ -13,22 +13,4 @@
 $installer = $this;
 
 $installer->startSetup();
-
-$identifier = 'demo-cms-oldal';
-$staticBlock = Mage::getModel('cms/page')
-    ->load($identifier, 'identifier');
-
-if ($staticBlock->isObjectNew()) {
-    $staticBlock
-        ->setIdentifier($identifier)
-        ->setStores(array(0))
-        ->setIsActive(true)
-        ->setRootTemplate('one_column')
-        ->setTitle('Demo CMS oldal');
-}
-
-$staticBlock
-    ->setContent('<p>Demo CMS oldal</p>')
-    ->save();
-
 $installer->endSetup();
