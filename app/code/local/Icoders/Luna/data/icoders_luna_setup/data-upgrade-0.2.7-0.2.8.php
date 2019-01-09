@@ -19,11 +19,11 @@ try {
 
     /* SYSTEM / CONFIGURATION / GENERAL / DESIGN */
     $installer->setConfigData('design/package/name','luna');
-    $installer->setConfigData('design/theme/locale','luna2');
-    $installer->setConfigData('design/theme/template','luna2');
-    $installer->setConfigData('design/theme/skin','luna2');
-    $installer->setConfigData('design/theme/layout','luna2');
-    $installer->setConfigData('design/theme/default','luna2');
+    $installer->setConfigData('design/theme/locale','luna');
+    $installer->setConfigData('design/theme/template','luna');
+    $installer->setConfigData('design/theme/skin','luna');
+    $installer->setConfigData('design/theme/layout','luna');
+    $installer->setConfigData('design/theme/default','luna');
 
 } catch (Exception $e) {
     Mage::throwException($e->getMessage());
