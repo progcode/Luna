@@ -1,0 +1,58 @@
+<?php
+
+    $collection = $this->getOptions();
+    $num = 0;
+?>
+<tr>
+    <td class="label"><label for="advanced_settings"><?php echo $this->__('Menu Details') ?></label></td>
+    <td class="value grid">
+    <table id="attribute-options-table" class="dynamic-grid data border" cellspacing="0" cellpadding="0"><tbody>
+        <tr class="headings">
+            <th><?php echo $this->__('Title') ?></th>
+            <th><?php echo $this->__('Link') ?></th>
+            <th><?php echo $this->__('Target') ?></th>
+            <th>
+            <?php
+                $num = 0;
+                if ($collection):
+                    foreach($collection as $item):
+            ?>
+                            <tr class="option-row aion-banner-row" id="banner-row-<?php echo $num ?>">
+                                <td><input name="links[value][option_<?php echo $num ?>][title]" value="<?php echo $item->getTitle() ?>" class="input-text required-option" type="text"></td>
+                                <td><input name="links[value][option_<?php echo $num ?>][url]" value="<?php echo $item->getLink() ?>" class="input-text required-option" type="text"></td>
+                                <td>
+                                    <select name="links[value][option_<?php echo $num ?>][target]" class="required-option">
+                                        <option <?php if ($item->getTarget() == ''): ?>selected="selected"<?php endif; ?> value=""><?php echo $this->__('Current Browser Tab') ?></option>
+                                        <option <?php if ($item->getTarget() == '_blank'): ?>selected="selected"<?php endif; ?> value="_blank"><?php echo $this->__('New Browser Tab') ?></option>
+                                        <option <?php if ($item->getTarget() == '_open'): ?>selected="selected"<?php endif; ?> value="_open"><?php echo $this->__('Open Window') ?></option>
+                                    </select>
+                                </td>
+                                <td class="a-left" id="delete_button_container_option_<?php echo $num ?>">
+                                    <input type="hidden" class="delete-flag" name="links[delete][option_<?php echo $num ?>]" value=""/>
+                                    <button onclick="$('banner-row-<?php echo $num ?>').remove();" title="Delete" type="button" class="scalable delete delete-option"><span><span><span><?php echo $this->__('Delete') ?></span></span></span></button>
+                                </td>
+                            </tr>
+                <?php
+                        $num++;
+                        endforeach;
+                    endif;
+                ?>
+                <button id="add_new_option_button" title="Add Item" type="button" class="scalable add"><span><span><span><?php echo $this->__('Add Item') ?></span></span></span></button>
+            </th>
+        </tr>
+        </tbody></table></td></tr>
+
+<script type="text/javascript">
+//<![CDATA[
+
+    var _form_html_row = '<tr class="option-row aion-banner-row" id="banner-row-{{id}}"><td><input name="links[value][option_{{id}}][title]" value="" class="input-text required-option" type="text"></td><td><input name="links[value][option_{{id}}][url]" value="" class="input-text required-option" type="text"></td><td><select name="links[value][option_{{id}}][target]" class="required-option"><option value="">Current Window</option><option value="_blank">New Window</option><option value="_open">Open Window</option></select></td><td class="a-left" id="delete_button_container_option_{{id}}"><input type="hidden" class="delete-flag" name="links[delete][option_{{id}}]" value=""/><button onclick="$(\'banner-row-{{id}}\').remove();" title="Delete" type="button" class="scalable delete delete-option"><span><span><span>Delete</span></span></span></button></td></tr>';
+
+    var _bannerlocator_counter = <?php echo $num ?>;
+
+    $('add_new_option_button').on('click', 'button', function(){
+    $('attribute-options-table').insert(_form_html_row.replace(/\{\{id\}\}/ig, _bannerlocator_counter));
+    _bannerlocator_counter++;
+    });
+
+//]]>
+</script>

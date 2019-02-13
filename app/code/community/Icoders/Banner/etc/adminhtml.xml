@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <cms>
+            <children>
+                <icoders_banner translate="title" module="icoders_banner">
+                    <title>Icoders Banners</title>
+                    <action>adminhtml/icoders_banner</action>
+                    <sort_order>50</sort_order>
+                </icoders_banner>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <icoders_banner translate="title" module="icoders_banner">
+                                <title>Icoders Banners</title>
+                                <sort_order>65</sort_order>
+                                <save translate="title">
+                                    <title>Save Banner</title>
+                                    <sort_order>0</sort_order>
+                                </save>
+                                <delete translate="title">
+                                    <title>Delete Banner</title>
+                                    <sort_order>10</sort_order>
+                                </delete>
+                            </icoders_banner>
+                        </children>
+                    </cms>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <icoders_banner translate="title" module="icoders_banner">
+                                        <title>Banner Management</title>
+                                    </icoders_banner>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

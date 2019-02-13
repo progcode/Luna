@@ -1,0 +1,76 @@
+<?php
+/**
+ * Aion_Banner template for Nila
+ *
+ * @category  Aion
+ * @package   Aion_Banner
+ * @author    Kovacs Daniel Akos <kovacs.daniel@aion.hu>
+ * @copyright 2016 AionNext Kft. (http://www.aion.hu)
+ * @license   http://aion.hu/license Aion License
+ * @link      http://www.aion.hu
+ */
+
+$helper = Mage::helper('icoders_mobiledetect/data');
+$banner = $this->getBanner();
+
+if ($banner->getId()): ?>
+    <?php $images = $banner->getImages(); ?>
+    <?php $links = $banner->getLinks() ?>
+
+<div class="aion-aion-banner">
+    <div class="container aion-banner-container">
+        <div id="banner-<?php echo $banner->getId() ?>" class="carousel slide"  data-ride="carousel" style="width: 100%;">
+
+            <?php if (count($images) > 1): ?>
+            <ol class="carousel-indicators">
+                <?php for ($i = 0; $i < count($images); $i++) : ?>
+                    <li data-target="#banner-<?php echo $banner->getId() ?>" data-slide-to="<?php echo $i ?>" class="<?php echo ($i==0) ? 'active' : '' ?>"></li>
+                <?php endfor; ?>
+            </ol>
+            <?php endif; ?>
+
+            <div class="carousel-inner">
+                <?php $i=0; foreach ($images as $image): ?>
+                    <div class="<?php echo ($i==0) ? 'active ' : '' ?>item">
+                        <a href="<?php echo $image->getLink() ?>">
+                            <img class="banner-img" src="<?php echo $image->getImageUrl() ?>"/>
+                            <div class="carousel-caption <?php if(!empty($image->getVerticalAlign())) echo 'vertical-'.$image->getVerticalAlign() ?> <?php if(!empty($image->getHorizontalAlign())) echo 'horizontal-'.$image->getHorizontalAlign() ?>">
+                                <div class="container">
+                                    <div class="">
+                                        <h2 <?php if(!empty($image->getLabelColor())) : ?> style="color: <?php echo $image['labelColor'] ?>;" <?php endif ?>><?php echo $image->getLabel() ?></h2>
+                                        <p <?php if(!empty($image->getHtmlColor())) : ?> style="color: <?php echo $image['htmlColor'] ?>;" <?php endif ?>><?php echo $image->getHtml() ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php $i++; endforeach; ?>
+            </div>
+
+            <?php if (count($images) > 1): ?>
+            <div class="container carousel-control-container">
+                <a class="carousel-control left" href="#banner-<?php echo $banner->getId() ?>" data-slide="prev">
+                    <i class="icon-nav fa fa-angle-left fa-3x"></i>
+                </a>
+                <a class="carousel-control right" href="#banner-<?php echo $banner->getId() ?>" data-slide="next">
+                    <i class="icon-nav fa fa-angle-right fa-3x"></i>
+                </a>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="container">
+    <?php echo $this->getChildHtml('small_banners'); ?>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery("#banner-<?php echo $banner->getId() ?>").carousel(<?php echo $banner->getAdvancedSettings() ?>);
+    })
+</script>
+
+<?php endif; ?>

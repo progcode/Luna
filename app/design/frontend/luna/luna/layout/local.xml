@@ -45,7 +45,7 @@
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>icoders/icoders-fonticon/style.css</name>
+                <name>icoders/fonticon/style.css</name>
                 <params/>
             </action>
             <action method="addItem">
@@ -53,26 +53,21 @@
                 <name>icoders/js/home.js</name>
                 <params/>
             </action>
-            <!--<action method="addItem">-->
-                <!--<type>skin_js</type>-->
-                <!--<name>vendor/owl.carousel/js/owl.carousel.min.js</name>-->
-                <!--<params/>-->
-            <!--</action>-->
-            <!--<action method="addItem">-->
-                <!--<type>skin_css</type>-->
-                <!--<name>vendor/owl.carousel/css/owl.carousel.css</name>-->
-                <!--<params/>-->
-            <!--</action>-->
-            <!--<action method="addItem">-->
-                <!--<type>skin_css</type>-->
-                <!--<name>vendor/owl.carousel/css/owl.theme.css</name>-->
-                <!--<params/>-->
-            <!--</action>-->
-            <!--<action method="addItem">-->
-                <!--<type>skin_css</type>-->
-                <!--<name>vendor/owl.carousel/css/owl.transitions.css</name>-->
-                <!--<params/>-->
-            <!--</action>-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>vendor/owl.carousel/js/owl.carousel.min.js</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>vendor/owl.carousel/css/owl.carousel.css</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>vendor/owl.carousel/css/owl.theme.css</name>
+                <params/>
+            </action>
             <action method="removeItem">
                 <type>skin_css</type>
                 <name>css/styles.css</name>
@@ -92,18 +87,11 @@
             <block type="core/text" name="google.font.roboto">
                 <action method="setText">
                     <text>
-                        <![CDATA[<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,800italic,700italic,600italic,400italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>]]></text>
+                        <![CDATA[<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,800italic,700italic,600italic,400italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>]]>
+                    </text>
                 </action>
             </block>
         </reference>
-
-        <reference name="footer">
-            <block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml">
-                <action method="setTemplate"><template helper="icoders_edm/data/getNewsletterTemplate" /></action>
-            </block>
-            <block type="page/html" name="footer-menu" template="page/html/footer-menu.phtml"/>
-        </reference>
-
     </default>
 
     <cms_index_index>

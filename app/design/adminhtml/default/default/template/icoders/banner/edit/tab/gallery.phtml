@@ -1,0 +1,230 @@
+<?php
+/**
+* app/design/adminhtml/default/default/template/aion/banner/edit/tab/gallery.phtml
+*
+* @category  Aion
+* @package   icoders_banner
+* @author    Deli-Szabó Sándor <deli.szabo.sandor@aion.hu>
+* @copyright 2014 AionNext Kft. (http://www.aion.hu)
+* @license   http://aion.hu/license Aion License
+* @link      http://www.aion.hu
+*/
+/** @var icoders_banner_Block_Adminhtml_Grid_Edit_Tab_Gallery */
+?>
+<script type="text/javascript">
+    /* to update section after image upload */
+    Product.Gallery.prototype.updateImage = function (file) {
+
+        var index = this.getIndexByFile(file);
+        this.images[index].html = this.getFileElement(file, 'cell-label #image-html').value;
+        this.images[index].link = this.getFileElement(file, 'cell-label #image-link').value;
+        this.images[index].label = this.getFileElement(file, 'cell-label #image-label').value;
+        this.images[index].position = this.getFileElement(file, 'cell-position input').value;
+        this.images[index].removed = (this.getFileElement(file, 'cell-remove input').checked ? 1 : 0);
+        this.images[index].disabled = (this.getFileElement(file, 'cell-disable input').checked ? 1 : 0);
+        this.getElement('save').value = Object.toJSON(this.images);
+        this.updateState(file);
+        this.container.setHasChanges();
+    };
+    /* fill saved data in db to form */
+    Product.Gallery.prototype.updateVisualisation = function (file) {
+
+        var image = this.getImageByFile(file);
+
+        if (image.html != undefined) {
+            this.getFileElement(file, 'cell-label #image-html').value = image.html;
+        }
+        if (image.link != undefined) {
+            this.getFileElement(file, 'cell-label #image-link').value = image.link;
+        }
+        this.getFileElement(file, 'cell-label #image-label').value = image.label;
+
+        this.getFileElement(file, 'cell-position input').value = image.position;
+        this.getFileElement(file, 'cell-remove input').checked = (image.removed == 1);
+        this.getFileElement(file, 'cell-disable input').checked = (image.disabled == 1);
+        $H(this.imageTypes)
+            .each(
+                function (pair) {
+                    if (this.imagesValues[pair.key] == file) {
+                        this.getFileElement(file,
+                            'cell-' + pair.key + ' input').checked = true;
+                    }
+                }.bind(this));
+        this.updateState(file);
+    };
+
+</script>
+
+<div id="<?php echo $this->getHtmlId() ?>">
+
+    <div class="grid">
+        <table cellspacing="0" class="data border" id="<?php echo $this->getHtmlId() ?>_grid" width="100%">
+            <col width="1"/>
+            <col/>
+            <col width="70"/>
+
+            <?php foreach ($this->getImageTypes() as $typeId => $type) : ?>
+                <col style="display:none;"/>
+            <?php endforeach; ?>
+
+            <col width="70"/>
+            <col width="70"/>
+            <thead>
+            <tr class="headings">
+                <th><?php echo Mage::helper('icoders_banner')->__('Image') ?></th>
+                <th><?php echo Mage::helper('icoders_banner')->__('Label') ?></th>
+                <th><?php echo Mage::helper('icoders_banner')->__('Sort Order') ?></th>
+
+                <?php foreach ($this->getImageTypes() as $typeId => $type) : ?>
+                    <th style="display:none;"><?php echo $type['label'] ?></th>
+                <?php endforeach; ?>
+
+                <th><?php echo Mage::helper('icoders_banner')->__('Exclude') ?></th>
+                <th class="last"><?php echo Mage::helper('icoders_banner')->__('Remove') ?></th>
+            </tr>
+            </thead>
+            <tbody id="<?php echo $this->getHtmlId() ?>_list">
+            <tr id="<?php echo $this->getHtmlId() ?>_template" class="template no-display">
+                <td class="cell-image">
+                    <div class="place-holder"
+                         onmouseover="<?php echo $this->getJsObjectName(); ?>.loadImage('__file__')">
+                        <span><?php echo Mage::helper('icoders_banner')->__('Roll Over for preview') ?></span></div>
+                    <img src="<?php echo $this->getSkinUrl('images/spacer.gif') ?>" width="100" style="display:none;"
+                         alt=""/></td>
+                <td class="cell-label">
+                    <table>
+                        <tr>
+                            <td><?php echo $this->__('Label'); ?>
+                                <input id="image-label"
+                                       type="text" <?php if ($this->getElement()->getReadonly()) : ?> disabled="disabled"<?php endif; ?>
+                                       class="input-text"
+                                       title=""
+                                       onkeyup="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"
+                                       onchange="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->__('Link'); ?>
+                                <input id="image-link"
+                                       type="text" <?php if ($this->getElement()->getReadonly()) : ?> disabled="disabled"<?php endif; ?>
+                                       class="input-text"
+                                       title=""
+                                       onkeyup="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"
+                                       onchange="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->__('HTML'); ?>
+                                <textarea id="image-html" rows=6
+                                          cols=140 <?php if ($this->getElement()->getReadonly()) : ?> disabled="disabled"<?php endif; ?>
+                                          class="textarea"
+                                          title=""
+                                          onkeyup="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"
+                                          onchange="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+                <td class="cell-position"><input
+                        type="text" <?php if ($this->getElement()->getReadonly()) : ?> disabled="disabled"<?php endif; ?>
+                        class="input-text validate-number"
+                        title=""
+                        onkeyup="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"
+                        onchange="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"/></td>
+
+                <?php foreach ($this->getImageTypes() as $typeId => $type) : ?>
+                    <td class="cell-<?php echo $typeId ?> a-center" style="display:none;">
+                        <input <?php if ($this->getElement()->getAttributeReadonly($typeId)) : ?> disabled="disabled" <?php endif; ?>
+                            type="radio" name="<?php echo $type['field'] ?>"
+                            title=""
+                            onclick="<?php echo $this->getJsObjectName(); ?>.setProductImages('__file__')"
+                            value="__file__"/>
+                    </td>
+                <?php endforeach; ?>
+
+                <td class="cell-disable a-center"><input
+                        type="checkbox" <?php if ($this->getElement()->getReadonly()) : ?> disabled="disabled"<?php endif; ?>
+                        title=""
+                        onclick="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"/></td>
+                <td class="cell-remove a-center last"><input
+                        type="checkbox" <?php if ($this->getElement()->getReadonly()) : ?> disabled="disabled"<?php endif; ?>
+                        title=""
+                        onclick="<?php echo $this->getJsObjectName(); ?>.updateImage('__file__')"/></td>
+            </tr>
+            <?php if ($this->hasUseDefault()) : ?>
+                <tr id="<?php echo $this->getHtmlId() ?>_default">
+                    <td><?php echo Mage::helper('icoders_banner')->__('Use Default Value') ?></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <?php foreach ($this->getMediaAttributes() as $_attribute) : ?>
+                        <td class="a-center">
+                            <?php if ($this->getElement()->canDisplayUseDefault($_attribute)) : ?>
+                                <input class="default-checkbox" name="use_default[]"
+                                       type="checkbox" <?php if ($this->getElement()->getAttributeReadonly($_attribute->getAttributeCode())) : ?> disabled="disabled" <?php endif; ?>
+                                       onclick="<?php echo $this->getJsObjectName(); ?>.updateUseDefault()" title=""
+                                       <?php if ($this->getElement()->usedDefault($_attribute)) : ?>checked<?php endif; ?>
+                                       value="<?php echo $_attribute->getAttributeCode() ?>"/>
+                            <?php endif ?>
+                        </td>
+                    <?php endforeach; ?>
+                    <td>&nbsp;</td>
+                    <td class="last">&nbsp;</td>
+                </tr>
+            <?php endif ?>
+            <tr id="<?php echo $this->getHtmlId() ?>-image-0" style="display:none;">
+                <td class="cell-image"><?php echo Mage::helper('icoders_banner')->__('No image') ?></td>
+                <td class="cell-label"><input type="hidden"/>&nbsp;</td>
+                <td class="cell-position"><input type="hidden"/>&nbsp;</td>
+
+                <?php foreach ($this->getImageTypes() as $typeId => $type) : ?>
+                    <td class="cell-<?php echo $typeId ?> a-center" style="display:none;">
+                        <input
+                            type="radio" <?php if ($this->getElement()->getAttributeReadonly($typeId)) : ?> disabled="disabled" <?php endif; ?>
+                            name="<?php echo $type['field'] ?>" title=""
+                            onclick="<?php echo $this->getJsObjectName(); ?>.setProductImages('no_selection')"
+                            value="no_selection"/>
+                    </td>
+                <?php endforeach; ?>
+
+                <td class="cell-disable"><input type="hidden"/>&nbsp;</td>
+                <td class="cell-remove last"><input type="hidden"/>&nbsp;</td>
+            </tr>
+            </tbody>
+            <?php if (!$this->getElement()->getReadonly()) : ?>
+                <tfoot>
+                <tr>
+                    <td colspan="100" class="last" style="padding:8px">
+                        <?php echo $this->getUploaderHtml() ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="100" class="last" style="padding:8px">
+                        <b><?php echo $this->__('Note:-'); ?></b>
+                        <?php echo $this->__('Image Link Url : Please enter url with http and www'); ?>
+                    </td>
+                </tr>
+                </tfoot>
+            <?php endif; ?>
+        </table>
+    </div>
+</div>
+
+<input type="hidden" id="<?php echo $this->getHtmlId() ?>_save" name="banner_tabs[images]"
+       value="<?php echo $this->escapeHtml($this->getImagesJson()) ?>"/>
+<input type="hidden" id="<?php echo $this->getHtmlId() ?>_save_image" name="banner_tabs[values]"
+       value="<?php echo $this->escapeHtml($this->getImagesValuesJson()) ?>"/>
+<script type="text/javascript">
+    //<![CDATA[
+
+    <?php if (Mage::helper('icoders_banner')->isNoFlashUploader()) : ?>
+        var <?php echo $this->getJsObjectName(); ?> = new Product.Gallery('<?php echo $this->getHtmlId() ?>', <?php echo $this->getImageTypesJson() ?>);
+    <?php else : ?>
+        var <?php echo $this->getJsObjectName(); ?> = new Product.Gallery('<?php echo $this->getHtmlId() ?>',
+            <?php if ($this->getElement()->getReadonly()) : ?>null<?php else:?><?php echo $this->getUploader()->getJsObjectName() ?><?php endif; ?>,
+            <?php echo $this->getImageTypesJson() ?>);
+    <?php endif; ?>
+    //]]>
+</script>
+

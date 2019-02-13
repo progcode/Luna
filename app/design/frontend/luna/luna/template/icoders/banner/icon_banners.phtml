@@ -1,1 +1,41 @@
-<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('icoders-icon-banners')->toHtml();
+<div class="icoders-icon-banners">
+    <div class="icon-banner col-xs-12 col-sm-6 col-md-4">
+        <div class="icon-banner-icon">
+            <i class="icoders-icon icoders-icon-badge-freedelivery"></i>
+        </div>
+        <div class="icon-banner-text">
+            <a href="{{config path="web/secure/base_url"}}" title="Trusted Delivery">
+            Trusted Delivery
+            </a>
+            <div>
+                For orders above 90,00 EUR
+            </div>
+        </div>
+    </div>
+    <div class="icon-banner col-xs-12 col-sm-6 col-md-4">
+        <div class="icon-banner-icon">
+            <i class="icoders-icon icoders-icon-badge-hotline"></i>
+        </div>
+        <div class="icon-banner-text">
+            <a href="{{config path="web/secure/base_url"}}" title="Trusted Service">
+            Trusted Service
+            </a>
+            <div>
+                Hotline and online service
+            </div>
+        </div>
+    </div>
+    <div class="icon-banner col-xs-12 col-sm-12 col-md-4">
+        <div class="icon-banner-icon">
+            <i class="icoders-icon icoders-icon-badge-moneyback"></i>
+        </div>
+        <div class="icon-banner-text">
+            <a href="{{config path="web/secure/base_url"}}" title="Trusted Payment">
+            Trusted Payment
+            </a>
+            <div>
+                14 day money back guarantee
+            </div>
+        </div>
+    </div>
+</div>

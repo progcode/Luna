@@ -49,7 +49,7 @@ $currentCategory = Mage::registry('current_category');
             if($current_category->getData('is_active') && $current_category->getData('is_featured_brand')) { ?>
                 <div class="item">
                     <a href="<?php echo $_helper->getCategoryUrl($current_category) ?>" title="<?php echo $current_category->getName() ?>">
-                        <img class="brand-logo" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'/catalog/category/'. $current_category->getData('brand_logo'); ?>"  />
+                        <img class="brand-logo" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'/catalog/category/'. $current_category->getData('brand_logo'); ?>"  style="width: 100%;" />
                     </a>
                 </div>
             <?php };
@@ -66,7 +66,7 @@ $currentCategory = Mage::registry('current_category');
 
                         <div class="item">
                             <a href="<?php echo $_helper->getCategoryUrl($current_subcategory) ?>" title="<?php echo $current_subcategory->getName() ?>">
-                                <img class="brand-logo" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'/catalog/category/'. $current_subcategory->getData('brand_logo'); ?>"  />
+                                <img class="brand-logo" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'/catalog/category/'. $current_subcategory->getData('brand_logo'); ?>" style="width: 100%;"  />
                             </a>
                         </div>
 
@@ -98,8 +98,8 @@ $currentCategory = Mage::registry('current_category');
 
 <div class="copyright">
     <div class="container">
-        <a href="#header" title="Nila Shop">
-            <img src="<?php echo $this->getSkinUrl('img/footer-logo.png') ?>">
+        <a href="#header" title="Luna Shop">
+            Luna <?php echo date('Y'); ?>
         </a>
     </div>
 </div>

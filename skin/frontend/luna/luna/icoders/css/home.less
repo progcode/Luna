@@ -1,7 +1,7 @@
 @import "base";
-@import "aionbanner";
+@import "banner";
 
-.aion-aion-banner {
+.icoders-icoders-banner {
   .carousel {
     max-width: 100%;
   }
@@ -92,7 +92,7 @@
   }
 }
 
-.aion-small-banners {
+.icoders-small-banners {
   padding-top: 0;
   .small-banner {
     background-size: cover;
@@ -133,11 +133,11 @@
   }
 }
 
-.aion-icon-banners {
+.icoders-icon-banners {
   margin-top: 30px;
 }
 
-.aion-promotional-banners {
+.icoders-promotional-banners {
   padding-top: 20px;
   .small-banner {
     background-size: cover;
@@ -177,7 +177,7 @@
   }
 }
 
-.aion-icon-banners {
+.icoders-icon-banners {
   .icon-banner{
     margin-bottom: 15px;
 
@@ -214,7 +214,7 @@
   }
 }
 
-.aion-home-grid {
+.icoders-home-grid {
   .widget-title {
     hr {
       border: 0;
@@ -231,37 +231,41 @@
     margin-right: -15px;
     .products-grid {
       padding-top: 20px;
-      .product-info {
-        .product-name a {
-          .nfont-normal(@black, 15, 16);
-        }
-        .price {
-          display: inline-block;
-          margin-bottom: 10px;
-          .nfont-bold(@blue, 15, 16);
-        }
-        .actions {
-          button {
-            .nfont-sbold(@white, 11, 30);
-            background-color: @blue;
-            border: 1px solid transparent;
+
+      .item {
+        .product-info {
+          .product-name a {
+            .nfont-normal(@black, 15, 16);
+          }
+          .price {
             display: inline-block;
-            padding: 0 15px;
-            text-transform: uppercase;
+            margin-bottom: 10px;
+            .nfont-bold(@blue, 15, 16);
+          }
+          .actions {
+            button {
+              .nfont-sbold(@white, 11, 30);
+              background-color: @blue;
+              border: 1px solid transparent;
+              display: inline-block;
+              padding: 0 15px;
+              text-transform: uppercase;
 
-            &:hover {
-              background-color: @white;
-              border: 1px solid @blue;
-              color: @blue;
+              &:hover {
+                background-color: @white;
+                border: 1px solid @blue;
+                color: @blue;
+              }
+
             }
-
+          }
+          .add-to-links {
+            list-style-type: none;
+            margin-top: 10px;
           }
         }
-        .add-to-links {
-          list-style-type: none;
-          margin-top: 10px;
-        }
       }
+
     }
   }
 }
@@ -283,7 +287,7 @@
 // LG ------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Large devices (large desktops, 1200px and up)
 @media (max-width: @screen-lg-min) {
-  .aion-aion-banner {
+  .icoders-icoders-banner {
     .carousel-caption {
       h2 {
         font-size: 45px;
@@ -296,7 +300,7 @@
 // MD ------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Medium devices (desktops, 992px and up)
 @media (max-width: @screen-md-min) {
-  .aion-aion-banner {
+  .icoders-icoders-banner {
     padding-bottom: 15px;
     .carousel-control-container {
       position: static;
@@ -317,7 +321,7 @@
     }
   }
 
-  .aion-small-banners {
+  .icoders-small-banners {
     div {
       padding: 0;
     }
@@ -327,7 +331,7 @@
 // SM ------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Small devices (tablets, 768px and up)
 @media (max-width: @screen-sm-min) {
-  .aion-aion-banner {
+  .icoders-icoders-banner {
     .carousel-caption {
       h2 {
         font-size: 30px;
@@ -342,7 +346,7 @@
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
-  .aion-small-banners {
+  .icoders-small-banners {
     .small-banner {
       margin-bottom: 15px;
     }
@@ -350,7 +354,7 @@
 }
 
 @media (max-width: @screen-xs) {
-  .aion-aion-banner {
+  .icoders-icoders-banner {
     .carousel-caption {
       padding: 10px 0;
       h2 {

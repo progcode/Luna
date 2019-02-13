@@ -38,17 +38,7 @@ if ($banner->getId()): ?>
                             foreach ($images as $image): ?>
                                 <div class="<?php if ($num == 0): ?>active<?php endif; ?> item">
                                     <a <?php if (!empty($image->getLink())): ?> href="<?php echo $image->getLink() ?>"<?php else: ?> href="#" <?php endif; ?>>
-                                        <div class="caption-background" style="background-image: url('<?php echo $image->getImageUrl() ?>'); no-repeat center center fixed">
-                                            <div class="carousel-caption">
-                                                <div class="caption-title">
-                                                    <h2><?php echo $image->getLabel() ?></h2>
-                                                </div>
-
-                                                <div class="caption-text">
-                                                    <p><?php echo $image->getHtml() ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="caption-background" style="background-image: url('<?php echo $image->getImageUrl() ?>'); no-repeat center center fixed"></div>
                                     </a>
                                 </div>
                                 <?php $num++;
@@ -80,7 +70,47 @@ if ($banner->getId()): ?>
 <div class="clearfix"></div>
 
 <div class="container">
-    <?php echo $this->getChildHtml('icon_banners'); ?>
+    <div class="icoders-icon-banners">
+        <div class="icon-banner col-xs-12 col-sm-6 col-md-4">
+            <div class="icon-banner-icon">
+                <i class="icoders-icon icoders-icon-badge-freedelivery"></i>
+            </div>
+            <div class="icon-banner-text">
+                <a href="{{config path="web/secure/base_url"}}" title="Trusted Delivery">
+                Trusted Delivery
+                </a>
+                <div>
+                    For orders above 90,00 EUR
+                </div>
+            </div>
+        </div>
+        <div class="icon-banner col-xs-12 col-sm-6 col-md-4">
+            <div class="icon-banner-icon">
+                <i class="icoders-icon icoders-icon-badge-hotline"></i>
+            </div>
+            <div class="icon-banner-text">
+                <a href="{{config path="web/secure/base_url"}}" title="Trusted Service">
+                Trusted Service
+                </a>
+                <div>
+                    Hotline and online service
+                </div>
+            </div>
+        </div>
+        <div class="icon-banner col-xs-12 col-sm-12 col-md-4">
+            <div class="icon-banner-icon">
+                <i class="icoders-icon icoders-icon-badge-moneyback"></i>
+            </div>
+            <div class="icon-banner-text">
+                <a href="{{config path="web/secure/base_url"}}" title="Trusted Payment">
+                Trusted Payment
+                </a>
+                <div>
+                    14 day money back guarantee
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">

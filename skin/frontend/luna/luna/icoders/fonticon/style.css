@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'icoders-icon';
+  src:  url('fonts/aion-icon.eot?8rajcp');
+  src:  url('fonts/aion-icon.eot?8rajcp#iefix') format('embedded-opentype'),
+    url('fonts/aion-icon.ttf?8rajcp') format('truetype'),
+    url('fonts/aion-icon.woff?8rajcp') format('woff'),
+    url('fonts/aion-icon.svg?8rajcp#icoders-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i.icoders-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icoders-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icoders-icon-arrow-tocart:before {
+  content: "\e900";
+}
+.icoders-icon-close-cart:before {
+  content: "\e901";
+}
+.icoders-icon-delete:before {
+  content: "\e902";
+}
+.icoders-icon-edit:before {
+  content: "\e903";
+}
+.icoders-icon-info:before {
+  content: "\e904";
+}
+.icoders-icon-reload:before {
+  content: "\e905";
+}
+.icoders-icon-badge-freedelivery:before {
+  content: "\e906";
+}
+.icoders-icon-badge-hotline:before {
+  content: "\e907";
+}
+.icoders-icon-badge-moneyback:before {
+  content: "\e908";
+}
+.icoders-icon-icons-contact-form:before {
+  content: "\e909";
+}
+.icoders-icon-icons-contact-mail:before {
+  content: "\e90a";
+}
+.icoders-icon-icons-contact-map:before {
+  content: "\e90b";
+}
+.icoders-icon-icons-contact-tel:before {
+  content: "\e90c";
+}
+.icoders-icon-icons-search:before {
+  content: "\e90d";
+}
+.icoders-icon-icons-social-facebook:before {
+  content: "\e90e";
+}
+.icoders-icon-icons-social-gplus:before {
+  content: "\e90f";
+}
+.icoders-icon-icons-social-pinterest:before {
+  content: "\e910";
+}
+.icoders-icon-icons-social-twitter:before {
+  content: "\e911";
+}
+.icoders-icon-icons-user-cart:before {
+  content: "\e912";
+}
+.icoders-icon-icons-user-profile:before {
+  content: "\e913";
+}

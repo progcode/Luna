@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_icoders_banner_index>
+        <reference name="content">
+            <block type="icoders_banner/adminhtml_grid" name="icoders_banner_grid"/>
+        </reference>
+    </adminhtml_icoders_banner_index>
+
+    <adminhtml_icoders_banner_edit>
+        <reference name="head">
+            <action method="setCanLoadExtJs">1</action>
+            <action method="addJs"><file helper="icoders_banner/getFlowMin" /></action>
+            <action method="addJs"><file helper="icoders_banner/getFustyFlow" /></action>
+            <action method="addJs"><file helper="icoders_banner/getFustyFlowFactory" /></action>
+            <action method="addJs"><file helper="icoders_banner/getAdminhtmlUploaderInstance" /></action>
+        </reference>
+
+        <reference name="left">
+            <block type="icoders_banner/adminhtml_grid_edit_tabs" name="banner_tabs">
+                <block name="banner_gallery_page"
+                       type="icoders_banner/adminhtml_grid_edit_tab_gallery"
+                       template="icoders/banner/edit/tab/gallery.phtml"/>
+
+                <action method="addTab">
+                    <name>banner_form</name>
+                    <block>icoders_banner/adminhtml_grid_edit_tab_form</block>
+                </action>
+                <action method="addTab">
+                    <name>banner_gallery</name>
+                    <block>banner_gallery_page</block>
+                </action>
+
+                <action method="addTab">
+                    <name>banner_tab_page</name>
+                    <block>icoders_banner/adminhtml_grid_edit_tab_page</block>
+                </action>
+            </block>
+        </reference>
+
+        <reference name="content">
+            <block type="icoders_banner/adminhtml_grid_edit" name="icoders_banner_grid_edit"/>
+        </reference>
+    </adminhtml_icoders_banner_edit>
+</layout>
