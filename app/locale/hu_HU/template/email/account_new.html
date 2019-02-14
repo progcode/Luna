@@ -1,0 +1,46 @@
+<!--@subject Welcome, {{var customer.name}}! @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"htmlescape var=$customer.name":"Customer Name",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var customer.email":"Customer Email",
+"htmlescape var=$customer.password":"Customer Password"}
+@-->
+
+<!--@styles
+@-->
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+
+<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td class="action-content">
+            <h1>Kedves {{htmlescape var=$customer.name}}!</h1>
+            <p>A belépéshez kattintson <a href="{{store url="customer/account/"}}">ide</a>.</p>
+            <p class="highlighted-text">
+                A bejelentkezéshez az adatok:<br/>
+                <strong>E-mail</strong>: {{var customer.email}}<br/>
+                <strong>Jelszó</strong>: {{htmlescape var=$customer.password}}
+            </p>
+            <p>Belépés után az alábbi tevékenységeket tudja elvégezni: </p>
+            <ul>
+                <li>Gyors vásárlás</li>
+                <li>Rendelések nyomon követése</li>
+                <li>Múltbéli rendelések megtekintése</li>
+                <li>Az adatai megváltoztatása</li>
+                <li>Jelszó megváltoztatása</li>
+                <li>Több cím megadása</li>
+            </ul>
+            <p>
+                Ha bármilyen kérdése lenne, kérjük írjon az
+                <a href="mailto:{{var store_email}}">{{var store_email}}</a>
+                e-mail címre
+                {{depend store_phone}} vagy keressen bennünket a <a href="tel:{{var phone}}">{{var store_phone}}</a> telefonszámon{{/depend}}.
+            </p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer"}}
