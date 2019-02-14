@@ -32,8 +32,8 @@
     <div class="container">
         <div class="header-language-container">
             <div class="col-xs-4 header-store-info">
-                <span>Phone: <?php echo Mage::getStoreConfig('general/store_information/phone'); ?></span>
-                <span>Email: <?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?></span>
+                <span><?php echo $this->__('Telephone'); ?>: <?php echo Mage::getStoreConfig('general/store_information/phone'); ?></span>
+                <span><?php echo $this->__('Email'); ?>: <?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?></span>
             </div>
             <div class="welcome-msg col-xs-4 text-center"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getChildHtml('accountLinks') ?></div>
             <div class="store-language-container col-xs-4">

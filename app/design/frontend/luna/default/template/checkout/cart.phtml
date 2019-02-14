@@ -93,12 +93,12 @@
 
                 <?php if($this->getContinueShoppingUrl()): ?>
                 <div class="col-xs-6 col-md-3">
-                    <button class="btn-back" type="button" title="<?php echo $this->quoteEscape($this->__('Continue Shopping')) ?>" class="button2 btn-continue" onclick="setLocation('<?php echo Mage::helper('core')->quoteEscape($this->getContinueShoppingUrl()) ?>')"><i class="fa fa-arrow-left"></i><span><?php echo $this->quoteEscape($this->__('Continue Shopping')) ?></span></button>
+                    <button class="btn-back btn-continue" type="button" title="<?php echo $this->quoteEscape($this->__('Continue Shopping')) ?>" onclick="setLocation('<?php echo Mage::helper('core')->quoteEscape($this->getContinueShoppingUrl()) ?>')"><i class="fa fa-arrow-left"></i><span><?php echo $this->quoteEscape($this->__('Continue Shopping')) ?></span></button>
                 </div>
                 <?php endif; ?>
 
                 <div class="col-xs-6 col-md-3 col-md-offset-6">
-                    <button class="btn-empty-cart" type="submit" name="update_cart_action" data-cart-empty value="empty_cart" title="<?php echo $this->quoteEscape($this->__('Empty Cart')); ?>" class="button2 btn-empty" id="empty_cart_button"><i class="fa fa-times-circle"></i><span><?php echo $this->quoteEscape($this->__('Empty Cart')); ?></span></button>
+                    <button class="btn-empty-cart btn-empty" type="submit" name="update_cart_action" data-cart-empty value="empty_cart" title="<?php echo $this->quoteEscape($this->__('Empty Cart')); ?>" id="empty_cart_button"><i class="fa fa-times-circle"></i><span><?php echo $this->quoteEscape($this->__('Empty Cart')); ?></span></button>
                 </div>
 
                     <!--[if lt IE 8]>
