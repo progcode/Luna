@@ -1087,40 +1087,6 @@ $j(document).ready(function () {
                     }
                 });
 
-                $j.each(gridRows, function () {
-                    var tallestProductInfo = 0;
-                    $j.each(this, function () {
-                        // Since this function is called every time the page is resized, we need to remove the min-height
-                        // and bottom-padding so each cell can return to its natural size before being measured.
-                        $j(this).find('.product-info').css({
-                            'min-height': '',
-                            'padding-bottom': ''
-                        });
-
-                        // We are checking the height of .product-info (rather than the entire li), because the images
-                        // will not be loaded when this JS is run.
-                        var productInfoHeight = $j(this).find('.product-info').height();
-                        // Space above .actions element
-                        var actionSpacing = 10;
-                        // The height of the absolutely positioned .actions element
-                        var actionHeight = $j(this).find('.product-info .actions').height();
-
-                        // Add height of two elements. This is necessary since .actions is absolutely positioned and won't
-                        // be included in the height of .product-info
-                        var totalHeight = productInfoHeight + actionSpacing + actionHeight;
-                        if (totalHeight > tallestProductInfo) {
-                            tallestProductInfo = totalHeight;
-                        }
-
-                        // Set the bottom-padding to accommodate the height of the .actions element. Note: if .actions
-                        // elements are of varying heights, they will not be aligned.
-                        $j(this).find('.product-info').css('padding-bottom', actionHeight + 'px');
-                    });
-                    // Set the height of all .product-info elements in a row to the tallest height
-                    $j.each(this, function () {
-                        $j(this).find('.product-info').css('min-height', tallestProductInfo);
-                    });
-                });
             });
         }
         alignProductGridActions();

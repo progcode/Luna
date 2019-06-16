@@ -1075,18 +1075,13 @@ footer {
 
 }
 
-// MD ------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Medium devices (desktops, 992px and up)
-
 @media (min-width: @screen-md-min) {
-
     #header-search {
         left: 260px;
         width: 360px;
     }
 
     footer {
-
         .block-subscribe {
             padding: 0;
             text-align: center;
@@ -1100,9 +1095,8 @@ footer {
             }
 
             .block-title {
-                margin: 0 90px 0 0;
                 position: relative;
-                top: 2px;
+                margin-top: 20px;
             }
 
             label {
@@ -1154,6 +1148,15 @@ footer {
 
         .footer-newsletter-menu {
             text-align: center;
+
+            .form-group {
+                text-align: left;
+            }
+
+            label {
+                .nfont-normal(@dgray, 14,21);
+                text-transform: inherit;
+            }
         }
 
         .footer-header {
@@ -1246,9 +1249,5 @@ footer {
 
     #header-search {
         left: 325px;
-    }
-
-    footer .block-subscribe .block-title{
-        margin: 0 285px 0 0;
     }
 }

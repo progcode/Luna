@@ -1,13 +1,47 @@
 <?xml version="1.0"?>
 <config>
+	<modules>
+		<Icoders_Cms>
+			<version>0.1.3</version>
+		</Icoders_Cms>
+	</modules>
 	<global>
+		<helpers>
+			<icoders_cms>
+				<class>Icoders_Cms_Helper</class>
+			</icoders_cms>
+		</helpers>
 		<page>
 			<layouts>
 				<custom_2column_left_cms>
 					<label>IcodersCmsPage</label>
 					<template>page/custom-2column-left-cms.phtml</template>
 				</custom_2column_left_cms>
+
+				<custom_homepage>
+					<label>HomePage</label>
+					<template>page/homepage.phtml</template>
+				</custom_homepage>
 			</layouts>
 		</page>
 	</global>
+	<adminhtml>
+		<layout>
+			<updates>
+				<adminhtml_index_login>
+					<file>icoders/cms.xml</file>
+				</adminhtml_index_login>
+			</updates>
+		</layout>
+	</adminhtml>
+	<default>
+		<icoders_cms>
+			<config>
+				<instagram_enabled>1</instagram_enabled>
+				<wp_url>https://panarom.hu</wp_url>
+				<wp_feed>https://af-blog.delocal.hu/FeedRss.php</wp_feed>
+				<insta_feed>https://af-blog.delocal.hu/instaFeed.php</insta_feed>
+			</config>
+		</icoders_cms>
+	</default>
 </config>

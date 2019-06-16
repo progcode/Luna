@@ -34,6 +34,17 @@
             </icoders_luna_setup>
         </resources>
     </global>
+    <frontend>
+        <translate>
+            <modules>
+                <icoders_luna>
+                    <files>
+                        <default>Icoders_Luna.csv</default>
+                    </files>
+                </icoders_luna>
+            </modules>
+        </translate>
+    </frontend>
     <default>
         <luna>
             <view>

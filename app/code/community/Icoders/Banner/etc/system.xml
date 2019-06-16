@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config>
     <tabs>
-        <aion translate="label" module="icoders_banner">
+        <icoders translate="label" module="icoders_banner">
             <label>Icoders - Extensions</label>
             <sort_order>50</sort_order>
-        </aion>
+        </icoders>
     </tabs>
     <sections>
         <icoders_banner>
             <class>separator-top</class>
             <label>Banner</label>
-            <tab>aion</tab>
+            <tab>icoders</tab>
             <frontend_type>text</frontend_type>
             <sort_order>500</sort_order>
             <show_in_default>1</show_in_default>

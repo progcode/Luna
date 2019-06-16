@@ -32,20 +32,10 @@
 
     <default translate="label" module="page">
         <label>All Pages</label>
-        <block type="page/html" name="root" output="toHtml" template="page/3columns.phtml">
+        <block type="page/html" name="root" output="toHtml" template="page/2columns-left.phtml">
 
             <block type="page/html_head" name="head" as="head">
                 <action method="addJs"><script>prototype/prototype.js</script></action>
-                <action method="addItem">
-                    <type>skin_js</type>
-                    <name>vendor/jquery/jquery-1.12.0.min.js</name>
-                    <params/>
-                </action>
-                <action method="addItem">
-                    <type>skin_js</type>
-                    <name>vendor/jquery/noconflict.js</name>
-                    <params/>
-                </action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
                 <action method="addJs"><script>scriptaculous/builder.js</script></action>

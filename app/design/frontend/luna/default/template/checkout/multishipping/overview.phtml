@@ -199,7 +199,7 @@
                         <div class="inner">
                             <big><?php echo $this->__('Grand Total:') ?> <?php echo $this->helper('checkout')->formatPrice($this->getTotal()) ?></big>
                             <div id="review-buttons-container">
-                                <button type="submit" title="<?php echo $this->quoteEscape($this->__('Place Order')) ?>" class="button btn-checkout" id="review-button"><span><span><?php echo $this->__('Place Order') ?></span></span></button>
+                                <button type="button" title="<?php echo $this->quoteEscape($this->__('Place Order')) ?>" class="btn btn__cart btn-lg btn-block" id="review-button"><span><span><?php echo $this->__('Place Order') ?></span></span></button>
                             </div>
                         </div>
                     </div>
@@ -207,9 +207,6 @@
                         <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->quoteEscape($this->__('Submitting order information...')) ?>" title="<?php echo $this->quoteEscape($this->__('Submitting order information...')) ?>" class="v-middle" /> <?php echo $this->__('Submitting order information...') ?>
                     </span>
                 </div>
-            </div>
-            <div class="buttons-set">
-                <p class="back-link"><a href="<?php echo $this->getBackUrl() ?>"><small>&laquo; </small><?php echo $this->__('Back to Billing Information') ?></a></p>
             </div>
         </form>
         <script type="text/javascript">

@@ -19,12 +19,10 @@ if ($banner->getId()): ?>
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 no-padding-right">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding-right">
             <div class="icoders-icoders-banner">
                 <div class="icoders-banner-container">
-
                     <div id="banner-<?php echo $banner->getId() ?>" class="carousel slide" data-ride="carousel" style="width: 100%;">
-
                         <?php if (count($images) > 1): ?>
                             <ol class="carousel-indicators">
                                 <?php for ($i = 0; $i < count($images); $i++) : ?>
@@ -55,14 +53,9 @@ if ($banner->getId()): ?>
                                 </a>
                             </div>
                         <?php endif; ?>
-
                     </div>
-
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 no-padding">
-            <?php echo $this->getChildHtml('small_banners'); ?>
         </div>
     </div>
 </div>
@@ -76,11 +69,11 @@ if ($banner->getId()): ?>
                 <i class="icoders-icon icoders-icon-badge-freedelivery"></i>
             </div>
             <div class="icon-banner-text">
-                <a href="#" title="Trusted Delivery">
+                <a href="#" title="<?php echo $this->__('Free Delivery'); ?>">
                     <?php echo $this->__('Free Delivery'); ?>
                 </a>
                 <div>
-                    <?php echo $this->__('For orders above 100,00 EUR'); ?>
+                    <?php echo $this->__('For orders above 100 EUR'); ?>
                 </div>
             </div>
         </div>
@@ -89,7 +82,7 @@ if ($banner->getId()): ?>
                 <i class="icoders-icon icoders-icon-badge-hotline"></i>
             </div>
             <div class="icon-banner-text">
-                <a href="#" title="Trusted Service">
+                <a href="#" title="<?php echo $this->__('Trusted Service'); ?>">
                     <?php echo $this->__('Trusted Service'); ?>
                 </a>
                 <div>
@@ -102,7 +95,7 @@ if ($banner->getId()): ?>
                 <i class="icoders-icon icoders-icon-badge-moneyback"></i>
             </div>
             <div class="icon-banner-text">
-                <a href="#" title="Trusted Payment">
+                <a href="#" title="<?php echo $this->__('Trusted Payment'); ?>">
                     <?php echo $this->__('Trusted Payment'); ?>
                 </a>
                 <div>

@@ -2,8 +2,8 @@
 <config>
 	<modules>
 		<Icoders_Cms>
-			<codePool>local</codePool>
 			<active>true</active>
+			<codePool>local</codePool>
 		</Icoders_Cms>
 	</modules>
 </config>

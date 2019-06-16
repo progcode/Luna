@@ -26,33 +26,45 @@
 ?>
 <div class="footer-newsletter-menu">
     <div class="container">
-    <div class="block block-subscribe">
-        <div class="">
-            <div class="block-title"><?php echo $this->__('Newsletter') ?></div>
-            <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
-                <div class="block-content">
-                    <?php /*<div class="form-subscribe-header">
-                        <label for="newsletter"><?php echo $this->__('Sign Up for Our Newsletter:') ?></label>
-                    </div> */ ?>
-                    <div class="input-box">
-                        <label><?php echo $this->__('Name') ?></label>
-                        <input type="text" name="name" id="name" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Name')) ?>" class="input-text required-entry validate-name" />
-                    </div>
-                    <div class="input-box">
-                        <label><?php echo $this->__('E-mail') ?></label>
-                       <input type="text" name="email" id="newsletter" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sign up for our newsletter')) ?>" class="input-text required-entry validate-email" />
-                    </div>
-                    <div class="actions">
-                        <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Subscribe')) ?>" class="button"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+        <form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+            <div class="block block-subscribe">
+                <div class="">
+                <div class="block-title"><?php echo $this->__('Newsletter') ?></div>
+                    <div class="block-content">
+                        <?php /*<div class="form-subscribe-header">
+                            <label for="newsletter"><?php echo $this->__('Sign Up for Our Newsletter:') ?></label>
+                        </div> */ ?>
+                        <div class="input-box">
+                            <label><?php echo $this->__('Name') ?></label>
+                            <input type="text" name="name" id="name" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Name')) ?>" class="input-text required-entry validate-name" />
+                        </div>
+                        <div class="input-box">
+                            <label><?php echo $this->__('E-mail') ?></label>
+                           <input type="text" name="email" id="newsletter" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sign up for our newsletter')) ?>" class="input-text required-entry validate-email" />
+                        </div>
+                        <div class="actions">
+                            <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Subscribe')) ?>" class="button"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+                        </div>
                     </div>
                 </div>
-            </form>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="accept_tos" name="accept_tos" required>
+                        <?php echo $this->__('Accept TOS') ?>
+                    </label>
+                </div>
+            </div>
+
             <script type="text/javascript">
-            //<![CDATA[
+                //<![CDATA[
                 var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
-            //]]>
+                //]]>
             </script>
-        </div>
-    </div>
+        </form>
+
+        <hr />
+
     </div>
 </div>

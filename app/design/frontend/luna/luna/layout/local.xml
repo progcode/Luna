@@ -23,6 +23,12 @@
         </reference>
 
         <reference name="head">
+            <action method="addJs">
+                <script>vendor/jquery/jquery-1.12.0.min.js</script>
+            </action>
+            <action method="addJs">
+                <script>vendor/jquery/noconflict.js</script>
+            </action>
             <action method="addItem">
                 <type>skin_js</type>
                 <name>vendor/bootstrap/js/bootstrap.min.js</name>
@@ -91,6 +97,11 @@
                     </text>
                 </action>
             </block>
+        </reference>
+
+        <reference name="footer">
+            <block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml"/>
+            <block type="page/html" name="footer-menu" template="page/html/footer-menu.phtml"/>
         </reference>
     </default>
 

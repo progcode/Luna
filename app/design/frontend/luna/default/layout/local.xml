@@ -40,7 +40,7 @@
             </action>
             <action method="addItem">
                 <type>skin_css</type>
-                <name>icoders/css/nila.css</name>
+                <name>icoders/css/luna.css</name>
                 <params/>
             </action>
             <action method="removeItem">

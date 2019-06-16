@@ -71,17 +71,14 @@
 
     <?php if($this->getLastPageNum()>1): ?>
         <div class="pages">
-            <strong><?php echo $this->__('Page:') ?></strong>
             <ol>
                 <?php if (!$this->isFirstPage()): ?>
                     <li>
                         <a class="previous<?php if(!$this->getAnchorTextForPrevious()): ?> i-previous<?php endif;?>" href="<?php echo $this->getPreviousPageUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Previous')) ?>">
                             <?php if(!$this->getAnchorTextForPrevious()): ?>
-                                <?php // echo $this->__('Previous') ?>
-                                <i class="fa fa-caret-left"></i>
+                                <img class="icon-nav" src="<?php echo $this->getSkinUrl('images/pagination-left.png') ?>" />
                             <?php else: ?>
-                                <?php // echo $this->getAnchorTextForPrevious() ?>
-                                <i class="fa fa-caret-left"></i>
+                                <img class="icon-nav" src="<?php echo $this->getSkinUrl('images/pagination-left.png') ?>" />
                             <?php endif;?>
                         </a>
                     </li>
@@ -116,11 +113,9 @@
                     <li>
                         <a class="next<?php if(!$this->getAnchorTextForNext()): ?> i-next<?php endif; ?>" href="<?php echo $this->getNextPageUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Next')) ?>">
                             <?php if(!$this->getAnchorTextForNext()): ?>
-                                <?php // echo $this->__('Next') ?>
-                                <i class="fa fa-caret-right"></i>
+                                <img class="icon-nav inverse" src="<?php echo $this->getSkinUrl('images/pagination-left.png') ?>" />
                             <?php else: ?>
-                                <?php // echo $this->getAnchorTextForNext() ?>
-                                <i class="fa fa-caret-right"></i>
+                                <img class="icon-nav inverse" src="<?php echo $this->getSkinUrl('images/pagination-left.png') ?>" />
                             <?php endif;?>
                         </a>
                     </li>
